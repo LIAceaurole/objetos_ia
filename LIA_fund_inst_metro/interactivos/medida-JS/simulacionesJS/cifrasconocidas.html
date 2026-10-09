@@ -1,0 +1,31 @@
+<html>
+<head>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body>
+
+<ajs name="N&uacute;mero de cifras conocidas" width=500 height=220
+        code="Descartes.class"
+        codebase="./"
+        archive="lib/Descartes5.jar"
+        MAYSCRIPT>
+   <param name="tama&ntilde;o" value="500x220">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="s&iacute;">
+   <param name="nombre" value="N&uacute;mero de cifras conocidas">
+   <param name="Versi&oacute;n" value="5.202, 2013-10-22">
+   <param name="Idioma" value="espa&ntilde;ol">
+   <param name="Botones" value="cr&eacute;ditos=no config=no inicio=s&iacute; limpiar=no">
+   <param name="E_01" value="tipo='R2' despl_imagen='arr-izq' fondo='ffc9bc' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='p' tipo='num&eacute;rico' interfaz='men&uacute;' nombre='&iquest;Cu&aacute;ntos decimales conoces con seguridad?' decimales='0' fijo='s&iacute;' visible='no' opciones='--,1,2,3,4,5'">
+   <param name="C_02" value="id='n2' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='norte' nombre='Actividad' fijo='no' visible='s&iacute;' acci&oacute;n='mensaje' par&aacute;metro='A veces algunos aparatos de medida muestran m&aacute;s decimales de los que podemos conocer su valor con seguridad.\nEn este ejemplo se trata de que aciertes el n&uacute;mero de decimales de los que tenemos certeza, conocida la sensibilidad del aparato.' pos_mensajes='centro'">
+   <param name="A_01" value="algoritmo='s&iacute;' evaluar='una-sola-vez' hacer='p=0;a=ent(5*rnd);a=(a=0)?1:a;b=1/(10^a);c=rnd;'">
+   <param name="G_01" value="tipo='texto' color='azul' expresi&oacute;n='[20,40]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30 Medida con un aparato de sensibilidad  {\*\mjaformula{\expr b}}\f2\fs30}' fuente='SansSerif,PLAIN,15' decimales='a' fijo='s&iacute;'">
+   <param name="G_02" value="tipo='texto' color='rojo' dibujar-si='p=a' expresi&oacute;n='[20,140]' texto='Muy bien &iexcl;Acertaste.! ' fijo='s&iacute;'">
+   <param name="G_03" value="tipo='texto' color='rojo' dibujar-si='(p#a)&amp;(p&gt;0)' expresi&oacute;n='[20,140]' texto='Lo siento! Fallaste.' fijo='s&iacute;'">
+   <param name="G_04" value="tipo='texto' color='azul' expresi&oacute;n='[20,80]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30 Si crees haber le\u237 do {\*\mjaformula{\expr c}} en un aparato que tiene\par la sensibildad:\f2\fs30}' fuente='SansSerif,PLAIN,15' decimales='6' fijo='s&iacute;'">
+   <param name="G_05" value="tipo='texto' color='rojo' expresi&oacute;n='[140,100]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30  {\*\mjaformula{\expr b}}\f2\fs30}' fuente='SansSerif,PLAIN,15' decimales='a' fijo='s&iacute;'">
+   <param name="G_06" value="tipo='texto' color='azul' expresi&oacute;n='[20,120]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30 Indica cu\u225 ntos decimales conoces con seguridad.\f2\fs30}' fuente='SansSerif,PLAIN,15' decimales='6' fijo='s&iacute;'">
+</ajs>
+</body>
+</html>

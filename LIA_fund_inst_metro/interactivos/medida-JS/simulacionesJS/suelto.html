@@ -1,0 +1,59 @@
+<html>
+<head>
+
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body>
+
+<ajs name="Descartes" width=480 height=360
+        code="Descartes.class"
+        codebase="./"
+        archive="lib/Descartes5.jar"
+        MAYSCRIPT>
+   <param name="tama&ntilde;o" value="480x360">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="s&iacute;">
+   <param name="nombre" value="Descartes">
+   <param name="Versi&oacute;n" value="5.202, 2013-10-22">
+   <param name="Idioma" value="espa&ntilde;ol">
+   <param name="Botones" value="cr&eacute;ditos=no config=no inicio=s&iacute; limpiar=no">
+   <param name="E_01" value="tipo='R2' despl_imagen='arr-izq' fondo='negro' red='no' red10='no' ejes='no' texto='rosa'">
+   <param name="C_01" value="id='n2' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='norte' nombre='Actividad' fijo='s&iacute;' visible='s&iacute;' par&aacute;metro='Pulsa inicio para lanzar una nueva serie de  medidas. Al pulsar en el men&uacute; vas viendo los pasos que se deben acometer para obtener un valor representativo de ellas y sus errores absolutos y relativo.'">
+   <param name="C_02" value="id='p' tipo='num&eacute;rico' interfaz='men&uacute;' nombre='Pasos' decimales='0' fijo='no' visible='no' opciones='--------Escoge acci&oacute;n--------&gt;,Registro de medidas,Media aritm&eacute;tica,Error absoluto de cada medida,Imprecisi&oacute;n absoluta,Error relativo' pos_mensajes='centro'">
+   <param name="A_01" value="id='V1' vector='s&iacute;' evaluar='una-sola-vez' tama&ntilde;o='7' expresi&oacute;n='V1[0]=0;V1[1]=0;V1[2]=0;V1[3]=0;V1[4]=0;V1[5]=0;V1[6]=0'">
+   <param name="A_02" value="id='f' vector='s&iacute;' evaluar='siempre' tama&ntilde;o='7' expresi&oacute;n='f[0]=1;f[1]=2;f[2]=3;f[3]=3;f[4]=3;f[5]=2;f[6]=1;;;'">
+   <param name="A_03" value="id='Ea' vector='s&iacute;' evaluar='una-sola-vez' tama&ntilde;o='7' expresi&oacute;n='Ea[0]=suma/15-V1[0];Ea[1]=suma/15-V1[1];Ea[2]=suma/15-V1[2];Ea[3]=suma/15-V1[3];Ea[4]=suma/15-V1[4];Ea[5]=suma/15-V1[5];Ea[6]=suma/15-V1[6]'">
+   <param name="A_04" value="id='a2' algoritmo='s&iacute;' evaluar='una-sola-vez' hacer='m=4;V1[0]=m-((rnd&gt;0.5)?0.5:rnd);V1[1]=m-((rnd&gt;0.5)?0.4:rnd);V1[2]=m-rnd;V1[3]=m+((rnd&gt;0.5)?0.1:rnd);V1[4]=m+((rnd&gt;0.5)?0.5:rnd);V1[5]=m+((rnd&gt;0.5)?0.4:rnd);V1[6]=m+((rnd&gt;0.5)?0.3:rnd);;'">
+   <param name="A_05" value="id='a4' algoritmo='s&iacute;' evaluar='una-sola-vez' inicio='i=0;suma=0' hacer='suma=suma+(V1[i])*(f[i]);i=i+1' mientras='i&lt;7'">
+   <param name="A_06" value="id='a5' algoritmo='s&iacute;' evaluar='una-sola-vez' inicio='i=0;sf=0' hacer='sf=sf+f[i];i=i+1' mientras='i&lt;7'">
+   <param name="A_07" value="id='a7' algoritmo='s&iacute;' evaluar='siempre' inicio='i=0;sumaEa=0' hacer='Ea[i]=suma/15-V1[i];sumaEa=sumaEa+abs(Ea[i]);i=i+1' mientras='i&lt;7'">
+   <param name="G_01" value="tipo='segmento' color='blanco' expresi&oacute;n='(s-5,-2)(s-5,3)' familia='s' s.intervalo='[0,4.5]' s.pasos='4' fijo='s&iacute;' tama&ntilde;o='1' ancho='2'">
+   <param name="G_02" value="tipo='segmento' color='blanco' expresi&oacute;n='(-5,2.5)(-0.5,2.5)' fijo='s&iacute;' tama&ntilde;o='1' ancho='2'">
+   <param name="G_03" value="tipo='segmento' color='blanco' expresi&oacute;n='(-5,-2)(-0.5,-2)' fijo='s&iacute;' tama&ntilde;o='1' ancho='2'">
+   <param name="G_04" value="tipo='texto' color='blanco' dibujar-si='p&gt;0' expresi&oacute;n='[10,40+30*s]' familia='s' s.intervalo='[0,6]' s.pasos='6' texto='[V1[s]]' fijo='s&iacute;'">
+   <param name="G_05" value="tipo='texto' color='rojo' dibujar-si='p&gt;0' expresi&oacute;n='[60,40+30*s]' familia='s' s.intervalo='[0,6]' s.pasos='6' texto='[f[s]]' fijo='no'">
+   <param name="G_06" value="tipo='texto' color='verde' dibujar-si='p&gt;1' expresi&oacute;n='[110,40+30*s]' familia='s' s.intervalo='[0,6]' s.pasos='6' texto='[V1[s]*f[s]]' fijo='s&iacute;'">
+   <param name="G_07" value="tipo='texto' color='blanco' expresi&oacute;n='[0,00]' texto='Medidas\n--Xi--' fijo='s&iacute;'">
+   <param name="G_08" value="tipo='texto' color='blanco' expresi&oacute;n='[50,0]' texto='Frecuen.\n--f--' fijo='s&iacute;'">
+   <param name="G_09" value="tipo='texto' color='blanco' expresi&oacute;n='[120,20]' texto='Xi*f' fijo='s&iacute;'">
+   <param name="G_10" value="tipo='texto' color='verde' dibujar-si='p&gt;1' expresi&oacute;n='[110,260]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30{\*\mjaformula{\expr suma}}\f2\fs30}' fuente='SansSerif,PLAIN,15' fijo='s&iacute;'">
+   <param name="G_11" value="tipo='texto' color='rojo' dibujar-si='p&gt;1' expresi&oacute;n='[60,260]' texto='n=[sf]' fijo='no'">
+   <param name="G_12" value="tipo='texto' color='blanco' dibujar-si='p&gt;1' expresi&oacute;n='[10,260]' texto='Sumas:' fijo='no'">
+   <param name="G_13" value="tipo='texto' color='rojo' dibujar-si='p&gt;1' expresi&oacute;n='[260,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Courier New;\f2\fcharset0 Times New Roman;}\f1\fs30  = \f2\fs34\i\u9472 \u9472 \u9472 \f1\fs30\i0 - =}' fijo='s&iacute;'">
+   <param name="G_14" value="tipo='texto' color='rojo' dibujar-si='p&gt;1' expresi&oacute;n='[280,5]' texto=' Suma (Xi*f)' fuente='Serif,PLAIN,12' fijo='s&iacute;'">
+   <param name="G_15" value="tipo='texto' color='rojo' dibujar-si='p&gt;1' expresi&oacute;n='[310,35]' texto='n' fuente='Serif,PLAIN,12' fijo='s&iacute;'">
+   <param name="G_16" value="tipo='texto' color='rojo' dibujar-si='p&gt;1' expresi&oacute;n='[370,20]' texto=' [suma/15]' fuente='Serif,PLAIN,12' fijo='s&iacute;'">
+   <param name="G_17" value="tipo='texto' color='blanco' dibujar-si='p&gt;2' expresi&oacute;n='[165,20]' texto='E.abs' fijo='s&iacute;'">
+   <param name="G_18" value="tipo='texto' color='verde' dibujar-si='p&gt;2' expresi&oacute;n='[160,40+30*s]' familia='s' s.intervalo='[0,6]' s.pasos='6' texto='[suma/15-V1[s]]' fijo='s&iacute;'">
+   <param name="G_19" value="tipo='texto' color='rojo' dibujar-si='p&gt;3' expresi&oacute;n='[370,90]' texto='   = [sumaEa/15]' fijo='s&iacute;'">
+   <param name="G_20" value="tipo='texto' color='rojo' dibujar-si='p&gt;4' expresi&oacute;n='[310,160]' texto='=[sumaEa/suma]----&gt;[100*sumaEa/suma] %' fijo='s&iacute;'">
+   <param name="G_21" value="tipo='imagen' dibujar-si='p&gt;3' expresi&oacute;n='(0,1.8)' archivo='/images/imprecabs.gif'">
+   <param name="G_22" value="tipo='imagen' dibujar-si='p&gt;4' expresi&oacute;n='(0,0.3)' archivo='/images/er.gif'">
+   <param name="G_23" value="tipo='imagen' dibujar-si='p&gt;1' expresi&oacute;n='(0,2.8)' archivo='/images/valorverdad.gif'">
+   <param name="G_24" value="tipo='texto' color='rojo' dibujar-si='p=2' expresi&oacute;n='[0,290]' texto='Hemos hallado la media aritm&eacute;tica de las medidas' fijo='s&iacute;'">
+   <param name="G_25" value="tipo='texto' color='verde' dibujar-si='p=3' expresi&oacute;n='[0,275]' texto='El error absoluto de cada medida se halla rest&aacute;ndole a la media\naritm&eacute;tica el valor de cada una.Compru&eacute;balo.' fijo='s&iacute;'">
+   <param name="G_26" value="tipo='texto' color='rojo' dibujar-si='p=4' expresi&oacute;n='[0,290]' texto='Ea es la media de los valores errores absolutos tomados todos con signo positivo.' fijo='s&iacute;'">
+   <param name="G_27" value="tipo='texto' color='rojo' dibujar-si='p=5' expresi&oacute;n='[0,290]' texto='El error relativo da la calidad de la medida y se expresa en %' fijo='s&iacute;'">
+</ajs>
+</body>
+</html>

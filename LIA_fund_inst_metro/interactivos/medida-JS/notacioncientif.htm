@@ -1,0 +1,336 @@
+<HTML>
+<HEAD>
+<META http-equiv=Content-Type content='text/html; charset=ISO-8859-1'>
+<TITLE>LA MEDIDA</TITLE>
+<LINK REL="stylesheet" TYPE="text/css" HREF="img/1bachcss/newton.css">
+<script type="text/javascript" language="JavaScript" src="img/1bachjs/objNavegador.js"></script>
+<script type="text/javascript" language="JavaScript" src="img/1bachjs/objLayer.js"></script>
+<script type="text/javascript" language="JavaScript" src="img/1bachjs/newton.js"></script>
+<script type="text/javascript" src="lib/descartes-min.js"></script>
+<script type="text/javascript">
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  window.open(theURL,winName,features);
+}
+</script>
+
+
+</HEAD>
+<BODY onLoad="posicionaMenu(7)" BGCOLOR="#ffffff">
+<DIV class=clsCurso id="CapaCurso" GBLCOLORON="FFC9BC" GBLCOLOR="E3998C">Fundamentos de Instrumentación y Metrología</DIV>
+<DIV id=CapaFondo><IMG height=429 src="images/fondo.jpg" width=770></DIV>
+<DIV id=CapaImg>
+  <div id="recorte" style="position:absolute; width:140px; height:81px; z-index:1; left: -2px; top: 424px; background-color: #ECEAED; layer-background-color: #ECEAED; border: 1px none #000000;"></div>
+  <IMG id=imgUnidad src="images/bombillas.gif" name=imgUnidad></DIV>
+<DIV id="eltoMenuHead"  nombre="eltoMenuHead">
+<TABLE cellSpacing=0 cellPadding=0 width=138 border=0>
+
+<TR>
+<TD><IMG height=4 src="images/menu/menu_01.jpg" width=10></TD>
+<TD><IMG height=4 src="images/menu/menu_02.jpg" width=112></TD>
+<TD><IMG height=4 src="images/menu/menu_03.jpg" width=16></TD></TR>
+<TR>
+<TD width=10 background=images/menu/menu_04.jpg height=29></TD>
+<TD class=clsMenuHead id=tbMenuVTitulo align=left width=112 bgColor=#f7f7f7 height=29>LA MEDIDA</TD>
+<TD width=16 background=images/menu/menu_06.jpg height=29></TD></TR>
+<TR>
+<TD><IMG height=2 src="images/menu/menu_07.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_08.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_09.jpg" width=16></TD></TR>
+<TR>
+<TD><IMG height=2 src="images/menu/menu_10.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_11.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_12.jpg" width=16></TD></TR>
+<TR>
+<TD><IMG height=2 src="images/menu/menu_16.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_17.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_18.jpg" width=16></TD></TR></TABLE></DIV>
+<DIV class=clsCapasMenu id="eltoMenuFoot"  nombre="eltoMenuFoot">
+<TABLE cellSpacing=0 cellPadding=0 width=138 border=0>
+
+<TR>
+<TD><IMG height=75 src="images/menu/menu_31.jpg" width=10></TD>
+<TD class=clsPeque id=idTextoPie vAlign=bottom width=112 background=images/menu/menu_32.jpg height=75><div align="left">Autor: J. Villasuso. Modificado por César A. Rodriguez. Adaptador a Descartes-JS: Enric Ripoll.</div></TD>
+<TD><IMG height=75 src="images/menu/menu_33.jpg" width=16></TD></TR></TABLE></DIV>
+<DIV id=CapaMenuH>
+<TABLE height=21 cellSpacing=0 cellPadding=0 width=423 background=images/menuH/fondo.jpg border=0>
+
+<TR>
+<TD width=2><IMG height=21 src="images/menuH/separaFondo.jpg" width=2></TD>
+<TD id=idUnidad height=21>
+<TABLE cellSpacing=0 cellPadding=0 border=0>
+
+<TR>
+<TD class=clsMenuH id=idUnidadDentro contentEditable=false vAlign=bottom height=21>&nbsp;Medida&nbsp;</TD>
+<TD><IMG height=21 src="images/menuH/cajaOn.jpg" width=18></TD>
+<TD><IMG height=21 src="images/menuH/separador.jpg" width=2></TD>
+<TD><IMG height=21 src="images/menuH/cajaOn.jpg" width=18></TD>
+<TD><IMG height=21 src="images/menuH/separador.jpg" width=2></TD>
+<TD><IMG height=21 src="images/menuH/cajaOn.jpg" width=18></TD>
+<TD><IMG height=21 src="images/menuH/separador.jpg" width=2></TD>
+<TD><IMG height=21 src="images/menuH/cajaOn.jpg" width=18></TD>
+<TD><IMG height=21 src="images/menuH/separador.jpg" width=2></TD>
+<TD><IMG height=21 src="images/menuH/cajaOn.jpg" width=18></TD>
+<TD><IMG height=21 src="images/menuH/separador.jpg" width=2></TD>
+<TD><IMG height=21 src="images/menuH/cajaOn.jpg" width=18></TD>
+<TD><IMG height=21 src="images/menuH/separador.jpg" width=2></TD>
+<TD><IMG height=21 src="images/menuH/cajaOff.jpg" width=18></TD>
+<TD><IMG height=21 src="images/spacer.gif" width=10></TD></TR></TABLE></TD>
+
+
+
+
+<TD width=2><IMG height=21 src="images/menuH/separaFondo.jpg" width=2></TD></TR></TABLE></DIV>
+<DIV id=CapaCont>
+  <TABLE id=oTblCont0 borderColor=#e3998c cellSpacing=0 cellPadding=2 width=605 bgColor=#ffffff border=0>
+    <TR height=26>
+      <TD width="85%" bgColor=#ffc9bc class=clsCabecera><strong>Notación
+        científica</strong></TD>
+      <TD width="15%" bgColor=#ffc9bc class=clsCabecera><a href="notacioncientif2.htm">calculadora</a></TD>
+    </TR>
+    <TR>
+      <TD colspan="2" vAlign=top class=clsTexto> <p align="justify">A menudo usamos n&uacute;meros
+          con muchos ceros (manejamos cantidades muy grandes o muy peque&ntilde;as)
+          que pueden escribirse abreviadamente usando potencias de 10. Esto permite
+          tener, con una simple ojeada, una idea de su orden de magnitud, permite
+          operar m&aacute;s f&aacute;cilmente e incluso revisar r&aacute;pidamente
+          operaciones realizadas con ellos.</p>
+        <p align="justify"> Utilizando la notaci&oacute;n cient&iacute;fica el n&uacute;mero se
+          escribe como un producto de dos partes: un n&uacute;mero comprendido
+          entre 1 y 10 y una potencia de 10. El n&uacute;mero se representa con
+          una cifra entera seguido <font color="#990000">de todas las cifras significativas</font>
+          y multiplicado por la potencia de 10. La potencia de diez recibe el
+          nombre de<font color="#990000"> exponente</font>.<br>
+          El exponente positivo de la potencia de diez indica el n&uacute;mero
+          de lugares que la coma decimal se debe mover hacia la derecha si expresamos
+          el n&uacute;mero sin la potencia de diez. Un exponente negativo indica
+          que se mover&aacute; hacia la izquierda.<br>
+          Antes de realizar la transformaci&oacute;n de un n&uacute;mero a su
+          equivalente en notaci&oacute;n cient&iacute;fica debemos conocer el
+          <a href="cifrassignif2.htm"> n&uacute;mero de cifras significativas.</a></p>
+        <table class=clsTexto BGCOLOR="#C0C0C0" width="100%" border="1">
+          <tr>
+            <td width="34%" class="clsTexto"><div align="center"><strong><font face="Times New Roman, Times, serif">3.400
+            = 3,400&middot;10<sup>3</sup></font></strong></div></td>
+            <td width="66%" class="clsTexto"><font color="#CC3300" face="Times New Roman, Times, serif"><strong>Significa
+              que si <font face="Times New Roman, Times, serif">3,400&middot;10<sup>3</sup></font>
+              lo escribimos &quot;normal&quot;(sin notaci&oacute;n cient&iacute;fica),
+              la coma debe avanzar 3 lugares a la derecha, 3400.</strong></font></td>
+          </tr>
+          <tr>
+            <td class="clsTexto"><div align="center"><strong><font face="Times New Roman, Times, serif">0,</font><font face="Times New Roman, Times, serif">00340
+            = 3,4&middot;10<Sup>-3</sup> </font></strong></div></td>
+            <td class="clsTexto"><strong><font color="#CC3300" face="Times New Roman, Times, serif">
+              0,00340 tiene dos cifras significativas. El exponente negativo indica
+              que se debe mover la coma tres lugares a la izquierda.</font></strong></td>
+          </tr>
+          <tr>
+            <td class="clsTexto"><div align="center"><strong><font face="Times New Roman, Times, serif">
+            120.000.000 = 1,2&middot;10<sup>8</sup></font></strong></div></td>
+            <td class="clsTexto"><strong><font color="#CC3300" face="Times New Roman, Times, serif">120.000.000
+              tiene dos cifras significativas y lo escribimos como se muestra,
+              1,2&middot;10<sup>8</sup></font><font face="Times New Roman, Times, serif"></font></strong></td>
+          </tr>
+        </table>
+        <p align="center">
+          <input name="boton" type="button" class="boton_escena" id="boton" value="Ejercicio" onClick="MM_openBrWindow('simulacionesJS/boton.html','escena','width=500,height=240')">
+        </p>
+        <p align="left"><a href="notacioncientif2.htm">Notaci&oacute;n cient&iacute;fica
+          en las calculadoras y en el ordenador</a></p></TD>
+    </TR>
+  </TABLE>
+<TABLE id=oTblSep0 height=1 cellSpacing=0 cellPadding=0 border=0>
+
+<TR height=1>
+<TD height=1></TD></TR></TABLE></DIV>
+<DIV id=CapaAvanzar><A id=aAvanzar href="notacioncientif2.htm"><IMG onMouseOver="this.src='images/avanzar_on.jpg'" onMouseOut="this.src='images/avanzar.jpg'" height=18 src="images/avanzar.jpg" width=88 border=0></A></DIV>
+<DIV class=clsCapasMenu id="eltoMenu0"  nombre="eltoMenu0">
+<TABLE cellSpacing=0 cellPadding=0 width=138 border=0>
+
+<TR>
+<TD><IMG height=2 src="images/menu/menu_19.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_20.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_21.jpg" width=16></TD></TR>
+<TR>
+<TD width=10 background=images/menu/menu_22.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD>
+<TD class=clsMenu id=eltoMenuHead0 align=left width=112 bgColor=#e3998c height=25><A class=clsMenu href="index.htm">Introducción</A></TD>
+<TD width=16 background=images/menu/menu_24.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD></TR>
+<TR>
+<TD><IMG height=4 src="images/menu/menu_25.jpg" width=10></TD>
+<TD><IMG height=4 src="images/menu/menu_26.jpg" width=112></TD>
+<TD><IMG height=4 src="images/menu/menu_27.jpg" width=16></TD></TR></TABLE></DIV>
+<DIV class=clsCapasMenu id="eltoMenu1"  nombre="eltoMenu1">
+<TABLE cellSpacing=0 cellPadding=0 width=138 border=0>
+
+<TR>
+<TD><IMG height=2 src="images/menu/menu_19.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_20.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_21.jpg" width=16></TD></TR>
+<TR>
+<TD width=10 background=images/menu/menu_22.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD>
+<TD class=clsMenu id=eltoMenuHead1 align=left width=112 bgColor=#e3998c height=25><A class=clsMenu href="magnitudes.htm">Magnitudes</A></TD>
+<TD width=16 background=images/menu/menu_24.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD></TR>
+<TR>
+<TD><IMG height=4 src="images/menu/menu_25.jpg" width=10></TD>
+<TD><IMG height=4 src="images/menu/menu_26.jpg" width=112></TD>
+<TD><IMG height=4 src="images/menu/menu_27.jpg" width=16></TD></TR></TABLE></DIV>
+<DIV class=clsCapasMenu id="eltoMenu2"  nombre="eltoMenu2">
+<TABLE cellSpacing=0 cellPadding=0 width=138 border=0>
+
+<TR>
+<TD><IMG height=2 src="images/menu/menu_19.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_20.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_21.jpg" width=16></TD></TR>
+<TR>
+<TD width=10 background=images/menu/menu_22.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD>
+<TD class=clsMenu id=eltoMenuHead2 align=left width=112 bgColor=#e3998c height=25><A class=clsMenu href="javascript:gestionMenu(2)">Unidades</A></TD>
+<TD width=16 background=images/menu/menu_24.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD></TR>
+<TR>
+<TD><IMG height=4 src="images/menu/menu_25.jpg" width=10></TD>
+<TD><IMG height=4 src="images/menu/menu_26.jpg" width=112></TD>
+<TD><IMG height=4 src="images/menu/menu_27.jpg" width=16></TD></TR></TABLE>
+<TABLE borderColor=#ffffff cellSpacing=0 cellPadding=2 width=138 align=center border=0>
+
+<TR>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=5></TD>
+<TD class=clsSubMenu id=eltoSubMenuHead20 align=left width=123 bgColor=#ffffff><A class=clsMenu href="javascript:enlace('si.htm', 2, 0)">S.I.</A></TD>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=10></TD></TR>
+<TR>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=5></TD>
+<TD class=clsSubMenu id=eltoSubMenuHead21 align=left width=123 bgColor=#f0f0f0><A class=clsMenu href="javascript:enlace('factorconversion.htm', 2, 1)">Factor de conversión</A></TD>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=10></TD></TR></TABLE></DIV>
+<DIV class=clsCapasMenu id="eltoMenu3"  nombre="eltoMenu3">
+<TABLE cellSpacing=0 cellPadding=0 width=138 border=0>
+
+<TR>
+<TD><IMG height=2 src="images/menu/menu_19.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_20.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_21.jpg" width=16></TD></TR>
+<TR>
+<TD width=10 background=images/menu/menu_22.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD>
+<TD class=clsMenu id=eltoMenuHead3 align=left width=112 bgColor=#e3998c height=25><A class=clsMenu href="javascript:gestionMenu(3)">Instrumentos de medida</A></TD>
+<TD width=16 background=images/menu/menu_24.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD></TR>
+<TR>
+<TD><IMG height=4 src="images/menu/menu_25.jpg" width=10></TD>
+<TD><IMG height=4 src="images/menu/menu_26.jpg" width=112></TD>
+<TD><IMG height=4 src="images/menu/menu_27.jpg" width=16></TD></TR></TABLE>
+<TABLE borderColor=#ffffff cellSpacing=0 cellPadding=2 width=138 align=center border=0>
+
+<TR>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=5></TD>
+<TD class=clsSubMenu id=eltoSubMenuHead30 align=left width=123 bgColor=#ffffff><A class=clsMenu href="javascript:enlace('tipoinstrum.htm', 3, 0)">Tipos</A></TD>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=10></TD></TR>
+<TR>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=5></TD>
+<TD class=clsSubMenu id=eltoSubMenuHead31 align=left width=123 bgColor=#f0f0f0><A class=clsMenu href="javascript:enlace('cualidadesinstrum.htm', 3, 1)">Cualidades</A></TD>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=10></TD></TR>
+<TR>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=5></TD>
+<TD class=clsSubMenu id=eltoSubMenuHead32 align=left width=123 bgColor=#ffffff><A class=clsMenu href="javascript:enlace('erroraparatos.htm', 3, 2)">Errores debidos a los aparatos</A></TD>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=10></TD></TR></TABLE></DIV>
+<DIV class=clsCapasMenu id="eltoMenu4"  nombre="eltoMenu4">
+<TABLE cellSpacing=0 cellPadding=0 width=138 border=0>
+
+<TR>
+<TD><IMG height=2 src="images/menu/menu_19.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_20.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_21.jpg" width=16></TD></TR>
+<TR>
+<TD width=10 background=images/menu/menu_22.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD>
+<TD class=clsMenu id=eltoMenuHead4 align=left width=112 bgColor=#e3998c height=25><A class=clsMenu href="javascript:gestionMenu(4)">El proceso de medir </A></TD>
+<TD width=16 background=images/menu/menu_24.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD></TR>
+<TR>
+<TD><IMG height=4 src="images/menu/menu_25.jpg" width=10></TD>
+<TD><IMG height=4 src="images/menu/menu_26.jpg" width=112></TD>
+<TD><IMG height=4 src="images/menu/menu_27.jpg" width=16></TD></TR></TABLE>
+<TABLE borderColor=#ffffff cellSpacing=0 cellPadding=2 width=138 align=center border=0>
+
+<TR>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=5></TD>
+<TD class=clsSubMenu id=eltoSubMenuHead40 align=left width=123 bgColor=#ffffff><A class=clsMenu href="javascript:enlace('comorealizar.htm', 4, 0)">¿Cómo realizarlo?</A></TD>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=10></TD></TR>
+<TR>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=5></TD>
+<TD class=clsSubMenu id=eltoSubMenuHead41 align=left width=123 bgColor=#f0f0f0><A class=clsMenu href="javascript:enlace('mdirectas.htm', 4, 1)">Medidas directas</A></TD>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=10></TD></TR>
+<TR>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=5></TD>
+<TD class=clsSubMenu id=eltoSubMenuHead42 align=left width=123 bgColor=#ffffff><A class=clsMenu href="javascript:enlace('mindirectas.htm', 4, 2)">Medidas indirectas</A></TD>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=10></TD></TR>
+<TR>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=5></TD>
+<TD class=clsSubMenu id=eltoSubMenuHead43 align=left width=123 bgColor=#f0f0f0><A class=clsMenu href="javascript:enlace('normasUne.htm', 4, 3)">Normas NTC</A></TD>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=10></TD></TR>
+<TR>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=5></TD>
+<TD class=clsSubMenu id=eltoSubMenuHead44 align=left width=123 bgColor=#ffffff><A class=clsMenu href="javascript:enlace('registro.htm', 4, 4)">Registro de datos</A></TD>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=10></TD></TR></TABLE></DIV>
+<DIV class=clsCapasMenu id="eltoMenu5"  nombre="eltoMenu5">
+<TABLE cellSpacing=0 cellPadding=0 width=138 border=0>
+
+<TR>
+<TD><IMG height=2 src="images/menu/menu_19.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_20.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_21.jpg" width=16></TD></TR>
+<TR>
+<TD width=10 background=images/menu/menu_22.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD>
+<TD class=clsMenu id=eltoMenuHead5 align=left width=112 bgColor=#ffc9bc height=25><A class=clsMenu href="javascript:gestionMenu(5)">Expresión de la medida</A></TD>
+<TD width=16 background=images/menu/menu_24.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD></TR>
+<TR>
+<TD><IMG height=4 src="images/menu/menu_25.jpg" width=10></TD>
+<TD><IMG height=4 src="images/menu/menu_26.jpg" width=112></TD>
+<TD><IMG height=4 src="images/menu/menu_27.jpg" width=16></TD></TR></TABLE>
+<TABLE borderColor=#ffffff cellSpacing=0 cellPadding=2 width=138 align=center border=0>
+
+<TR>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=5></TD>
+<TD class=clsSubMenu id=eltoSubMenuHead50 align=left width=123 bgColor=#ffffff><A class=clsMenu href="javascript:enlace('valorrepresent.htm', 5, 0)">Valor representativo</A></TD>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=10></TD></TR>
+<TR>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=5></TD>
+<TD class=clsSubMenu id=eltoSubMenuHead51 align=left width=123 bgColor=#f0f0f0><A class=clsMenu href="javascript:enlace('cuantasmedidas.htm', 5, 1)">¿Cuántas medidas realizar?</A></TD>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=10></TD></TR>
+<TR>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=5></TD>
+<TD class=clsSubMenu id=eltoSubMenuHead52 align=left width=123 bgColor=#ffffff><A class=clsMenu href="javascript:enlace('imprecision.htm', 5, 2)">Imprecisión y resultado</A></TD>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=10></TD></TR>
+<TR>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=5></TD>
+<TD class=clsSubMenu id=eltoSubMenuHead53 align=left width=123 bgColor=#f0f0f0><A class=clsMenu href="javascript:enlace('ea.htm', 5, 3)">Ea</A></TD>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=10></TD></TR>
+<TR>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=5></TD>
+<TD class=clsSubMenu id=eltoSubMenuHead54 align=left width=123 bgColor=#ffffff><A class=clsMenu href="javascript:enlace('er.htm', 5, 4)">Er</A></TD>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=10></TD></TR>
+<TR>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=5></TD>
+<TD class=clsSubMenu id=eltoSubMenuHead55 align=left width=123 bgColor=#f0f0f0><A class=clsMenu href="javascript:enlace('cifrassignif.htm', 5, 5)">Cifras significativas</A></TD>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=10></TD></TR>
+<TR>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=5></TD>
+<TD class=clsSubMenu id=eltoSubMenuHead56 align=left width=123 bgColor=#ffffff><A class=clsMenu href="javascript:enlace('notacioncientif.htm', 5, 6)">Notación científica</A></TD>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=10></TD></TR>
+<TR>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=5></TD>
+<TD class=clsSubMenu id=eltoSubMenuHead57 align=left width=123 bgColor=#f0f0f0><A class=clsMenu href="javascript:enlace('ordenmagnitud.htm', 5, 7)">Orden de magnitud</A></TD>
+<TD width=5><IMG height=1 src="images/spacer.gif" width=10></TD></TR></TABLE></DIV>
+<DIV class=clsCapasMenu id="eltoMenu6"  nombre="eltoMenu6">
+<TABLE cellSpacing=0 cellPadding=0 width=138 border=0>
+
+<TR>
+<TD><IMG height=2 src="images/menu/menu_19.jpg" width=10></TD>
+<TD><IMG height=2 src="images/menu/menu_20.jpg" width=112></TD>
+<TD><IMG height=2 src="images/menu/menu_21.jpg" width=16></TD></TR>
+<TR>
+<TD width=10 background=images/menu/menu_22.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD>
+<TD class=clsMenu id=eltoMenuHead6 align=left width=112 bgColor=#e3998c height=25><A class=clsMenu href="evaluacion.htm">Evaluación</A></TD>
+<TD width=16 background=images/menu/menu_24.jpg height=25><IMG height=1 src="images/spacer.gif" width=1></TD></TR>
+<TR>
+<TD><IMG height=4 src="images/menu/menu_25.jpg" width=10></TD>
+<TD><IMG height=4 src="images/menu/menu_26.jpg" width=112></TD>
+<TD><IMG height=4 src="images/menu/menu_27.jpg" width=16></TD></TR></TABLE></DIV>
+</BODY>
+<script type="text/javascript" src="lib/descartes-min.js"></script>
+
+<script type="text/javascript" src="lib/descartes-min.js"></script>
+
+</html>

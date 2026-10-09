@@ -1,0 +1,34 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>orden</title>
+<script type="text/javascript" src="lib/descartes-min.js"></script>
+</head>
+
+<body>
+<ajs name="Orden de magnitud" width=460 height=220
+        code="Descartes.class"
+        codebase="./"
+        archive="lib/Descartes5.jar"
+        MAYSCRIPT>
+   <param name="tama&ntilde;o" value="460x220">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="s&iacute;">
+   <param name="nombre" value="Orden de magnitud">
+   <param name="Versi&oacute;n" value="5.202, 2013-10-22">
+   <param name="Idioma" value="espa&ntilde;ol">
+   <param name="Botones" value="cr&eacute;ditos=no config=no inicio=s&iacute; limpiar=no">
+   <param name="E_01" value="tipo='R2' despl_imagen='arr-izq' fondo='ffc9bc' red='no' red10='no' ejes='no' texto='no'">
+   <param name="C_01" value="id='p' tipo='num&eacute;rico' interfaz='campo de texto' nombre='Introduce la potencia de diez y pulsa &lt;enter&gt;' incr='1' min='-7' max='8' decimales='0' fijo='s&iacute;' visible='s&iacute;' acci&oacute;n='calcular' par&aacute;metro='n=2'">
+   <param name="C_02" value="id='n2' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='norte' nombre='Actividad' fijo='no' visible='s&iacute;' acci&oacute;n='mensaje' par&aacute;metro='Introduce la potencia de diez que da el orden de  magnitud de ese n&uacute;mero.\nPulsa enter en el teclado para que se procese la respuesta.' pos_mensajes='centro'">
+   <param name="A_01" value="algoritmo='s&iacute;' evaluar='una-sola-vez' hacer='p=0;r=2;a=10*rnd;a=(ent(a)=0)?(a+1):a;f=1+ent(3*rnd);s=(10*rnd&gt;5)?1:-1;b=(1+ent(6*rnd))*s;m=(a&gt;5)?1:0;ord=f+b+m;;;;'">
+   <param name="A_02" value="id='a2' algoritmo='s&iacute;' evaluar='siempre' hacer='r=(ord=p)?1:-1;'">
+   <param name="G_01" value="tipo='texto' color='azul' expresi&oacute;n='[50,30]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30 Tenemos el n\u250 mero:{\*\mjaformula{\expr a*10^f}}\u183 10{\*\mjaformula{\supix{\expr b\decimals 0\fixed1}}}  \f2\fs30}' fuente='SansSerif,PLAIN,15' fijo='s&iacute;'">
+   <param name="G_02" value="tipo='texto' color='azul' expresi&oacute;n='[50,70]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30 Calcula el orden de magnitud y selecciona\par la potencia de diez\f2\fs30}' fuente='SansSerif,PLAIN,15' fijo='s&iacute;'">
+   <param name="G_03" value="tipo='texto' color='rojo' dibujar-si='(r=-1)&amp;(n=2)' expresi&oacute;n='[50,130]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30 Lo siento fallaste,  es:10{\*\mjaformula{\supix{\expr ord\decimals 0\fixed1}}}   por ser {\*\mjaformula{\expr a}}\u183 10{\*\mjaformula{\supix{\expr b+f\decimals 0\fixed1}}}\f2\fs30}' fuente='SansSerif,PLAIN,15' decimales='1' fijo='no'">
+   <param name="G_04" value="tipo='texto' color='rojo' dibujar-si='r=1' expresi&oacute;n='[50,130]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30 Muy bien, la potencia {\*\mjaformula{\expr p}}es correcta\f2\fs30}' fuente='SansSerif,PLAIN,15' decimales='0' fijo='no'">
+</ajs>
+
+</body>
+</html>

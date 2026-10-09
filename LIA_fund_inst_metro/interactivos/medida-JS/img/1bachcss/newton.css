@@ -1,0 +1,115 @@
+BODY, A, B, TD, DIV, SPAN, LI, UL, OL, P {font-family:arial, verdana; }
+HR {color:BACEE2; }
+SPAN{width:100%}
+.clsMenuHead{font-size:14px; color:#444444; text-decoration:none; text-align:center; font-weight:bold;}
+
+a.clsMenu:link{font-size:12px; color:#444444; text-decoration:none;}
+a.clsMenu:active{font-size:12px; color:#444444; text-decoration:none;}
+a.clsMenu:visited{font-size:12px; color:#444444; text-decoration:none;}
+a.clsMenu:hover{font-size:12px; color:#225A92; text-decoration:underline; text-align:center;}
+.clsMenu{font-size:13px; color:#444444; text-decoration:none;}
+
+a.clsSubMenu:link{font-size:11px; color:#444444; text-decoration:none;}
+a.clsSubMenu:active{font-size:11px; color:#444444; text-decoration:none;}
+a.clsSubMenu:visited{font-size:11px; color:#444444; text-decoration:none;}
+a.clsSubMenu:hover{font-size:11px; color:#225A92; text-decoration:underline; text-align:center;}
+.clsSubMenu{font-size:11px; color:#444444; text-decoration:none;}
+a.clsSubMenuRes:active, a.clsSubMenuRes:link, a.clsSubMenuRes:hover, a.clsSubMenuRes:visited
+{color:#444444;text-decoration:underline; font-weight:bold;}
+
+
+.clsMenuH{font-size:11px; color:#444444; text-decoration:none; text-align:left; }
+a.clsMenuH:link{font-size:11px; color:#444444; text-decoration:none; text-align:left;}
+a.clsMenuH:active{font-size:11px; color:#444444; text-decoration:none; text-align:left;}
+a.clsMenuH:visited{font-size:11px; color:#444444; text-decoration:none; text-align:left;}
+a.clsMenuH:hover{font-size:11px; color:#225A92; text-decoration:underline; text-align:left;}
+
+:link{font-size:12px; color:#225A92; text-decoration:underline;}
+:active{font-size:12px; color:#225A92; text-decoration:underline;}
+:visited{font-size:12px; color:#225A92; text-decoration:underline;}
+:hover{font-size:12px; color:#444444; text-decoration:underline;}
+
+.clsCurso{font-size:23px; color:#6D6D6D; text-decoration:none; text-align:left;}
+.clsPeque{font-size:9px; color:#888888; text-align:justify;}
+.clsTexto{font-size:14px; color:#333333; text-align:justify; }
+.clsCabecera{font-size:13px; color:#333333; text-align:center;}
+
+
+#CapaFondo{position:absolute; left:0px; top:0px; z-index:1; width:770; height:429;}
+#CapaImg{position:absolute; left:0px; top:0px; z-index:2; }
+#eltoMenuHead{position:absolute; left:0px; top:88px; z-index:3; visibility:hidden; width:138px;}
+.clsCapasMenu{
+	position:absolute;
+	left:0px;
+	z-index:4;
+	width:138px;
+	overflow:hidden;
+	visibility: hidden;
+}
+#CapaCurso{position:absolute; left:227px; top:20px; z-index:15;}
+#CapaMenuH{position:absolute; left:220px; top:54px; z-index:16;}
+#CapaCont{position:absolute; left:165px; top:97px; z-index:17; width:564px; overflow:visible;}
+#CapaAvanzar{position:absolute; left:241px; top:76px; z-index:18; width:492px; height:23px; visibility:visible; text-align:right}
+#CapaRetroceder{position:absolute; left:220px; top:76px; z-index:19; width:148px; height:27px; visibility:visible;}
+.textMode{font-family:Courier New; font-size:12px;}
+
+.azulresaltado {
+	font-family: Verdana, Arial;
+	font-size: 12px;
+	font-style: normal;
+	font-weight: bold;
+	color: #336699;
+}
+.contenido {
+	font-family:  Arial, Verdana;
+	/*font-size: 14px;*/
+}
+.azul {
+color: #2D6DBD;
+font-weight:bold;
+}
+.azul2 {
+color: #2D6DBD;
+
+}
+.margen {
+padding-left:10px;
+padding-right:8px;
+}
+.margenes {
+padding-left:4px;
+padding-bottom:4px;
+
+
+}
+.numerito {
+position:relative;
+font-size:11px; 
+padding-bottom:30px;
+top:-6px;
+}
+INPUT:hover {
+font-size:14px;
+text-decoration:none;
+}
+.boton_escena{
+	font-size: 13px;
+	color: #FFFF00;
+	text-align: center;
+	font-family: Verdana, Geneva, sans-serif;
+	background-clip: border-box;
+	font-weight: bolder;
+	font-style: italic;
+	background-color: #4646A1;
+}
+.boton_escena:hover {
+	font-size: 13px;
+	color: #FF9933;
+	text-align: center;
+	font-family: Verdana, Geneva, sans-serif;
+	background-clip: border-box;
+	font-weight: bolder;
+	font-style: italic;
+	background-color: #8787C3;
+}
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<recurso 
+	id="PA5_OA_MA_3UNAM_008_SumaDeFraccionesDistintoDenominador"
+	nivel="Primaria" 
+	plataforma="HTML 5" 
+	>
+	<titulo><![CDATA[
+		Sumas de fracciones con distinto denominador
+	]]></titulo>
+
+	<descripcion><![CDATA[
+		Resolución de problemas que impliquen sumas o restas de fracciones comunes con denominadores diferentes.
+	]]></descripcion>
+
+	<area><![CDATA[
+		Matemáticas, Aritmética, Sentido numérico y pensamiento algebraico, Problemas aditivos
+	]]></area>
+
+	<nivel><![CDATA[
+		Básico, primaria
+	]]></nivel>
+
+	<tags><![CDATA[
+		SEP, UNAM, IMATE, LITE, Matemáticas, Aritmética, Sentido numérico y pensamiento algebraico, Problemas aditivos, fracciones, denominadores, numeradores, múltiplos, mínimo múltiplo común, suma de fracciones, resta de fracciones, fracciones equivalentes
+	]]></tags>
+
+	<vistas>
+		meta/icono.png
+	</vistas>
+
+	<info>
+		http://descartes.matem.unam.mx/recursos/Primaria/Aprende.Mx/docs/info.html
+	</info>
+
+	<creditos>
+		docs/info.html
+	</creditos>
+
+	<proyecto id="" ><![CDATA[
+		Aprende.Mx
+	]]></proyecto>
+
+</recurso>

@@ -1,0 +1,8 @@
+'Escribe las frases'
+'La exactitud en los instrumentos de medición se refiere al grado de cercanía que tiene los resultados medidos con el valor de referencia, también llamado valor verdadero o magnitud real'
+'En física, química y ciencias en general, la precisión se refiere al grado de cercanía que presentan los resultados obtenidos a partir del control de las mismas condiciones.'
+'La precisión se asocia a la sensibilidad del instrumento, mientras mayor sea la precisión del instrumento, mayor será la cercanía de los resultados con relación a las diferentes mediciones hechas con los mismos parámetros.'
+'El error de medición se define como la diferencia entre el valor medido y el valor verdadero.'  
+'Los errores de medición afectan a cualquier instrumento de medición y pueden deberse a distintas causas.' 
+'Las errores que se pueden de alguna manera prever, calcular, eliminar mediante calibraciones y compensaciones, se denominan deterministas o sistemáticos y se relacionan con la exactitud de las mediciones.' 
+'Los errores que no se pueden prever, dependen de causas desconocidas, o estocásticas se denominan aleatorios y están relacionados con la precisión del instrumento.'

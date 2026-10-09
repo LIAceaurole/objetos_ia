@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <script type="text/javascript" src="lib/descartes-min.js" charset="utf-8"></script>
+</head>
+
+<body style="                                                                       background-color: #fff8e1;">
+  <meta http-equiv="Content-Language" content="es">
+  <title>Fundamentos de instrumentación y metrología </title>
+
+  <div align="center">
+    <center>
+      <table bordercolorlight="#CCCCFF" bordercolordark="#CCCCFF" width="95%" cellspacing="0" cellpadding="0" border="0">
+        <tbody>
+          <tr>
+            <td rowspan="2" style="background-color: #FFF8E1" width="15%" bgcolor="#FFF8E1">
+              <a href="http://proyectodescartes.org/descartescms/" target="_blank"><img src="img/logo3.png" height="80" width="240" vspace="6" border="0"></a>
+            </td>
+            <td width="85%" bgcolor="#006699">
+
+              <p align="center">
+                <font face="Verdana" size="3" color="#FFFFFF">
+                  <font size="+2"><b><font size="+1">Fundamentos de instrumentación y metrología</font>&nbsp;</b></font>
+                </font>
+              </p>
+            </td>
+          </tr>
+          <tr>
+            <td style="background-color: #EAF4FF" width="85%" bgcolor="#EAF4FF">
+
+              <p align="center"><i style="color: #3460aa;"><font face="Verdana"><font size="4">UNIDADES DE MEDIDA DE ÁREA O SUPERFICIE</font></font></i>
+              </p>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </center>
+  </div>
+  <hr width="95%" size="30" color="#FEE6B8">
+  <table background-color:="" style="width: 95%;" align="center" cellspacing="2" cellpadding="6" border="0" bgcolor="#fff8e1">
+    <tbody>
+      <tr colspan="2" rowspan="1">
+        <td style="height: 50px;">
+          <h3><strong><font face="Verdana" color="#006699">¿Por qué un metro cuadrado es igual a 100 decímetros cuadrados? </font><br>
+          </strong></h3>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" width="50" valign="middle">
+          <ajs name="unidades de superficie" code="Descartes.class" width="441" height="361">
+            <param name="tamaño" value="441x361">
+            <param name="decimal_symbol" value=",">
+            <param name="nombre" value="unidades de superficie">
+            <param name="Versión" value="5.5">
+            <param name="editable" value="sí">
+            <param name="Idioma" value="español">
+            <param name="Botones" value="créditos=sí config=no inicio=no limpiar=no filas_norte=0 filas_sur=0 ancho_este=150 ancho_oeste=150 alto=0 ">
+            <param name="E_01" value="tipo='R2' id='E1' dibujar-si='S<8' fijo='sí' escala='20' O.x='-1' O.y='-1' fondo='ffffcc' red='no' red10='no' ejes='no' ">
+            <param name="C_01" value="id='S' tipo='numérico' interfaz='pulsador' región='sur' espacio='E1' nombre='S' expresión='(0,0)' incr='1' min='0' max='7' visible='sí' ">
+            <param name="C_02" value="id='sig' interfaz='botón' tipo='numérico' región='interior' espacio='E1' nombre='_._' expresión='(390,5,20,20)' color='222222' color-int='f0f8ff' fuente puntos='19' imagen='./img/sig.png' acción='calcular' parámetro='S=S+1' dibujar-si='S<7' activo-si='S<7' ">
+            <param name="C_03" value="id='ant' interfaz='botón' tipo='numérico' región='interior' espacio='E1' nombre='_._' expresión='(360,5,20,20)' color='222222' color-int='f0f8ff' fuente puntos='19' imagen='./img/ant.png' acción='calcular' parámetro='S=S-1' dibujar-si='S>0' activo-si='S>0' ">
+            <param name="C_04" value="id='iniciar' interfaz='botón' tipo='numérico' región='interior' espacio='E1' expresión='(20,5,110,25)' color='222222' color-int='f0f8ff' fuente puntos='19' imagen='img/iniciofr.png' acción='inicio' ">
+            <param name="C_05" value="id='escalera' interfaz='botón' tipo='numérico' región='interior' espacio='E1' nombre='_._' expresión='(80,0,260,25)' color='222222' color-int='f0f8ff' fuente puntos='19' imagen='vacio.gif' acción='abrir Escena' parámetro='./escalera_superficies.htm' dibujar-si='S=7' ">
+            <param name="A_01" value="id='cox' expresión='ent(E1.mouse_x)' evaluar='siempre' constante='sí' ">
+            <param name="A_02" value="id='coy' expresión='ent(E1.mouse_y)' evaluar='siempre' constante='sí' ">
+            <param name="G_01" value="espacio='E1' tipo='polígono' color='20303a' coord_abs='no' expresión='(-5,5)(5,5)(5,-5)(-5,-5)(-5,5)' relleno='9200ffff' ancho='3' ">
+            <param name="G_02" value="espacio='E1' tipo='segmento' color='000000' dibujar-si='(S>0)&(S<5)' coord_abs='no' expresión='(-4+s,-5.2)(-4+s,-4.8)' familia='s' s.intervalo='[0,8]' s.pasos='8' tamaño='0' ancho='1' font_family='Monospaced' fuente puntos='12' ">
+            <param name="G_03" value="espacio='E1' tipo='segmento' color='000000' dibujar-si='(S>1)&(S<5)' coord_abs='no' expresión='(-5.2,-4+s)(-4.8,-4+s)' familia='s' s.intervalo='[0,8]' s.pasos='8' tamaño='0' ancho='1' font_family='Monospaced' fuente puntos='12' ">
+            <param name="G_04" value="espacio='E1' tipo='segmento' color='404040' dibujar-si='S>3' coord_abs='no' expresión='(-5,4-s)(5,4-s)' familia='s' s.intervalo='[0,8]' s.pasos='8' decimales='0' tamaño='0' ancho='1' font_family='Monospaced' fuente puntos='12' ">
+            <param name="G_05" value="espacio='E1' tipo='segmento' color='404040' dibujar-si='S>2' coord_abs='no' expresión='(-4+s,5)(-4+s,-5)' familia='s' s.intervalo='[0,8]' s.pasos='8' decimales='0' tamaño='0' ancho='1' font_family='Monospaced' fuente puntos='12' ">
+            <param name="G_06" value="espacio='E1' tipo='polígono' color='20303a' dibujar-si='S=6' coord_abs='no' expresión='(-5,5)(-4,5)(-4,4)(-5,4)(-5,5)' relleno='ffff00' ancho='3' ">
+            <param name="G_07" value="espacio='E1' tipo='texto' color='20303a' dibujar-si='S=0' coord_abs='sí' expresión='[40,320]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red64\green64\blue64;}\cf0\f0\fs28\b Veremos como podemos conseguir el primer\b0\par\cf0\f0\fs28\b submúltiplo del metro cuadrado y su relación.\b0\par\cf0\f0\fs28 }' ancho='1' negrita='sí' fuente puntos='14' align='a_left' anchor='a_top_left' ">
+            <param name="G_08" value="espacio='E1' tipo='texto' color='20303a' dibujar-si='S=0' coord_abs='sí' expresión='[182,155]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}{\colortbl\red0\green0\blue0;\red0\green0\blue255;}\cf0\f0\fs80\b 1 m\b0\b{\*\mjaformula{\supix\b 2\b0}}\b0\cf1\f1\fs24 \par\cf1\f1\fs24 }' ancho='1' negrita='sí' fuente puntos='40' align='a_left' anchor='a_top_left' ">
+            <param name="G_09" value="espacio='E1' tipo='punto' color='20303a' dibujar-si='S=0' coord_abs='no' expresión='(-2,-5.9)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}\f0\fs28\b 1 metro de lado\b0\par\f0\fs28 }' tamaño='0' negrita='sí' fuente puntos='14' ">
+            <param name="G_10" value="espacio='E1' tipo='punto' color='20303a' dibujar-si='S=0' coord_abs='no' expresión='(-8.5,0.5)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}\f0\fs28\b 1 metro \b0\par\f0\fs28\b de lado\b0\par\f0\fs28 }' tamaño='0' negrita='sí' fuente puntos='14' ">
+            <param name="G_11" value="espacio='E1' tipo='punto' color='20303a' dibujar-si='(S>0)&(S<5)' coord_abs='no' expresión='(-2,-5.9)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}\f0\fs28\b 1 metro de lado\b0\par\f0\fs28\b = 10 dm de lado\b0\par\f1\fs24  \par\f1\fs24 }' tamaño='0' negrita='sí' fuente puntos='14' ">
+            <param name="G_12" value="espacio='E1' tipo='punto' color='20303a' dibujar-si='(S>1)&(S<5)' coord_abs='no' expresión='(-8.5,0.5)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}\f0\fs28\b 1 metro \b0\par\f0\fs28\b de lado\b0\par\f0\fs28\b = 10 dm\b0\par\f0\fs28\b de lado\b0\par\f1\fs24 }' tamaño='0' negrita='sí' fuente puntos='14' ">
+            <param name="G_13" value="espacio='E1' tipo='texto' color='20303a' dibujar-si='S=6' coord_abs='sí' expresión='[40,320]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red64\green64\blue64;\red0\green0\blue0;}\cfe0\f0\fs28\b Cada cuadrado pequeño tiene un área de \b0\par\cf0\f0\fs28\b 1 decímetro cuadrado  (\b0\cf1\i\b dm\b0\i0{\*\mjaformula{\supix\i\b 2\b0\i0}}\cf0\fs32\b  )\b0\par\cf0\f0\fs32 \par\cf0\f0\fs32 }' ancho='1' negrita='sí' fuente puntos='14' align='a_left' anchor='a_top_left' ">
+            <param name="G_14" value="espacio='E1' tipo='polígono' color='20303a' dibujar-si='S=7' coord_abs='no' expresión='(-5+s,5)(-4+s,5)(-4+s,4)(-5+s,4)(-5+s,5)' familia='s' s.intervalo='[0,9]' s.pasos='9' relleno='ffff00' ancho='3' ">
+            <param name="G_15" value="espacio='E1' tipo='polígono' color='20303a' dibujar-si='S=7' coord_abs='no' expresión='(-5,5)(5,5)(5,-5)(-5,-5)(-5,5)' relleno='ffff00' ancho='3' ">
+            <param name="G_16" value="espacio='E1' tipo='texto' color='20303a' dibujar-si='S=5' coord_abs='sí' expresión='[40,320]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red64\green64\blue64;}\cf0\f0\fs28\b El cuadrado está dividido en cien cuadrados pequeños.\b0\par\cf0\f0\fs28\b de 1 decímetro de lado.\b0\par\cf0\f0\fs28 }' ancho='1' negrita='sí' fuente puntos='14' align='a_left' anchor='a_top_left' ">
+            <param name="G_17" value="espacio='E1' tipo='segmento' color='20303a' dibujar-si='S=7' coord_abs='no' expresión='(-5,4-s)(5,4-s)' familia='s' s.intervalo='[0,8]' s.pasos='8' decimales='0' tamaño='0' ancho='1' font_family='Monospaced' fuente puntos='12' ">
+            <param name="G_18" value="espacio='E1' tipo='segmento' color='20303a' dibujar-si='S=7' coord_abs='no' expresión='(-4+s,5)(-4+s,-5)' familia='s' s.intervalo='[0,8]' s.pasos='8' decimales='0' tamaño='0' ancho='1' font_family='Monospaced' fuente puntos='12' ">
+            <param name="G_19" value="espacio='E1' tipo='texto' color='20303a' dibujar-si='S=7' coord_abs='sí' expresión='[140,320]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red64\green64\blue64;}\cf0\f0\fs40\b 1 m\b0\b{\*\mjaformula{\supix\b 2\b0}}\b0\b   =  100 dm\b0\b{\*\mjaformula{\supix\b 2\b0}}\b0\b  \b0\fs36\b  \b0\par\cf0\f0\fs36 }' ancho='1' negrita='sí' fuente puntos='20' align='a_left' anchor='a_top_left' ">
+          </ajs>
+          <br>
+
+          <p align="center">
+            <ajs name="Descartes" code="Descartes" width="300" height="25">
+              <param name="tamaño" value="300x25">
+              <param name="decimal_symbol" value=",">
+              <param name="nombre" value="Descartes">
+              <param name="Versión" value="5.5">
+              <param name="editable" value="sí">
+              <param name="Idioma" value="español">
+              <param name="Botones" value="créditos=no config=no inicio=no limpiar=no filas_norte=0 filas_sur=0 ancho_este=150 ancho_oeste=150 alto=23 ">
+              <param name="E_01" value="tipo='R2' id='E1' ancho='600' alto='25' red='no' red10='no' ejes='no' ">
+              <param name="C_01" value="id='Indicaciones' interfaz='botón' tipo='numérico' región='interior' espacio='E1' nombre='Indicaciones' expresión='(0,0,300,25)' color='003d64' color-int='d8eeff' negrita='sí' fuente puntos='14' acción='abrir Escena' parámetro='indicaciones.html' ">
+            </ajs>
+          </p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <hr width="95%" size="30" color="#FEE6B8">
+  <table border="0" align="center" cellpadding="6" cellspacing="2" bgcolor="#fff8e1" style="width: 95%;" background-color:="">
+    <tbody>
+      <tr colspan="2" rowspan="1">
+        <td style="height: 50px;">
+          <h3><strong><font face="Verdana" color="#006699">Escala de unidades de área y superficie</font><br>
+          </strong></h3>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" width="50" valign="middle">
+          <ajs name="unidades_superficie_b" code="Descartes.class" width="441" height="361">
+            <param name="tamaño" value="441x361">
+            <param name="decimal_symbol" value=",">
+            <param name="nombre" value="unidades_superficie_b">
+            <param name="Versión" value="5.5">
+            <param name="editable" value="sí">
+            <param name="Idioma" value="español">
+            <param name="Botones" value="créditos=sí config=no inicio=no limpiar=no filas_norte=0 filas_sur=0 ancho_este=150 ancho_oeste=150 alto=0 ">
+            <param name="E_01" value="tipo='R2' id='E1' fijo='sí' escala='20' O.x='-1' O.y='-1' fondo='ffffcc' red='no' red10='no' ejes='no' ">
+            <param name="C_01" value="id='sig' interfaz='botón' tipo='numérico' región='interior' espacio='E1' nombre='_._' expresión='(40,8,20,20)' color='222222' color-int='f0f8ff' fuente puntos='19' imagen='./img/sig.png' acción='calcular' parámetro='S=S+1' dibujar-si='(S<6)|(S=12)' activo-si='(S<6)|(S=12)' ">
+            <param name="C_02" value="id='iniciar' interfaz='botón' tipo='numérico' región='interior' espacio='E1' expresión='(300,5,110,25)' color='222222' color-int='f0f8ff' fuente puntos='19' imagen='img/iniciofr.png' acción='inicio' ">
+            <param name="C_03" value="id='ant' interfaz='botón' tipo='numérico' región='interior' espacio='E1' nombre='_._' expresión='(40,8,20,20)' color='222222' color-int='f0f8ff' fuente puntos='19' imagen='./img/ant.png' acción='calcular' parámetro='S=S+1' dibujar-si='(S>5)&(S<12)' activo-si='(S>5)&(S<12)' ">
+            <param name="A_01" value="id='cox' expresión='ent(E1.mouse_x)' evaluar='siempre' constante='sí' ">
+            <param name="A_02" value="id='coy' expresión='ent(E1.mouse_y)' evaluar='siempre' constante='sí' ">
+            <param name="A_03" value="id='e3' evento='sí' condición='S=13' acción='calcular' parámetro='S=1' ejecución='siempre' ">
+            <param name="G_01" value="espacio='E1' tipo='polígono' color='000000' coord_abs='no' expresión='(-10,-7)(-7,-7)(-7,-5)(-4,-5)(-4,-3)(-1,-3)(-1,-1)(2,-1)(2,1)(5,1)(5,3)(8,3)(8,5)(11,5)' ancho='3' ">
+            <param name="G_02" value="espacio='E1' tipo='texto' color='0000ff' coord_abs='sí' expresión='[218,170]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red157\green49\blue0;\red255\green90\blue0;}\cf0\f0\fs44 \cf1{\*\mjaformula\b m\b0{\supix\b 2\b0}}\b = \b0\cf0\b ca\b0\par\cf0\f0\fs44 }' ancho='1' negrita='sí' fuente puntos='22' align='a_left' anchor='a_top_left' ">
+            <param name="G_03" value="espacio='E1' tipo='texto' color='0000ff' coord_abs='sí' expresión='[256,130]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Courier New;\f1\fcharset0 Arial;}{\colortbl\red0\green0\blue255;\red0\green165\blue0;\red157\green49\blue0;}\cf0\f0\fs24 \cf1\f1\fs44\b{\*\mjaformula\b dam\b0{\supix\b 2\b0}}\b0\b = \b0\cf2\b a\b0\cf1\b  \b0\par\cf0\f0\fs24 }' ancho='1' negrita='sí' fuente puntos='22' align='a_left' anchor='a_top_left' ">
+            <param name="G_04" value="espacio='E1' tipo='texto' color='0000ff' coord_abs='sí' expresión='[327,90]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Courier New;\f1\fcharset0 Arial;}{\colortbl\red0\green0\blue255;\red0\green165\blue0;\red157\green49\blue0;}\cf0\f0\fs24 \cf1\f1\fs44{\*\mjaformula\b hm\b0{\supix\b 2\b0}}\b = \b0\cf2\b ha\b0\par\cf2\f1\fs44 }' ancho='1' negrita='sí' fuente puntos='22' align='a_left' anchor='a_top_left' ">
+            <param name="G_05" value="espacio='E1' tipo='texto' color='0000ff' coord_abs='sí' expresión='[380,50]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Courier New;\f1\fcharset0 Arial;}{\colortbl\red0\green0\blue255;\red0\green165\blue0;}\cf0\f0\fs24 \cf1\f1\fs44{\*\mjaformula\b km\b0{\supix\b 2\b0}}\b  \b0\par\cf1\f1\fs44 }' ancho='1' negrita='sí' fuente puntos='22' align='a_left' anchor='a_top_left' ">
+            <param name="G_06" value="espacio='E1' tipo='texto' color='0000ff' coord_abs='sí' expresión='[145,210]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Courier New;\f1\fcharset0 Arial;}{\colortbl\red0\green0\blue255;\red0\green179\blue255;}\cf0\f0\fs24 \cf1\f1\fs44\b{\*\mjaformula\b dm\b0{\supix\b 2\b0}}\b0\b  \b0\par\cf0\f0\fs24 }' ancho='1' negrita='sí' fuente puntos='22' align='a_left' anchor='a_top_left' ">
+            <param name="G_07" value="espacio='E1' tipo='texto' color='azul' coord_abs='sí' expresión='[85,250]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red0\green179\blue255;\red0\green0\blue255;}\f1\fs44\b\cf0{\*\mjaformula cm{\supix 2}} \cf1\f2\fs24\b0\par }' ancho='1' negrita='sí' fuente puntos='22' align='left' anchor='top_left' ">
+            <param name="G_08" value="espacio='E1' tipo='texto' color='0000ff' coord_abs='sí' expresión='[20,290]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Courier New;\f1\fcharset0 Arial;}{\colortbl\red0\green0\blue255;\red0\green179\blue255;}\cf0\f0\fs24 \cf1\f1\fs44\b{\*\mjaformula\b mm\b0{\supix\b 2\b0}}\b0\b  \b0\par\cf0\f0\fs24 }' ancho='1' negrita='sí' fuente puntos='22' align='a_left' anchor='a_top_left' ">
+            <param name="G_09" value="espacio='E1' tipo='flecha' color='404040' dibujar-si='(S>0)&(S<7)' coord_abs='no' expresión='(-9+3*(S-1),-5.5+2*(S-1))(-7+3*(S-1),-4+2*(S-1))' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;}\f0\fs40 }' ancho='5' punta='8' flecha='404040' fuente puntos='12' ">
+            <param name="G_10" value="espacio='E1' tipo='punto' color='0000ff' dibujar-si='(S>0)&(S<7)' coord_abs='no' expresión='(-10.5+3*(S-1),-4.2+2*(S-1))' familia='s' s.intervalo='[0,5]' s.pasos='5' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red64\green64\blue64;}\cf0\f0\fs28 \b{\*\mjaformula{\fraction{\num\b ·\b0}{\den\b ·\b0}}}\b0\b 100\b0\par\cf0\f0\fs28 }' fijo='no' tamaño='0' negrita='sí' fuente puntos='14' ">
+            <param name="G_11" value="espacio='E1' tipo='flecha' color='grisObscuro' dibujar-si='S>6' coord_abs='no' expresión='(8+3*(6-S+1),6+2*(6-S+1))(6+3*(6-S+1),4.5+2*(6-S+1))' familia='s' s.intervalo='[0,5]' s.pasos='5' ancho='5' punta='8' flecha='grisClaro' font_family='Times New Roman' fuente puntos='12' ">
+            <param name="G_12" value="espacio='E1' tipo='punto' color='azul' dibujar-si='S>6' coord_abs='no' expresión='(4.5+3*(6-S+1),5.8+2*(6-S+1))' familia='s' s.intervalo='[0,5]' s.pasos='5' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}{\colortbl\red171\green171\blue171;\red0\green0\blue255;}\f1\fs28\b\cf0 x 100\cf1\f2\fs24\b0\par}' fijo='no' tamaño='0' negrita='sí' font_family='Arial' fuente puntos='14' ">
+            <param name="G_13" value="espacio='E1' tipo='texto' color='0000ff' dibujar-si='S=1' coord_abs='sí' expresión='[10,90]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}{\colortbl\red64\green64\blue64;\red0\green0\blue255;}\cf0\f0\fs36\b 1\b0{\*\mjaformula\b mm\b0{\supix\b 2\b0}\b  = \b0{\fraction{\num\b 1\b0}{\den\b 100\b0}}\b  cm\b0{\supix\b 2\b0}}\cf1\f1\fs24 \par\cf1\f1\fs24 }' ancho='1' negrita='sí' align='a_left' anchor='a_top_left' ">
+            <param name="G_14" value="espacio='E1' tipo='texto' color='0000ff' dibujar-si='S=2' coord_abs='sí' expresión='[10,90]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}{\colortbl\red64\green64\blue64;\red0\green0\blue255;}\cf0\f0\fs36\b 1\b0{\*\mjaformula\b cm\b0{\supix\b 2\b0}\b  = \b0{\fraction{\num\b 1\b0}{\den\b 100\b0}}\b  dm\b0{\supix\b 2\b0}}\cf1\f1\fs24 \par\cf1\f1\fs24 }' ancho='1' negrita='sí' align='a_left' anchor='a_top_left' ">
+            <param name="G_15" value="espacio='E1' tipo='texto' color='0000ff' dibujar-si='S=3' coord_abs='sí' expresión='[10,90]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}{\colortbl\red64\green64\blue64;\red0\green0\blue255;}\cf0\f0\fs36\b 1\b0{\*\mjaformula\b dm\b0{\supix\b 2\b0}\b  = \b0{\fraction{\num\b 1\b0}{\den\b 100\b0}}\b  m\b0{\supix\b 2\b0}}\cf1\f1\fs24 \par\cf1\f1\fs24 }' ancho='1' negrita='sí' align='a_left' anchor='a_top_left' ">
+            <param name="G_16" value="espacio='E1' tipo='texto' color='0000ff' dibujar-si='S=4' coord_abs='sí' expresión='[10,90]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}{\colortbl\red64\green64\blue64;\red0\green0\blue255;\red157\green49\blue0;}\cf0\f0\fs36\b 1\b0{\*\mjaformula\b m\b0{\supix\b 2\b0}\b  = \b0{\fraction{\num\b 1\b0}{\den\b 100\b0}}\b  dam\b0{\supix\b 2\b0}}\cf1\f1\fs24 \par\cf2\f0\fs36\b 1 ca = \b0\b{\*\mjaformula{\fraction{\num\b 1\b0}{\den\b 100\b0}}\b  a\b0}\b0\cf0\b \b0\par\cf2\f0\fs36\b ca = centiarea\b0\par\cf2\f0\fs36\b a = área\b0\par\cf1\f1\fs24 \par\cf1\f1\fs24 }' ancho='1' negrita='sí' align='a_left' anchor='a_top_left' ">
+            <param name="G_17" value="espacio='E1' tipo='texto' color='0000ff' dibujar-si='S=5' coord_abs='sí' expresión='[10,90]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}{\colortbl\red64\green64\blue64;\red0\green0\blue255;\red157\green49\blue0;}\cf0\f0\fs36\b 1\b0{\*\mjaformula\b dam\b0{\supix\b 2\b0}\b  = \b0{\fraction{\num\b 1\b0}{\den\b 100\b0}}\b  hm\b0{\supix\b 2\b0}}\cf1\f1\fs24 \par\cf2\f0\fs36\b 1 a = \b0\b{\*\mjaformula{\fraction{\num\b 1\b0}{\den\b 100\b0}}\b  ha\b0}\b0\cf0\b \b0\par\cf2\f0\fs36\b a = área\b0\par\cf2\f0\fs36\b ha = hectarea\b0\par\cf1\f1\fs24 }' ancho='1' negrita='sí' align='a_left' anchor='a_top_left' ">
+            <param name="G_18" value="espacio='E1' tipo='texto' color='0000ff' dibujar-si='S=6' coord_abs='sí' expresión='[10,90]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}{\colortbl\red64\green64\blue64;\red0\green0\blue255;}\cf0\f0\fs36\b 1\b0{\*\mjaformula\b hm\b0{\supix\b 2\b0}\b  = \b0{\fraction{\num\b 1\b0}{\den\b 100\b0}}\b  km\b0{\supix\b 2\b0}}\cf1\f1\fs24 \par\cf0\f0\fs36\b                 \b0\par\cf1\f1\fs24 }' ancho='1' negrita='sí' align='a_left' anchor='a_top_left' ">
+            <param name="G_19" value="espacio='E1' tipo='texto' color='0000ff' dibujar-si='S=7' coord_abs='sí' expresión='[250,230]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}{\colortbl\red125\green125\blue133;\red0\green0\blue255;}\cf0\f0\fs36\b 1\b0{\*\mjaformula\b km\b0{\supix\b 2\b0}\b  = 100 hm\b0{\supix\b 2\b0}}\cf1\f1\fs24 \par\cf1\f1\fs24 }' ancho='1' negrita='sí' align='a_left' anchor='a_top_left' ">
+            <param name="G_20" value="espacio='E1' tipo='texto' color='0000ff' dibujar-si='S=8' coord_abs='sí' expresión='[250,230]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red125\green125\blue133;\red157\green49\blue0;}\cf0\f0\fs36\b 1\b0{\*\mjaformula\b hm\b0{\supix\b 2\b0}\b  = 100 dam\b0{\supix\b 2\b0}}\cf1 \par\cf1\f0\fs36\b 1 ha = 100 a\b0\par\cf1\f0\fs36\b ha = hectarea\b0\par\cf1\f0\fs36\b a = área\b0\par\cf1\f0\fs36 }' ancho='1' negrita='sí' align='a_left' anchor='a_top_left' ">
+            <param name="G_21" value="espacio='E1' tipo='texto' color='0000ff' dibujar-si='S=9' coord_abs='sí' expresión='[250,230]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red125\green125\blue133;\red157\green49\blue0;}\cf0\f0\fs36\b 1\b0{\*\mjaformula\b dam\b0{\supix\b 2\b0}\b  = 100 m\b0{\supix\b 2\b0}}\cf1 \par\cf1\f0\fs36\b 1 a = 100 ca\b0\par\cf1\f0\fs36\b a = área\b0\par\cf1\f0\fs36\b ca = centiarea\b0\par\cf1\f0\fs36 }' ancho='1' negrita='sí' align='a_left' anchor='a_top_left' ">
+            <param name="G_22" value="espacio='E1' tipo='texto' color='0000ff' dibujar-si='S=10' coord_abs='sí' expresión='[250,230]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}{\colortbl\red125\green125\blue133;\red0\green0\blue255;}\cf0\f0\fs36\b 1\b0{\*\mjaformula\b m\b0{\supix\b 2\b0}\b  = 100 dm\b0{\supix\b 2\b0}}\cf1\f1\fs24 \par\cf1\f1\fs24 \par\cf0\f0\fs36 }' ancho='1' negrita='sí' align='a_left' anchor='a_top_left' ">
+            <param name="G_23" value="espacio='E1' tipo='texto' color='0000ff' dibujar-si='S=11' coord_abs='sí' expresión='[250,230]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}{\colortbl\red125\green125\blue133;\red0\green0\blue255;}\cf0\f0\fs36\b 1\b0{\*\mjaformula\b dm\b0{\supix\b 2\b0}\b  = 100 cm\b0{\supix\b 2\b0}}\cf1\f1\fs24 \par\cf1\f1\fs24 }' ancho='1' negrita='sí' align='a_left' anchor='a_top_left' ">
+            <param name="G_24" value="espacio='E1' tipo='texto' color='0000ff' dibujar-si='S=12' coord_abs='sí' expresión='[250,230]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}{\colortbl\red125\green125\blue133;\red0\green0\blue255;}\cf0\f0\fs36\b 1\b0{\*\mjaformula\b cm\b0{\supix\b 2\b0}\b  = 100 mm\b0{\supix\b 2\b0}}\cf1\f1\fs24 \par\cf1\f1\fs24 }' ancho='1' negrita='sí' align='a_left' anchor='a_top_left' ">
+            <param name="G_25" value="espacio='E1' tipo='texto' color='0000ff' dibujar-si='(S>0)&(S<7)' coord_abs='sí' expresión='[20,30]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red64\green64\blue64;}\cf0\f0\fs28\b Para pasar de una unidad a su múltiplo inmediatamente \b0\par\cf0\f0\fs28\b superior debemos dividir por 100.\b0\par\cf0\f0\fs28 }' ancho='1' negrita='sí' fuente puntos='14' align='a_left' anchor='a_top_left' ">
+            <param name="G_26" value="espacio='E1' tipo='texto' color='0000ff' dibujar-si='(S>6)' coord_abs='sí' expresión='[20,30]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red136\green136\blue136;}\cf0\f0\fs28\b Para pasar de una unidad a su submúltiplo\b0\par\cf0\f0\fs28\b inferior debemos multiplicar por 100.\b0\par\cf0\f0\fs28 }' ancho='1' negrita='sí' fuente puntos='14' align='a_left' anchor='a_top_left' ">
+            <param name="G_27" value="espacio='E1' tipo='texto' color='0000ff' coord_abs='sí' expresión='[50,330]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red255\green138\blue0;\red255\green141\blue0;}\cf1\f0\fs36\b UNIDADES DE ÁREA O SUPERFICIE\b0\par\cf1\f0\fs36 }' ancho='1' negrita='sí' align='a_center' anchor='a_top_left' ">
+            <param name="G_28" value="espacio='E1' tipo='texto' color='20303a' dibujar-si='kk=1' coord_abs='sí' expresión='(20,40)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red255\green107\blue0;}\cf0\f0\fs32\b Exercice suivant\b0}' ancho='1' align='a_left' anchor='a_top_left' ">
+          </ajs>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <hr width="95%" size="30" color="#FEE6B8">
+  <table border="0" align="center" cellpadding="6" cellspacing="2" bgcolor="#fff8e1" style="width: 95%;" background-color:="">
+    <tbody>
+      <tr colspan="2" rowspan="1">
+        <td style="height: 50px;">
+          <h3><strong><font face="Verdana" color="#006699">Ejercicios de conversión de área o superficie</font><br>
+          </strong></h3>
+        </td>
+      </tr>
+      <tr>
+        <td align="center" width="50" valign="middle">
+          <ajs name="ej_cambio_unidades" code="Descartes.class" width="840" height="362">
+            <param name="tamaño" value="840x362">
+            <param name="decimal_symbol" value=",">
+            <param name="nombre" value="ej_cambio_unidades">
+            <param name="Versión" value="5.5">
+            <param name="editable" value="sí">
+            <param name="Idioma" value="español">
+            <param name="Botones" value="créditos=no config=no inicio=sí limpiar=sí filas_norte=0 filas_sur=0 ancho_este=150 ancho_oeste=150 alto=0 ">
+            <param name="E_01" value="tipo='R2' id='E1' ancho='50%' fijo='sí' escala='33' O.x='-195' O.y='25' fondo='ffffcc' red='no' red10='no' ejes='no' ">
+            <param name="E_02" value="tipo='R2' id='texto' ancho='50%' alto='80' fijo='sí' fondo='ffffcc' red='no' red10='no' ejes='no' ">
+            <param name="E_03" value="tipo='R2' id='E4' x='420' ancho='50%' fondo='ffffcc' red='no' red10='no' ejes='no' ">
+            <param name="E_04" value="tipo='R2' id='controles' y='335' fijo='sí' fondo='ffffcc' red='no' red10='no' ejes='no' ">
+            <param name="C_01" value="id='Inicio' interfaz='botón' tipo='numérico' región='interior' espacio='controles' expresión='(10,0,110,22)' color='222222' color-int='f0f8ff' fuente puntos='19' imagen='img/iniciofr.png' acción='inicio' dibujar-si='n>-1' ">
+            <param name="C_02" value="id='e' tipo='numérico' interfaz='pulsador' región='exterior' espacio='E1' nombre='e' expresión='(0,0)' incr='1' min='0' max='1' discreto='sí' decimales='0' visible='no' ">
+            <param name="C_03" value="id='controles.e' interfaz='botón' tipo='numérico' región='interior' espacio='controles' expresión='(270,0,135,22)' color='222222' color-int='f0f8ff' fuente puntos='19' imagen='img/otroejerciciofr.png' acción='calcular' parámetro='sa=0;b=0;e=0' dibujar-si='(n=1)&(e=1)' ">
+            <param name="C_04" value="id='E1.e' interfaz='botón' tipo='numérico' región='interior' espacio='controles' expresión='(300,0,70,22)' valor='1' color='222222' color-int='f0f8ff' fuente puntos='19' imagen='./img/versolucionfr.png' acción='calcular' parámetro='e=1' dibujar-si='(n=1)&(e=0)' ">
+            <param name="C_05" value="id='sa' tipo='numérico' interfaz='campo de texto' región='interior' espacio='E1' expresión='(292,300,90,22)' decimales='12' fijo='no' visible='sí' dibujar-si='e=0' ">
+            <param name="C_06" value="id='n0' tipo='numérico' interfaz='campo de texto' región='sur' espacio='E1' nombre='_._' expresión='(0,0,150,0)' valor='numex' decimales='0' visible='sí' acción='calcular' ">
+            <param name="A_01" value="id='puntos()' algoritmo='sí' expresión='x' hacer='y1=ent(rnd*7)-3;y2=ent(rnd*7)-3;ca=ent(rnd*99);uni=&squot;mm&squot;;uni=(y1=-2)?&squot;cm&squot;:uni;uni=(y1=-1)?&squot;dm&squot;:uni;uni=(y1=0)?&squot; m&squot;:uni;uni=(y1=1)?&squot;dam&squot;:uni;uni=(y1=2)?&squot;hm&squot;:uni;uni=(y1=3)?&squot;km&squot;:uni;uni2=&squot;mm&squot;;uni2=(y2=-2)?&squot;cm&squot;:uni2;uni2=(y2=-1)?&squot;dm&squot;:uni2;uni2=(y2=0)?&squot; m&squot;:uni2;uni2=(y2=1)?&squot;dam&squot;:uni2;uni2=(y2=2)?&squot;hm&squot;:uni2;uni2=(y2=3)?&squot;km&squot;:uni2;ex=(y2>y1)?-1:1;sube=(ex=-1)?&squot;subir&squot;:&squot;bajar&squot;;nivel=(abs(y2-y1)>1)?&squot;peldaños&squot;:&squot;peldaño&squot;;multi=(ex=-1)?&squot;dividir por &squot;:&squot;multiplicar por &squot;;por=(ex=-1)?&squot;par &squot;:&squot;par &squot;;vez=(abs(y2-y1)=1)?1:2;veces=vez=1?&squot;veces &squot;:&squot; veces &squot;;multi2=(ex=-1)?&squot;Dividir por &squot;:&squot;Multiplicar por &squot;;;' mientras='(y1=y2)|(abs(y1-y2)>3)|(ca=1)|(ca=0)' tipo='función' ">
+            <param name="A_02" value="id='n' expresión='1' evaluar='una-sola-vez' constante='sí' ">
+            <param name="A_03" value="id='nuevoej' evento='sí' condición='e=0' acción='calcular' parámetro='puntos()' ejecución='alternar' ">
+            <param name="A_04" value="id='solucion' evento='sí' condición='e=1' acción='calcular' parámetro='sol=ca*100^(y1-y2);b=(abs(sol-sa)<0.000000000001)?1:0; numex=numex+1' ejecución='alternar' ">
+            <param name="A_05" value="id='correctos' evento='sí' condición='b=1' acción='calcular' parámetro='ebien=ebien+1' ejecución='alternar' ">
+            <param name="G_01" value="espacio='E1' tipo='segmento' color='0000ff' coord_abs='no' expresión='(-0.25,3.2)(-0.25,-3.5)' tamaño='2' ancho='4' font_family='Monospaced' fuente puntos='12' ">
+            <param name="G_02" value="espacio='E1' tipo='segmento' color='0000ff' coord_abs='no' expresión='(1.6,3.2)(1.6,-3.5)' tamaño='2' ancho='4' font_family='Monospaced' fuente puntos='12' ">
+            <param name="G_03" value="espacio='E1' tipo='segmento' color='0000ff' coord_abs='no' expresión='(-0.25,-3.2+s*1.2)(1.55,-3.2+s*1.2)' familia='s' s.intervalo='[0,5]' s.pasos='6' tamaño='2' ancho='3' font_family='Monospaced' fuente puntos='12' ">
+            <param name="G_04" value="espacio='texto' tipo='imagen' dibujar-si='(b=1)&(e=1)' coord_abs='sí' expresión='(390,20)' archivo='img/bien.png' ">
+            <param name="G_05" value="espacio='texto' tipo='imagen' dibujar-si='(e=1)&(b=0)' coord_abs='sí' expresión='(390,20)' archivo='img/mal.png' ">
+            <param name="G_06" value="espacio='E1' tipo='texto' color='c0c0c0' dibujar-si='n=1' coord_abs='sí' expresión='[20,90]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}\f0\fs32\b km\b0\b{\*\mjaformula{\supix\b 2\b0}}\b0\f1\fs24 \par\f1\fs24 }' ancho='1' negrita='sí' fuente puntos='16' align='a_left' anchor='a_top_left' ">
+            <param name="G_07" value="espacio='E1' tipo='texto' color='c0c0c0' dibujar-si='n=1' coord_abs='sí' expresión='[20,123]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}\f0\fs32\b hm\b0\b{\*\mjaformula{\supix\b 2\b0}}\b0\f1\fs24 \par\f1\fs24 }' ancho='1' negrita='sí' fuente puntos='16' align='a_left' anchor='a_top_left' ">
+            <param name="G_08" value="espacio='E1' tipo='texto' color='c0c0c0' dibujar-si='n=1' coord_abs='sí' expresión='[20,156]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Courier New;}\f1\fs32\b dam{\*\mjaformula{\supix\f2\fs22\b 2}}\f3\fs24\b0\par}' ancho='1' negrita='sí' fuente puntos='16' align='a_left' anchor='a_top_left' ">
+            <param name="G_09" value="espacio='E1' tipo='texto' color='c0c0c0' dibujar-si='n=1' coord_abs='sí' expresión='[20,189]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Courier New;}\f1\fs32\b m{\*\mjaformula{\supix\f2\fs22\b 2}}\f3\fs24\b0\par}' ancho='1' negrita='sí' fuente puntos='16' align='a_left' anchor='a_top_left' ">
+            <param name="G_10" value="espacio='E1' tipo='texto' color='c0c0c0' dibujar-si='n=1' coord_abs='sí' expresión='[20,222]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Courier New;}\f1\fs32\b dm{\*\mjaformula{\supix\f2\fs22\b 2}}\f3\fs24\b0\par}' ancho='1' negrita='sí' fuente puntos='16' align='a_left' anchor='a_top_left' ">
+            <param name="G_11" value="espacio='E1' tipo='texto' color='c0c0c0' dibujar-si='n=1' coord_abs='sí' expresión='[20,255]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Courier New;}\f1\fs32\b cm{\*\mjaformula{\supix\f2\fs22\b 2}}\f3\fs24\b0\par}' ancho='1' negrita='sí' fuente puntos='16' align='a_left' anchor='a_top_left' ">
+            <param name="G_12" value="espacio='E1' tipo='texto' color='c0c0c0' dibujar-si='n=1' coord_abs='sí' expresión='[20,288]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}\f0\fs32\b mm\b0\b{\*\mjaformula{\supix\b 2\b0}}\b0\f1\fs24 \par\f1\fs24 }' ancho='1' negrita='sí' fuente puntos='16' align='a_left' anchor='a_top_left' ">
+            <param name="G_13" value="espacio='E1' tipo='flecha' color='990000' dibujar-si='n=1' coord_abs='no' expresión='(0,y1)(0,y2)' ancho='5' punta='8' flecha='ff6600' font_family='Monospaced' fuente puntos='12' ">
+            <param name="G_14" value="espacio='E1' tipo='texto' color='990000' dibujar-si='(n=1)&((y1=3)|(y2=3))' coord_abs='sí' expresión='[20,90]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}\f0\fs32\b km\b0\b{\*\mjaformula{\supix\b 2\b0}}\b0\f1\fs24 \par\f1\fs24 }' ancho='1' negrita='sí' fuente puntos='16' align='a_left' anchor='a_top_left' ">
+            <param name="G_15" value="espacio='E1' tipo='texto' color='990000' dibujar-si='(n=1)&((y1=2)|(y2=2))' coord_abs='sí' expresión='[20,123]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}\f0\fs32\b hm\b0\b{\*\mjaformula{\supix\b 2\b0}}\b0\f1\fs24 \par\f1\fs24 }' ancho='1' negrita='sí' fuente puntos='16' align='a_left' anchor='a_top_left' ">
+            <param name="G_16" value="espacio='E1' tipo='texto' color='990000' dibujar-si='(n=1)&((y1=1)|(y2=1))' coord_abs='sí' expresión='[20,156]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Courier New;}\f1\fs32\b dam{\*\mjaformula{\supix\f2\fs22\b 2}}\f3\fs24\b0\par}' ancho='1' negrita='sí' fuente puntos='16' align='a_left' anchor='a_top_left' ">
+            <param name="G_17" value="espacio='E1' tipo='texto' color='990000' dibujar-si='(n=1)&((y1=0)|(y2=0))' coord_abs='sí' expresión='[20,189]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Courier New;}\f1\fs32\b m{\*\mjaformula{\supix\f2\fs22\b 2}}\f3\fs24\b0\par}' ancho='1' negrita='sí' fuente puntos='16' align='a_left' anchor='a_top_left' ">
+            <param name="G_18" value="espacio='E1' tipo='texto' color='990000' dibujar-si='(n=1)&((y1=-1)|(y2=-1))' coord_abs='sí' expresión='[20,222]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Arial;\f3\fcharset0 Courier New;}\f1\fs32\b dm{\*\mjaformula{\supix\f2\fs22\b 2}}\f3\fs24\b0\par}' ancho='1' negrita='sí' fuente puntos='16' align='a_left' anchor='a_top_left' ">
+            <param name="G_19" value="espacio='E1' tipo='texto' color='990000' dibujar-si='(n=1)&((y1=-2)|(y2=-2))' coord_abs='sí' expresión='[20,255]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}\f0\fs32\b cm\b0\b{\*\mjaformula{\supix\b 2\b0}}\b0\f1\fs24 \par\f1\fs24 }' ancho='1' negrita='sí' fuente puntos='16' align='a_left' anchor='a_top_left' ">
+            <param name="G_20" value="espacio='E1' tipo='texto' color='990000' dibujar-si='(n=1)&((y1=-3)|(y2=-3))' coord_abs='sí' expresión='[20,288]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}\f0\fs32\b mm\b0\b{\*\mjaformula{\supix\b 2\b0}}\b0\f1\fs24 \par\f1\fs24 }' ancho='1' negrita='sí' fuente puntos='16' align='a_left' anchor='a_top_left' ">
+            <param name="G_21" value="espacio='texto' tipo='texto' color='990000' dibujar-si='(n=1)' coord_abs='sí' expresión='[15,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red0\green145\blue255;}\cf0\f0\fs40\b Completa \b0{\*\mjaformula\b{\expr ca\decimals 2\fixed0}\b0\b{\expr uni\decimals 2\fixed0}\b0{\supix\b 2\b0}}\b  =            \b0{\*\mjaformula\b{\expr e#1?uni2:&squot;&squot;\decimals undefined\fixed0}\b0{\supix\b{\expr e#1?2:&squot;&squot;\decimals 2\fixed0}\b0}}\b             \b0\par\cf0\f0\fs40 \par\cf0\f0\fs40 }' ancho='1' negrita='sí' fuente puntos='20' align='a_left' anchor='a_top_left' ">
+            <param name="G_22" value="espacio='E1' tipo='texto' color='990000' dibujar-si='(n=1)&(e=1)' coord_abs='sí' expresión='[89,90]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red0\green152\blue0;}\cf0\f0\fs28\b Para pasar de \b0{\*\mjaformula\b{\expr uni\decimals 2\fixed0}\b0{\supix\b 2\b0}}\b  a \b0{\*\mjaformula\b{\expr uni2\decimals 0\fixed1}\b0{\supix\b 2\b0}}\par\cf0\f0\fs28\b hay que \b0{\*\mjaformula\b{\expr sube\decimals 0\fixed1}\b0} {\*\mjaformula\b{\expr abs(y2-y1)\decimals 0\fixed1}\b0} {\*\mjaformula\b{\expr nivel\decimals 0\fixed0}\b0\b .\b0}\b  \b0\par\cf0\f0\fs28\b hay que \b0{\*\mjaformula\b{\expr multi\decimals 0\fixed0}\b0}\b  100 \b0{\*\mjaformula\b{\expr abs(y2-y1)\decimals 0\fixed0}\b0} {\*\mjaformula\b{\expr veces\decimals 2\fixed0}\b0\b .\b0}\par\cf0\f0\fs28\b   \b0\par\cf0\f0\fs28 }' ancho='1' negrita='sí' fuente puntos='14' align='a_left' anchor='a_top_left' ">
+            <param name="G_23" value="espacio='E1' tipo='texto' color='990000' dibujar-si='(e=1)&(ex=1)&(vez=1)' coord_abs='sí' expresión='[86,160]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red0\green152\blue0;}\cf0\f0\fs28\b  El resultado es:\b0\par\cf0\f0\fs28 \par\cf0\f0\fs28\b             \b0{\*\mjaformula\b{\expr ca\decimals 1\fixed0}\b0} {\*\mjaformula\b{\expr uni\decimals 2\fixed0}\b0{\supix\b 2\b0}}\b =\b0{\*\mjaformula\b{\expr ca\decimals 1\fixed0}\b0}\b ·\b0{\*\mjaformula\b{\expr 100^(abs(y2-y1))\decimals 0\fixed1}\b0} {\*\mjaformula\b{\expr uni2\decimals 2\fixed0}\b0{\supix\b 2\b0}}\par\cf0\f0\fs28 \par\cf0\f0\fs40\b         \b0{\*\mjaformula\b{\expr ca\decimals 1\fixed0}\b0}\fs28  \fs40{\*\mjaformula\b{\expr uni\decimals 2\fixed0}\b0{\supix\b 2\b0}}\b =\b0{\*\mjaformula\b{\expr 100^(abs(y2-y1))*ca\decimals 0\fixed1}\b0  }\fs28 \fs40{\*\mjaformula\b{\expr uni2\decimals 2\fixed0}\b0{\supix\b 2\b0}}\fs28 \par\cf0\f0\fs28 }' ancho='1' negrita='sí' fuente puntos='14' align='a_left' anchor='a_top_left' ">
+            <param name="G_24" value="espacio='E1' tipo='texto' color='990000' dibujar-si='(e=1)&(ex=-1)&(vez=1)' coord_abs='sí' expresión='[86,160]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red192\green192\blue192;\red0\green152\blue0;}\cf0\f0\fs28\b  \b0\cf1\b El resultado es:\b0\par\cf1\f0\fs28 \par\cf1\f0\fs28\b             \b0{\*\mjaformula\b{\expr ca\decimals 1\fixed0}\b0} {\*\mjaformula\b{\expr uni\decimals 2\fixed0}\b0{\supix\b 2\b0}}\b =\b0\b{\*\mjaformula{\fraction{\num\b{\expr ca\decimals 1\fixed0}\b0}{\den\b{\expr 100\decimals 0\fixed1}\b0}}}\b0  {\*\mjaformula\b{\expr uni2\decimals 2\fixed0}\b0{\supix\b 2\b0}}\par\cf1\f0\fs28 \par\cf1\f0\fs40\b         \b0{\*\mjaformula\b{\expr ca\decimals 1\fixed0}\b0}\fs28  \fs40{\*\mjaformula\b{\expr uni\decimals 2\fixed0}\b0{\supix\b 2\b0}}\b =\b0{\*\mjaformula\b{\expr ca/100\decimals 11\fixed0}\b0}\fs28  \fs40{\*\mjaformula\b{\expr uni2\decimals 2\fixed0}\b0{\supix\b 2\b0}}\fs28 \par\cf1\f0\fs28 }' ancho='1' negrita='sí' fuente puntos='14' align='a_left' anchor='a_top_left' ">
+            <param name="G_25" value="espacio='E1' tipo='texto' color='990000' dibujar-si='(e=1)&(ex=1)&(vez=2)' coord_abs='sí' expresión='[86,160]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red0\green152\blue0;}\cf0\f0\fs28 {\*\mjaformula\b{\expr multi2\decimals 2\fixed0}\b0  }\b 100 \b0{\*\mjaformula\b{\expr abs(y2-y1)\decimals 0\fixed1}\b0} {\*\mjaformula\b{\expr veces\decimals 2\fixed0}\b0}\b  es igual\b0\par\cf0\f0\fs28\b   a \b0{\*\mjaformula\b{\expr multi\decimals 0\fixed0}\b0} {\*\mjaformula\b{\expr 100^(abs(y2-y1))\decimals 0\fixed0}\b0\b .\b0}\b  \b0\par\cf0\f0\fs28 \par\cf0\f0\fs28\b  El resultado es:\b0\par\cf0\f0\fs28\b              \b0{\*\mjaformula\b{\expr ca\decimals 1\fixed0}\b0} {\*\mjaformula\b{\expr uni\decimals 2\fixed0}\b0{\supix\b 2\b0}}\b =\b0{\*\mjaformula\b{\expr ca\decimals 1\fixed0}\b0}\b ·\b0{\*\mjaformula\b{\expr 100^(abs(y2-y1))\decimals 0\fixed1}\b0} {\*\mjaformula\b{\expr uni2\decimals 2\fixed0}\b0{\supix\b 2\b0}}\par\cf0\f0\fs28 \par\cf0\f0\fs40\b          \b0{\*\mjaformula\b{\expr ca\decimals 1\fixed0}\b0}\fs28 \fs40{\*\mjaformula\b{\expr uni\decimals 2\fixed0}\b0{\supix\b 2\b0}}\b =\b0{\*\mjaformula\b{\expr 100^(abs(y2-y1))*ca\decimals 0\fixed1}\b0}\fs28 \fs40{\*\mjaformula\b{\expr uni2\decimals 2\fixed0}\b0{\supix\b 2\b0}}\fs28 \par\cf0\f0\fs28 }' ancho='1' negrita='sí' fuente puntos='14' align='a_left' anchor='a_top_left' ">
+            <param name="G_26" value="espacio='E1' tipo='texto' color='990000' dibujar-si='(e=1)&(ex=-1)&(vez=2)' coord_abs='sí' expresión='[86,160]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red0\green152\blue0;}\cf0\f0\fs28 {\*\mjaformula\b{\expr multi2\decimals 2\fixed0}\b0}\b 100 \b0{\*\mjaformula\b{\expr abs(y2-y1)\decimals 0\fixed1}\b0}{\*\mjaformula\b{\expr veces\decimals 2\fixed0}\b0}\b es igual\b0\par\cf0\f0\fs28\b   a\b0{\*\mjaformula\b{\expr multi\decimals 0\fixed0}\b0}{\*\mjaformula\b{\expr 100^(abs(y2-y1))\decimals 0\fixed0}\b0\b .\b0}\b  \b0\par\cf0\f0\fs28 \par\cf0\f0\fs28\b   El resultado es:\b0\par\cf0\f0\fs28\b              \b0{\*\mjaformula\b{\expr ca\decimals 1\fixed0}\b0}{\*\mjaformula\b{\expr uni\decimals 2\fixed0}\b0{\supix\b 2\b0}}\b =\b0\b{\*\mjaformula{\fraction{\num\b{\expr ca\decimals 1\fixed0}\b0}{\den\b{\expr 100^(abs(y2-y1))\decimals 0\fixed1}\b0}}}\b0 {\*\mjaformula\b{\expr uni2\decimals 2\fixed0}\b0{\supix\b 2\b0}}\par\cf0\f0\fs28 \par\cf0\f0\fs40\b          \b0{\*\mjaformula\b{\expr ca\decimals 1\fixed0}\b0}\fs28 \fs40{\*\mjaformula\b{\expr uni\decimals 2\fixed0}\b0{\supix\b 2\b0}}\b =\b0{\*\mjaformula\b{\expr ca/(100^abs(y2-y1))\decimals 11\fixed0}\b0}\fs28 \fs40{\*\mjaformula\b{\expr uni2\decimals 2\fixed0}\b0{\supix\b 2\b0}}\fs28 \par\cf0\f0\fs28 }' ancho='1' negrita='sí' fuente puntos='14' align='a_left' anchor='a_top_left' ">
+            <param name="G_27" value="espacio='E1' tipo='texto' color='ff6600' dibujar-si='e=0' coord_abs='sí' expresión='[280,267]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red255\green102\blue0;}\cf0\f0\fs20\b Introduce la repuesta y\b0\par\cf0\f0\fs20\b   pulsa en\b0\fs24\i\b   verificar\b0\i0\par\cf0\f0\fs24 }' ancho='1' negrita='sí' fuente puntos='10' align='a_center' anchor='a_top_left' ">
+            <param name="G_28" value="espacio='texto' tipo='texto' color='c0c0c0' dibujar-si='e=1' coord_abs='sí' expresión='[230,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;\f1\fcharset0 Courier New;}{\colortbl\red0\green0\blue255;\red192\green192\blue192;\red0\green145\blue255;}\cf0\f0\fs24 \fs36{\*\mjaformula\b{\expr sa\decimals 8\fixed0}\b0}\cf1\f1\fs24  \cf2\f0\fs40\b  \b0{\*\mjaformula\b{\expr n=1?uni2:&squot;&squot;\decimals undefined\fixed0}\b0{\supix\b 2\b0}}\b       \b0\par\cf2\f0\fs40 }' ancho='1' align='a_left' anchor='a_top_left' ">
+            <param name="G_29" value="espacio='E4' tipo='texto' color='20303a' coord_abs='sí' expresión='(80,20)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red0\green126\blue0;}\cf0\f0\fs36\b RESULTADOS OBTENIDOS\b0}' ancho='1' align='a_left' anchor='a_top_left' ">
+            <param name="G_30" value="espacio='E4' tipo='texto' color='20303a' coord_abs='sí' expresión='(90,130)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red32\green48\blue58;\red0\green111\blue0;\red141\green0\blue0;\red0\green0\blue195;}\cf0\f0\fs28\b EJERCICIOS REALIZADOS:         \b0\par\cf0\f0\fs28                     \par\cf1\f0\fs28\b EJERCICIOS RESUELTOS:          \b0\par\cf1\f0\fs28         \par\cf2\f0\fs28\b EJERCICIOS INCORRECTOS:     \b0\par\cf2\f0\fs28 \par\cf3\f0\fs28\b CALIFICACIÓN:                        \b0\par\cf3\f0\fs28 }' ancho='1' align='a_left' anchor='a_top_left' ">
+            <param name="G_31" value="espacio='E4' tipo='texto' color='20303a' dibujar-si='numex>0' coord_abs='sí' expresión='(300,130)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red0\green0\blue195;\red32\green48\blue58;\red0\green111\blue0;\red141\green0\blue0;}\cf0\f0\fs28 \cf1{\*\mjaformula\b{\expr [numex]\decimals 0\fixed0}\b0}\cf0 \par\cf0\f0\fs28 \par\cf1\f0\fs24 \cf2\fs28{\*\mjaformula\b{\expr [ebien]\decimals 2\fixed0}\b0}\cf1\fs24 \par\cf0\f0\fs28 \par\cf1\f0\fs28 \cf3{\*\mjaformula\b{\expr [numex-ebien]\decimals 2\fixed0}\b0}\cf1 \par\cf1\f0\fs28 \par\cf0\f0\fs28\b  \b0{\*\mjaformula\b{\expr [(ebien/(numex))*100]\decimals 2\fixed0}\b0\b{\expr numex>0?&squot;%&squot;:&squot;&squot;\decimals 2\fixed0}\b0\b  \b0}\cf1 \par\cf3\f0\fs28 }' ancho='1' align='a_left' anchor='a_top_left' ">
+            <param name="G_32" value="espacio='E1' tipo='texto' color='20303a' dibujar-si='kk=1' coord_abs='sí' expresión='(150,150)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Arial;}{\colortbl\red255\green102\blue0;}\cf0\f0\fs32\b Reanudar\b0\par\cf0\f0\fs32 \par\cf0\f0\fs32\b Exercice suivant\b0\par\cf0\f0\fs32 \par\cf0\f0\fs32\b Vérifiez\b0}' ancho='1' align='a_left' anchor='a_top_left' ">
+            <param name="G_33" value="espacio='E1' tipo='texto' color='20303a' coord_abs='sí' expresión='(20,20)' ancho='1' align='a_left' anchor='a_top_left' ">
+          </ajs>
+          <br>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div></div>
+  <table style="width: 95%;" align="center" cellspacing="0" cellpadding="6" border="0">
+    <tbody>
+      <tr>
+        <td rowspan="1" colspan="2"><br>
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 100px; text-align: left; background-color: #fee6b8;" rowspan="1" colspan="2">
+
+          <div style="margin-left: 40px;"><i><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Miscelánea en espagnol <a href="https://proyectodescartes.org/miscelanea/materiales_didacticos/unidades_superficie-JS/index.html" target="_blank">Unidades de superficie y agrarias.</a>  Auteur: Josep Mª Navarro Canut</font> </i></div><i> 
+
+          </i>
+
+          <div style="margin-left: 40px;"><i><i><font face="Verdana, Arial, Helvetica, sans-serif" size="2" color="#000000">Adaptado y traducido por César Augusto Rodríguez Ledesma. </font></i><br>
+            <br>
+            <font face="Verdana, Arial, Helvetica, sans-serif" size="1.75">Escena realizada en el marco de la convocatoria del proyecto de innovación linguística en centros (PILC) del curso 2018-19 de la Consejería de Educación, Formación y Empleo del Gobierno de la Comunidad de La Rioja </font>
+            </i>
+            <font face="Verdana, Arial, Helvetica, sans-serif" size="1.75"><br><br></font>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td style="width: 100px; background-color: #fff8e1; text-align: center;"><img src="img/logo2.gif" alt="Logo Descartes" title="logo D"><br>
+        </td>
+        <td>
+          <font face="Verdana, Arial, Helvetica, sans-serif" size="1" color="006699">RED Descartes Proyecto Descartes. Año 2019</font>
+
+          <p> </p>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2" style="background-color: #fee6b8;"><br>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><br>
+  </p>
+
+  <p align="center">
+    <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/"><img alt="Licencia de Creative Commons" src="http://i.creativecommons.org/l/by-nc-sa/2.5/es/88x31.png" border="0"></a><br>
+    <font face="Verdana, Arial, Helvetica, sans-serif" size="1">Los contenidos de esta unidad didáctica están bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/">licencia
+          de Creative Commons</a> si no se indica lo contrario. </font>
+  </p>
+  <!-- /Licencia de Creative Commons -->
+
+
+
+</body>
+</html>

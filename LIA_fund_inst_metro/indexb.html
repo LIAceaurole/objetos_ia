@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<head>
+	<title>Libro digital interactivo</title>
+	<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+	<script type="text/javascript" src="js/turn.js"></script>
+	<link href="css/style.css" rel="stylesheet" type="text/css"/>
+	<link rel="stylesheet" href="fonts/font4.css" type="text/css">
+	<link rel="stylesheet" href="fonts/font3.css" type="text/css">
+	<link rel="stylesheet" href="fonts/font5.css" type="text/css">
+</head>
+
+<body style="margin:0;padding:0; overflow: hidden; ">
+
+	<div id="book">
+	    <div class="hard" style="background-image: url('images/fondo.png'); background-size: 100% 100%; background-repeat: no-repeat; background-position: center; border: 2px solid black;">
+        </div>
+				
+		<div class="hard" style="background-image: url(images/cover.png);">
+		<p align="center" style="position: absolute; bottom: 350px; left:0; right:0;"> <a id="logo"><img src="images/logo3.svg" alt="Descartes"></a></p>
+		</div>
+		
+		<div class="derecha">
+			<p align="center" style="position: absolute; top: 100px; left:0; right:0;"><span style="font-size:30px"><strong><big>Fundamentos de instrumentación industrial y metrología</big></strong></span><br><br><span style="font-size:25px"><big>Libro interactivo</big></span></p>
+			
+			<p align="center" style="position: absolute; top: 240px; left:0; right:0;"><br><br>Carlos Mario Rodríguez Ledesma<br>César Augusto Rodríguez Ledesma<br><br>Departamento de Calidad - Producción<br><br><br>
+			 Institución Universitaria ITM <br> </p>
+			<p align="center" style="position: absolute; bottom: 100px; left:0; right:0;"> "Desaprendiendo más para aprender mejor" <br><br><img src="images/portada.png" width="130px"></p>
+			<p align="center" style="position: absolute; bottom: 60px; left:0; right:0;">Medellín-Antioquia-Colombia</p>
+		</div>
+		<div class="izquierda">
+			<p><span style="font-size:16px">Título de la obra<br>Libro interactivo de Fundamentos de instrumentación industrial y metrología<br><br>
+			César Augusto Rodríguez Ledesma<br>Carlos Mario Rodríguez Ledesma<br>
+			Primera edición: 2026</span></p>
+			<br><br>
+			<p> <span style="font-size:16px">Diseño de cubierta: César Augusto Rodríguez Ledesma<br>
+			Librería turn.js: Copyright (C) 2012 Emmanuel Garcia<br>
+			Herramienta de edición: DescartesJS<br>
+			Fuente: Amaranth</span></p>
+			<p> <span style="font-size:16px">Institución Universitaria ITM.<br>
+			Dirección: Calle 73 #76A 354 vía el volador<br>
+			<a style="font-size:16px" href="http://www.itm.edu.co/" target="_blank"><font color="blue">www.itm.edu.co</font></a><br>
+			ISBN: XXx-XXX-X-X</span>
+			</p>
+
+			<p align="center" style="position: absolute; bottom: 120px; left:0; right:0;">
+				<img src="https://visitor-badge.laobi.icu/badge?page_id=LIA_fund_inst_metro_cesar_rodriguez&color=green&title=Visitas" alt="Contador de visitas">
+			</p>
+			
+			<p style="font-size:16px; position: absolute; bottom: 50px; left:0; right:0;"><a href="http://creativecommons.org/licenses/by-nc-sa/2.5/es/" target="_blank"><img src="images/88x31.png" style="height:40px; width:110px" /></a><br>Esta obra está bajo una licencia Creative Commons 4.0 internacional: Reconocimiento-No Comercial-Compartir Igual. Todos los objetos interactivos y los contenidos de esta obra colectiva están protegidos por la Ley de Propiedad Intelectual.</p>
+		</div>
+		
+		<div class="derecha">
+			<h2 class="t2">Tabla de contenido</h2>
+			<li><p><a class="a2" href="javascript:myFunction(6)"><b>Fundamentos de instrumentación industrial (Parte i)</b><span class="span2">6</span></a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(7)">1.1 Clasificación de los instrumentos<span class="span2">7</span></a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(8)">1.2 Evaluación interactiva<span class="span2">8</span></a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(9)">1.3 Características de los instrumentos industriales<span class="span2">9</span></a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(10)">1.4 Evaluación interactiva <span class="span2">10</span></a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(11)">1.5 Grados de protección IP (Ingress Protection) <span class="span2">11</span></a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(12)">1.6 Evaluación interactiva<span class="span2">12</span></a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(13)">1.7 Ecuación de linealidad en instrumentación industrial<span class="span2">13</span></a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(14)">1.8 Suma con números fraccionarios <span class="span2">14</span></a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(15)">1.9 División con números fraccionarios <span class="span2">15</span></a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(16)">1.10 Porcentaje y fracciones<span class="span2">16</span></a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(17)">1.11 Problemas con porcentajes<span class="span2">17</span></a></p></li>
+			<h3>iii</h3>	
+		</div>
+		<div class="izquierda">	
+			<li><p><a class="a2" href="javascript:myFunction(18)"><b>Fundamentos de metrología (parte ii)</b><span class="span2">18</span></a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(19)">2.1 Definición<span class="span2">19</span></a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(20)">2.2 Historia de la metrología<span class="span2">20</span></a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(22)">2.3 Evaluación interactiva<span class="span2">22</a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(23)">2.4 El sistema internacional de unidades (SI)<span class="span2">23</span></a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(25)">2.5 La medida <span class="span2">25</span></a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(26)">2.6 Unidades de longitud<span class="span2">26</span></a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(27)">2.7 Unidades de volumen o capacidad<span class="span2">27</span></a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(28)">2.8 Unidades de presión<span class="span2">28</span></a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(29)">2.9 Unidades de voltaje<span class="span2">29</span></a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(30)">2.10 Unidades de masa <span class="span2">30</span></a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(31)">2.11 Unidades de corriente eléctrica<span class="span2">31</span></a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(32)">2.12 Unidades de resistencia eléctrica<span class="span2">32</span></a></p></li>
+			<li><p><a class="a2" href="javascript:myFunction(33)">2.13 Unidades de área o superficie<span class="span2">33</span></a></p></li>
+			<h3>iv</h3>	
+		</div>
+	
+		<div class="derecha">
+		    <h1>Introducción</h1>
+			  <p>Bienvenidos al libro interactivo de Fundamentos de Instrumentación Industrial y Metrología. Este libro está diseñado para proporcionar una introducción completa y accesible a los conceptos básicos de la instrumentación industrial y la metrología. A lo largo de sus páginas, combinamos teoría, práctica y aplicaciones reales para ofrecer una experiencia de aprendizaje integral.<br><br> 
+                Como complemento al curso "Fundamentos de Instrumentación y Metrología" del programa de Tecnología en Control de la Calidad, este libro interactivo busca apoyar el proceso de enseñanza-aprendizaje y facilitar la evaluación de los conocimientos adquiridos.<br><br> 
+                A lo largo del contenido, exploraremos diversos temas fundamentales, incluyendo: 
+				Los principios básicos de la medición,los tipos de sensores y transductores más comunes en la industria y un repaso de operaciones básicas y conversión de unidades.<br><br>
+				Dirigido tanto a estudiantes como a profesionales, este recurso es ideal para quienes desean desarrollar una base sólida en instrumentación industrial y metrología, sin importar su nivel de experiencia previa.
+                ¡Esperamos que disfrute esta experiencia de aprendizaje y que este libro le ayude a consolidar su conocimiento en la materia! 
+
+           <br> </p>
+			<h3>v</h3>
+		</div>
+		
+		<div class="hard" style="background-image: url('images/fondo1.png'); background-size: 100% 100%; background-repeat: no-repeat; background-position: center; border: 2px solid black;">
+		 
+		</div>
+		
+		<div class="izquierda">
+			<h2>1.1 Clasificación de los instrumentos</h2>
+			<p>A continuación un video que nos muestra la clasificación de los instrumentos industriales, por favor esperar a que cargue.
+			<p align="center"><iframe width="90%" height="450" src="http://www.youtube.com/embed/71c2_R3DhwU?VQ=HD720?enablejsapi=1&html5=1&rel=0&autoplay=0&controls=1&showinfo=0&start=0&disablekb=1&hl=es;cc_load_policy=1&VQ=HD720" frameborder="0" allowfullscreen></iframe>
+			<br><div style="text-align: center;">Vera, C. A. (2014). Clases de instrumentos industriales [Video]. YouTube. https://youtu.be/71c2_R3DhwU</div></p>
+			<p align="center"><a href="http://www.youtube.com/embed/71c2_R3DhwU?enablejsapi=1&html5=1&rel=0&autoplay=0&controls=0&showinfo=0&start=0&disablekb=1&hl=es;cc_load_policy=1&VQ=HD720" frameborder="0" allowfullscreen target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=0,titlebar=0,,menubar=0,status=0,toolbar=0,left='+(screen.availWidth/2-512)+',top='+(screen.availHeight/2-380)+',width=1024,height=768');return false;"><font size="5" color="green">Ampliar</font></a></p>
+		</div>
+		<div class="derecha">
+			<h2>1.2 Evaluación interactiva</h2>
+			<p>Esta evaluación permite saber su nivel de competencia adquirido en la clasificación de los instrumentos.
+			<p align="center">
+				<div style="width: 711px; height: 450px; margin: 0 auto; overflow: hidden; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+					<iframe src="interactivos/Preguntas_SI-NO-JS/indexb.html" style="width: 790px; height: 500px; border: 0; transform: scale(0.9); transform-origin: 0 0;" scrolling="no"></iframe>
+				</div>
+			</p>
+			<p align="center" style="margin: 10px 0;"><a href="interactivos/Preguntas_SI-NO-JS/indexb.html" target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=no,menubar=no,status=no,toolbar=no,left='+(screen.availWidth/2-474)+',top='+(screen.availHeight/2-330)+',width=948,height=660');return false;"><font size="5" color="green">Haz clic para ampliar la interacción</font></a></p>
+			<br><div style="text-align: center;">Por favor dar clic derecho en el objeto para ver los créditos del objeto interactivo</div></p>
+			<br><h3>8</h3>
+		</div>
+		<div class="izquierda">
+			<h2>1.3 Características de los instrumentos industriales</h2>
+			<p>A continuación un video que nos muestra las característicascas de los instrumentos industriales, por favor esperar a que cargue.
+			<p align="center"><iframe width="90%" height="450" src="http://www.youtube.com/embed/OtlZfUwLtWA?VQ=HD720?enablejsapi=1&html5=1&rel=0&autoplay=0&controls=1&showinfo=0&start=0&disablekb=1&hl=es;cc_load_policy=1&VQ=HD720" frameborder="0" allowfullscreen></iframe>
+			<br><div style="text-align: center;">CADISAC. (2013, abril 22). Características de los instrumentos de medición [Video]. YouTube. https://www.youtube.com/watch?v=OtlZfUwLtWA</div></p>
+			<p align="center"><a href="http://www.youtube.com/embed/OtlZfUwLtWA?enablejsapi=1&html5=1&rel=0&autoplay=0&controls=0&showinfo=0&start=0&disablekb=1&hl=es;cc_load_policy=1&VQ=HD720" frameborder="0" allowfullscreen target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=0,titlebar=0,,menubar=0,status=0,toolbar=0,left='+(screen.availWidth/2-512)+',top='+(screen.availHeight/2-380)+',width=1024,height=768');return false;"><font size="5" color="green">Ampliar</font></a></p>
+			<br><h3>9</h3>
+		</div>
+		
+		<div class="derecha">
+			<h2>1.4 Evaluación interactiva</h2>
+			<p>Esta evaluación permite saber su nivel de competencia adquirido en las características de los instrumentos.
+			<p align="center">
+				<div style="width: 711px; height: 450px; margin: 0 auto; overflow: hidden; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+					<iframe src="interactivos/Completa_frases2-JS/indexb.html" style="width: 790px; height: 500px; border: 0; transform: scale(0.9); transform-origin: 0 0;" scrolling="no"></iframe>
+				</div>
+			</p>
+			<p align="center" style="margin: 10px 0;"><a href="interactivos/Completa_frases2-JS/indexb.html" target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=no,menubar=no,status=no,toolbar=no,left='+(screen.availWidth/2-474)+',top='+(screen.availHeight/2-330)+',width=948,height=660');return false;"><font size="5" color="green">Haz clic para ampliar la interacción</font></a></p>
+			<br><div style="text-align: center;">Por favor dar clic derecho en el objeto para ver los créditos del objeto interactivo</div></p>
+			
+			<br><h3>10</h3>
+		</div>
+		<div class="izquierda">
+			<h2>1.5 Grados de protección IP (Ingress Protection)</h2>
+			<p>A continuación un video que muestra los grados de protección IP, por favor esperar a que cargue.
+			<p align="center"><iframe width="90%" height="450" src="http://www.youtube.com/embed/og--AHBPgqE?VQ=HD720?enablejsapi=1&html5=1&rel=0&autoplay=0&controls=1&showinfo=0&start=0&disablekb=1&hl=es;cc_load_policy=1&VQ=HD720" frameborder="0" allowfullscreen></iframe>
+			<br><div style="text-align: center;">Galán, L. C. (2013, abril 22). ¿Qué es el grado de protección IP? ¿Cómo se interpreta? [Video]. YouTube. https://youtu.be/og--AHBPgqE</div></p>
+			<p align="center"><a href="http://www.youtube.com/embed/og--AHBPgqE?enablejsapi=1&html5=1&rel=0&autoplay=0&controls=0&showinfo=0&start=0&disablekb=1&hl=es;cc_load_policy=1&VQ=HD720" frameborder="0" allowfullscreen target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=0,titlebar=0,,menubar=0,status=0,toolbar=0,left='+(screen.availWidth/2-512)+',top='+(screen.availHeight/2-380)+',width=1024,height=768');return false;"><font size="5" color="green">Ampliar</font></a></p>
+			<br><h3>11</h3>
+		</div>
+		<div class="derecha">
+			<h2>1.6 Evaluación interactiva</h2>
+			<p>Esta evaluación permite saber su nivel de competencia adquirido en los grados de protección IP de los instrumentos industriales.
+			<p align="center">
+				<div style="width: 711px; height: 468px; margin: 0 auto; overflow: hidden; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+					<iframe src="interactivos/jinich-JS/indexb.html" style="width: 790px; height: 520px; border: 0; transform: scale(0.9); transform-origin: 0 0;" scrolling="no"></iframe>
+				</div>
+			</p>
+			<p align="center" style="margin: 10px 0;"><a href="interactivos/jinich-JS/indexb.html" target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=no,menubar=no,status=no,toolbar=no,left='+(screen.availWidth/2-474)+',top='+(screen.availHeight/2-330)+',width=948,height=660');return false;"><font size="5" color="green">Haz clic para ampliar la interacción</font></a></p>
+			<br><div style="text-align: center;">Por favor dar clic derecho en el objeto para ver los créditos del objeto interactivo</div></p>
+			<br><h3>12</h3>
+		</div>
+		
+		<div class="izquierda">
+			<h2>1.7 Ecuación de linealidad en instrumentación industrial</h2>
+			<p>A continuación un video que muestra la ecuación de linealidad en instrumentación industrial, por favor esperar a que cargue.
+			<p align="center"><iframe width="90%" height="450" src="http://www.youtube.com/embed/sOau3ZKGgxs?VQ=HD720?enablejsapi=1&html5=1&rel=0&autoplay=0&controls=1&showinfo=0&start=0&disablekb=1&hl=es;cc_load_policy=1&VQ=HD720" frameborder="0" allowfullscreen></iframe>
+			<br><div style="text-align: center;">SICEA Industrial. (s. f.). Ecuación de linealidad en instrumentación industrial [Video]. YouTube. https://youtu.be/sOau3ZKGgxs</div></p>
+			<p align="center"><a href="http://www.youtube.com/embed/sOau3ZKGgxs?enablejsapi=1&html5=1&rel=0&autoplay=0&controls=0&showinfo=0&start=0&disablekb=1&hl=es;cc_load_policy=1&VQ=HD720" frameborder="0" allowfullscreen target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=0,titlebar=0,,menubar=0,status=0,toolbar=0,left='+(screen.availWidth/2-512)+',top='+(screen.availHeight/2-380)+',width=1024,height=768');return false;"><font size="5" color="green">Ampliar</font></a></p>
+			<br><h3>13</h3>
+		</div>
+		
+		<div class="derecha">
+			<h2>1.8 Suma con números fraccionarios</h2>
+			<p>Esta interactividad le permite desarrollar competencias en las operaciones de suma con números fraccionarios</p>
+			
+			<div style="width: 717px; height: 442px; margin: 0 auto; overflow: hidden; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				<iframe src="interactivos/fraccionarios/index.html" style="width: 1024px; height: 632px; border: 0; transform: scale(0.7); transform-origin: 0 0;" scrolling="no"></iframe>
+			</div>
+			
+			<p align="center" style="margin: 10px 0;">
+				<a href="interactivos/fraccionarios/index.html" target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=no,menubar=no,status=no,toolbar=no,left='+(screen.availWidth/2-474)+',top='+(screen.availHeight/2-330)+',width=948,height=660');return false;">
+					<font size="5" color="green">Haz clic para ampliar la interacción</font>
+				</a>
+			</p>
+			
+			<div style="text-align: center; font-size: 14px; margin-bottom: 5px;">Cuando abra la escena, por favor dar clic en el icono derechos de autor para conocer los créditos del objeto interactivo</div>
+			
+			<br><h3>14</h3>
+		</div> 
+		
+		<div class="derecha">
+			<h2>1.9 División con números fraccionarios</h2>
+			<p>Esta interactividad le permite desarrollar competencias en las operaciones de división con números fraccionarios</p>
+			
+			<div style="width: 717px; height: 442px; margin: 0 auto; overflow: hidden; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				<iframe src="interactivos/Divisionfracciones/index.html" style="width: 1024px; height: 632px; border: 0; transform: scale(0.7); transform-origin: 0 0;" scrolling="no"></iframe>
+			</div>
+			
+			<p align="center" style="margin: 10px 0;">
+				<a href="interactivos/Divisionfracciones/index.html" target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=no,menubar=no,status=no,toolbar=no,left='+(screen.availWidth/2-474)+',top='+(screen.availHeight/2-330)+',width=948,height=660');return false;">
+					<font size="5" color="green">Haz clic para ampliar la interacción</font>
+				</a>
+			</p>
+			
+			<div style="text-align: center; font-size: 14px; margin-bottom: 5px;">Cuando abra la escena, por favor dar clic en el icono derechos de autor para conocer los créditos del objeto interactivo</div>
+			
+			<br><h3>15</h3>
+		</div> 
+		
+		<div class="izquierda">
+			<h2>1.10 Porcentaje y fracciones </h2>
+			<p>Esta interactividad le permite desarrollar competencias en las operaciones de porcentajes y fracciones</p>
+			
+			<div style="width: 717px; height: 442px; margin: 0 auto; overflow: hidden; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				<iframe src="interactivos/Porcentajesyfracciones/index.html" style="width: 1024px; height: 632px; border: 0; transform: scale(0.7); transform-origin: 0 0;" scrolling="no"></iframe>
+			</div>
+			
+			<p align="center" style="margin: 10px 0;">
+				<a href="interactivos/Porcentajesyfracciones/index.html" target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=no,menubar=no,status=no,toolbar=no,left='+(screen.availWidth/2-474)+',top='+(screen.availHeight/2-330)+',width=948,height=660');return false;">
+					<font size="5" color="green">Haz clic para ampliar la interacción</font>
+				</a>
+			</p>
+			
+			<div style="text-align: center; font-size: 14px; margin-bottom: 5px;">Cuando abra la escena, por favor dar clic en el icono derechos de autor para conocer los créditos del objeto interactivo</div>
+			
+			<br><h3>16</h3>
+		</div> 
+		
+		<div class="derecha">
+			<h2>1.11 Problemas con porcentajes</h2>
+			<p>Esta interactividad le permite desarrollar competencias en problemas con porcentajes</p>
+			
+			<div style="width: 717px; height: 442px; margin: 0 auto; overflow: hidden; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				<iframe src="interactivos/Probleporcentajes/index.html" style="width: 1024px; height: 632px; border: 0; transform: scale(0.7); transform-origin: 0 0;" scrolling="no"></iframe>
+			</div>
+			
+			<p align="center" style="margin: 10px 0;">
+				<a href="interactivos/Probleporcentajes/index.html" target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=no,menubar=no,status=no,toolbar=no,left='+(screen.availWidth/2-474)+',top='+(screen.availHeight/2-330)+',width=948,height=660');return false;">
+					<font size="5" color="green">Haz clic para ampliar la interacción</font>
+				</a>
+			</p>
+			
+			<div style="text-align: center; font-size: 14px; margin-bottom: 5px;">Cuando abra la escena, por favor dar clic en el icono derechos de autor para conocer los créditos del objeto interactivo</div>
+			
+			<br><h3>17</h3>
+		</div> 
+		
+		<div class="hard" style="background-image: url('images/fondo2.png'); background-size: 100% 100%; background-repeat: no-repeat; background-position: center; border: 2px solid black;">
+			
+		</div>
+		
+		<div class="derecha">
+			<h2>2.1 Definición</h2>
+			<p>La metrología es la ciencia de la medición, que se encarga de establecer los fundamentos teóricos y prácticos de los sistemas de medida, así como de desarrollar, mantener y mejorar los estándares de medida y los métodos de calibración. La metrología se aplica en una amplia variedad de campos, desde la industria y la tecnología hasta la medicina y las ciencias ambientales, y es esencial para garantizar la calidad, la precisión y la confiabilidad de los resultados de las mediciones en cualquier ámbito. A continuación un video por favor esperar a que cargue.
+			<p align="center"><iframe width="90%" height="380" src="http://www.youtube.com/embed/I-lKgVd0tLw?VQ=HD360?enablejsapi=1&html5=1&rel=0&autoplay=0&controls=1&showinfo=0&start=0&disablekb=1&hl=es;cc_load_policy=1&VQ=HD720" frameborder="0" allowfullscreen></iframe>
+			<br><div style="text-align: center;">Techmaster de México. (s. f.). La metrología en la vida diaria [Video]. YouTube. https://youtu.be/I-lKgVd0tLw</div></p>
+			<p align="center"><a href="http://www.youtube.com/embed/I-lKgVd0tLw?VQ=HD360?enablejsapi=1&html5=1&rel=0&autoplay=0&controls=0&showinfo=0&start=0&disablekb=1&hl=es;cc_load_policy=1&VQ=HD720" frameborder="0" allowfullscreen target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=0,titlebar=0,,menubar=0,status=0,toolbar=0,left='+(screen.availWidth/2-512)+',top='+(screen.availHeight/2-380)+',width=1024,height=768');return false;"><font size="5" color="green">Ampliar</font></a></p>
+			
+			<br><h3>19</h3>
+		</div>
+		
+		<div class="izquierda">
+			<h2>2.2 Historia de la Metrología</h2>
+			<p>La metrología es la ciencia que se ocupa de las mediciones y sus unidades de medida. Su origen se remonta a la antigua Mesopotamia, donde se utilizaron unidades de medida para fines comerciales y para la construcción de grandes obras, como el zigurat de Babilonia.
+            En la antigua Grecia, se desarrolló una gran cantidad de conocimientos sobre geometría, aritmética y trigonometría que permitieron establecer métodos más precisos para las mediciones. El famoso filósofo y matemático griego, Pitágoras, por ejemplo, desarrolló un método para calcular la longitud de los lados de un triángulo rectángulo, que fue fundamental para las mediciones de distancias.
+            En la Edad Media, la metrología fue muy importante para la construcción de catedrales y otras obras monumentales. La unidad de medida más común en Europa en ese momento era el codo, que se basaba en la longitud del antebrazo del constructor.
+            Durante la Revolución Industrial, la necesidad de mediciones precisas para la producción y el comercio hizo que la metrología se convirtiera en una disciplina más sistemática y científica. En 1875, se creó la Convención del Metro en París, en la que se establecieron las bases para un sistema de unidades de medida universalmente aceptado, conocido como Sistema Internacional de Unidades (SI).
+            Desde entonces, la metrología ha evolucionado para abarcar muchos campos diferentes, desde la medición de la temperatura y la presión hasta la medición de la cantidad de sustancias químicas y la duración de las reacciones. La metrología también ha desempeñado un papel fundamental en la investigación científica, proporcionando un marco riguroso para la comparación de datos experimentales y la evaluación de la exactitud y precisión de los resultados.
+			<br><h3>20</h3>
+			
+		</div>
+		
+		<div class="izquierda">
+			<br>
+			<p>A continuación un video que muestra la línea del tiempo de la metrología, por favor esperar a que cargue.
+			<p align="center"><iframe width="90%" height="450" src="http://www.youtube.com/embed/muweCIH0WmQ?VQ=HD720?enablejsapi=1&html5=1&rel=0&autoplay=0&controls=1&showinfo=0&start=0&disablekb=1&hl=es;cc_load_policy=1&VQ=HD720" frameborder="0" allowfullscreen></iframe>
+			<br><div style="text-align: center;">Metrología y Calidad para la Vida. (s. f.). Historia de la metrología, una historia extraordinaria [Video]. YouTube. https://youtu.be/muweCIH0WmQ</div></p>
+			<p align="center"><a href="http://www.youtube.com/embed/muweCIH0WmQ?enablejsapi=1&html5=1&rel=0&autoplay=0&controls=0&showinfo=0&start=0&disablekb=1&hl=es;cc_load_policy=1&VQ=HD720" frameborder="0" allowfullscreen target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=0,titlebar=0,,menubar=0,status=0,toolbar=0,left='+(screen.availWidth/2-512)+',top='+(screen.availHeight/2-380)+',width=1024,height=768');return false;"><font size="5" color="green">Ampliar</font></a></p>
+			
+			<br><h3>21</h3>
+		</div>
+		
+		<div class="derecha">		
+			<h2>2.3 Evaluación interactiva</h2>
+			<p>Esta evaluación permite saber su nivel de competencia adquirido en la historia de la metrología.
+			<p align="center">
+				<div style="width: 711px; height: 450px; margin: 0 auto; overflow: hidden; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+					<iframe src="interactivos/Preguntas1_SI-NO-JS/indexb.html" style="width: 790px; height: 500px; border: 0; transform: scale(0.9); transform-origin: 0 0;" scrolling="no"></iframe>
+				</div>
+			</p>
+			<p align="center" style="margin: 10px 0;"><a href="interactivos/Preguntas1_SI-NO-JS/indexb.html" target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=no,menubar=no,status=no,toolbar=no,left='+(screen.availWidth/2-474)+',top='+(screen.availHeight/2-330)+',width=948,height=660');return false;"><font size="5" color="green">Haz clic para ampliar la interacción</font></a></p>
+			<br><div style="text-align: center;">Por favor dar clic derecho en el objeto para ver los créditos del objeto interactivo</div></p>
+			<br><h3>22</h3>
+		</div>
+		
+		<div class="izquierda">
+			<h2>2.4 El sistema internacional de unidades (SI) </h2>
+			<p>El Sistema Internacional de Unidades (SI) es el sistema de unidades de medida que se utiliza en la mayoría de los países del mundo. Fue creado en 1960 y se basa en siete unidades de medida fundamentales que se consideran las más básicas e irreducibles. Estas unidades son: Metro (m): unidad de longitud;Kilogramo (kg): unidad de masa;Segundo (s): unidad de tiempo;Ampere (A): unidad de corriente eléctrica; Kelvin (K): unidad de temperatura termodinámica; Mol (mol): unidad de cantidad de sustancia; Candela (cd): unidad de intensidad luminosa.
+               Además de estas unidades fundamentales, existen unidades derivadas que se obtienen a partir de las anteriores mediante operaciones matemáticas. Algunas de las unidades derivadas más comunes son el metro cuadrado (m²) para la superficie, el metro cúbico (m³) para el volumen, el newton (N) para la fuerza, el joule (J) para la energía y el vatio (W) para la potencia.
+               El SI se utiliza en una amplia variedad de campos, como la física, la química, la ingeniería y la medicina. Su uso está estandarizado en todo el mundo, lo que permite una comunicación clara y precisa entre profesionales de diferentes países y disciplinas. Además, el SI es un sistema coherente, lo que significa que todas las unidades se relacionan entre sí de manera lógica y matemática. Por ejemplo, la unidad de energía, el joule, puede expresarse como el producto de una fuerza (en newtons) y una longitud (en metros).
+               El SI se sigue actualizando y evolucionando para adaptarse a las nuevas necesidades de la ciencia y la tecnología. En 2019, se llevó a cabo una revisión importante que redefinió cuatro de las unidades fundamentales: el kilogramo, el ampere, el kelvin y el mole. Con estas redefiniciones, el SI se basa completamente en constantes físicas fundamentales en lugar de objetos físicos, lo que aumenta su precisión y estabilidad a largo plazo.
+			<br><h3>23</h3>
+		</div>
+		
+		<div class="derecha">
+			<p>A continuación un video que muestra la evolución del SI, por favor esperar a que cargue.
+			<p align="center"><iframe width="90%" height="450" src="http://www.youtube.com/embed/nqxHnu4LJ6k?VQ=HD720?enablejsapi=1&html5=1&rel=0&autoplay=0&controls=1&showinfo=0&start=0&disablekb=1&hl=es;cc_load_policy=1&VQ=HD720" frameborder="0" allowfullscreen></iframe>
+			<br><div style="text-align: center;">Laboratoire national de métrologie et d'essais. (s. f.). Sistema internacional de unidades [Video]. YouTube. https://youtu.be/nqxHnu4LJ6k</div></p>
+			<p align="center"><a href="http://www.youtube.com/embed/nqxHnu4LJ6k?enablejsapi=1&html5=1&rel=0&autoplay=0&controls=0&showinfo=0&start=0&disablekb=1&hl=es;cc_load_policy=1&VQ=HD720" frameborder="0" allowfullscreen target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=0,titlebar=0,,menubar=0,status=0,toolbar=0,left='+(screen.availWidth/2-512)+',top='+(screen.availHeight/2-380)+',width=1024,height=768');return false;"><font size="5" color="green">Ampliar</font></a></p>
+			<br><h3>24</h3>
+		</div>
+		
+		<div class="izquierda">
+			<h2>2.5 La medida</h2>
+			<p>Esta escena interactiva ayuda a comprender que es la medida.
+			<p align="center">
+				<div style="width: 711px; height: 450px; margin: 0 auto; overflow: hidden; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+					<iframe src="interactivos/medida-JS/index.htm" style="width: 790px; height: 500px; border: 0; transform: scale(0.9); transform-origin: 0 0;" scrolling="no"></iframe>
+				</div>
+			</p>
+			<p align="center" style="margin: 10px 0;"><a href="interactivos/medida-JS/index.htm" target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=no,menubar=no,status=no,toolbar=no,left='+(screen.availWidth/2-474)+',top='+(screen.availHeight/2-330)+',width=948,height=660');return false;"><font size="5" color="green">Haz clic para ampliar la interacción</font></a></p>
+			<br><div style="text-align: center;">Por favor dar clic derecho en el objeto para ver los créditos del objeto interactivo</div></p>
+			<br><h3>25</h3>
+		</div>
+		
+		<div class="derecha">		
+			<h2>2.6 Unidades de longitud </h2>
+			<p>Esta interactividad permite desarrollar competencias en la conversión de unidades de longitud.
+			<p align="center">
+				<div style="width: 711px; height: 450px; margin: 0 auto; overflow: hidden; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+					<iframe src="interactivos/unidades_longitud-JS/index.html" style="width: 790px; height: 500px; border: 0; transform: scale(0.9); transform-origin: 0 0;" scrolling="no"></iframe>
+				</div>
+			</p>
+			<p align="center" style="margin: 10px 0;"><a href="interactivos/unidades_longitud-JS/index.html" target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=no,menubar=no,status=no,toolbar=no,left='+(screen.availWidth/2-474)+',top='+(screen.availHeight/2-330)+',width=948,height=660');return false;"><font size="5" color="green">Haz clic para ampliar la interacción</font></a></p>
+			<br><div style="text-align: center;">Por favor dar clic derecho en el objeto para ver los créditos del objeto interactivo</div></p>
+			<br><h3>26</h3>
+		</div>
+		
+		<div class="izquierda">		
+			<h2>2.7 Unidades de volumen o capacidad</h2>
+			<p>Esta interactividad permite desarrollar competencias en la conversión de unidades de volumen o capacidad.
+			<p align="center">
+				<div style="width: 711px; height: 450px; margin: 0 auto; overflow: hidden; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+					<iframe src="interactivos/unidades_capacidad-JS/index.html" style="width: 790px; height: 500px; border: 0; transform: scale(0.9); transform-origin: 0 0;" scrolling="no"></iframe>
+				</div>
+			</p>
+			<p align="center" style="margin: 10px 0;"><a href="interactivos/unidades_capacidad-JS/index.html" target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=no,menubar=no,status=no,toolbar=no,left='+(screen.availWidth/2-474)+',top='+(screen.availHeight/2-330)+',width=948,height=660');return false;"><font size="5" color="green">Haz clic para ampliar la interacción</font></a></p>
+			<br><div style="text-align: center;">Por favor dar clic derecho en el objeto para ver los créditos del objeto interactivo</div></p>
+			<br><h3>27</h3>
+		</div>
+		
+		<div class="derecha">		
+			<h2>2.8 Unidades de presión </h2>
+			<p>Esta interactividad permite desarrollar competencias en la conversión de unidades de presión.
+			<p align="center">
+				<div style="width: 711px; height: 450px; margin: 0 auto; overflow: hidden; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+					<iframe src="interactivos/unidades_presion-JS/index.html" style="width: 790px; height: 500px; border: 0; transform: scale(0.9); transform-origin: 0 0;" scrolling="no"></iframe>
+				</div>
+			</p>
+			<p align="center" style="margin: 10px 0;"><a href="interactivos/unidades_presion-JS/index.html" target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=no,menubar=no,status=no,toolbar=no,left='+(screen.availWidth/2-474)+',top='+(screen.availHeight/2-330)+',width=948,height=660');return false;"><font size="5" color="green">Haz clic para ampliar la interacción</font></a></p>
+			<br><div style="text-align: center;">Por favor dar clic derecho en el objeto para ver los créditos del objeto interactivo</div></p>
+			<br><h3>28</h3>
+		</div>
+		
+		<div class="izquierda">		
+			<h2>2.9 Unidades de voltaje</h2>
+			<p>Esta interactividad permite desarrollar competencias en la conversión de unidades de voltaje.
+			<p align="center">
+				<div style="width: 711px; height: 450px; margin: 0 auto; overflow: hidden; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+					<iframe src="interactivos/unidades_volts-JS/index.html" style="width: 790px; height: 500px; border: 0; transform: scale(0.9); transform-origin: 0 0;" scrolling="no"></iframe>
+				</div>
+			</p>
+			<p align="center" style="margin: 10px 0;"><a href="interactivos/unidades_volts-JS/index.html" target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=no,menubar=no,status=no,toolbar=no,left='+(screen.availWidth/2-474)+',top='+(screen.availHeight/2-330)+',width=948,height=660');return false;"><font size="5" color="green">Haz clic para ampliar la interacción</font></a></p>
+			<br><div style="text-align: center;">Por favor dar clic derecho en el objeto para ver los créditos del objeto interactivo</div></p>
+			<br><h3>29</h3>
+		</div>
+		
+		<div class="derecha">		
+			<h2>2.10 Unidades de masa</h2>
+			<p>Esta interactividad permite desarrollar competencias en la conversión de unidades de masa.
+			<p align="center">
+				<div style="width: 711px; height: 450px; margin: 0 auto; overflow: hidden; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+					<iframe src="interactivos/unidades_masa-JS/index.html" style="width: 790px; height: 500px; border: 0; transform: scale(0.9); transform-origin: 0 0;" scrolling="no"></iframe>
+				</div>
+			</p>
+			<p align="center" style="margin: 10px 0;"><a href="interactivos/unidades_masa-JS/index.html" target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=no,menubar=no,status=no,toolbar=no,left='+(screen.availWidth/2-474)+',top='+(screen.availHeight/2-330)+',width=948,height=660');return false;"><font size="5" color="green">Haz clic para ampliar la interacción</font></a></p>
+			<br><div style="text-align: center;">Por favor dar clic derecho en el objeto para ver los créditos del objeto interactivo</div></p>
+			<br><h3>30</h3>
+		</div>
+		
+		<div class="izquierda">		
+			<h2>2.11 Unidades de corriente eléctrica</h2>
+			<p>Esta interactividad permite desarrollar competencias en la conversión de unidades de corriente eléctrica.
+			<p align="center">
+				<div style="width: 711px; height: 450px; margin: 0 auto; overflow: hidden; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+					<iframe src="interactivos/unidades_amper-JS/index.html" style="width: 790px; height: 500px; border: 0; transform: scale(0.9); transform-origin: 0 0;" scrolling="no"></iframe>
+				</div>
+			</p>
+			<p align="center" style="margin: 10px 0;"><a href="interactivos/unidades_amper-JS/index.html" target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=no,menubar=no,status=no,toolbar=no,left='+(screen.availWidth/2-474)+',top='+(screen.availHeight/2-330)+',width=948,height=660');return false;"><font size="5" color="green">Haz clic para ampliar la interacción</font></a></p>
+			<br><div style="text-align: center;">Por favor dar clic derecho en el objeto para ver los créditos del objeto interactivo</div></p>
+			<br><h3>31</h3>
+		</div>
+		
+		<div class="derecha">		
+			<h2>2.12 Unidades de resistencia eléctrica</h2>
+			<p>Esta interactividad permite desarrollar competencias en la conversión de unidades de resistencia eléctrica.
+			<p align="center">
+				<div style="width: 711px; height: 450px; margin: 0 auto; overflow: hidden; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+					<iframe src="interactivos/unidades_resistencia-JS/index.html" style="width: 790px; height: 500px; border: 0; transform: scale(0.9); transform-origin: 0 0;" scrolling="no"></iframe>
+				</div>
+			</p>
+			<p align="center" style="margin: 10px 0;"><a href="interactivos/unidades_resistencia-JS/index.html" target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=no,menubar=no,status=no,toolbar=no,left='+(screen.availWidth/2-474)+',top='+(screen.availHeight/2-330)+',width=948,height=660');return false;"><font size="5" color="green">Haz clic para ampliar la interacción</font></a></p>
+			<br><div style="text-align: center;">Por favor dar clic derecho en el objeto para ver los créditos del objeto interactivo</div></p>
+			<br><h3>32</h3>
+		</div>
+		
+		<div class="izquierda">		
+			<h2>2.13 Unidades de área o superficie</h2>
+			<p>Esta interactividad permite desarrollar competencias en la conversión de unidades de área o superficie.
+			<p align="center">
+				<div style="width: 711px; height: 450px; margin: 0 auto; overflow: hidden; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+					<iframe src="interactivos/unidade_superficie-JS/index.html" style="width: 790px; height: 500px; border: 0; transform: scale(0.9); transform-origin: 0 0;" scrolling="no"></iframe>
+				</div>
+			</p>
+			<p align="center" style="margin: 10px 0;"><a href="interactivos/unidade_superficie-JS/index.html" target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=no,menubar=no,status=no,toolbar=no,left='+(screen.availWidth/2-474)+',top='+(screen.availHeight/2-330)+',width=948,height=660');return false;"><font size="5" color="green">Haz clic para ampliar la interacción</font></a></p>
+			<br><div style="text-align: center;">Por favor dar clic derecho en el objeto para ver los créditos del objeto interactivo</div></p>
+			<br><h3>33</h3>
+		</div>
+		
+		<div class="derecha">	
+			<h2>Créditos</h2>
+			<div style="width: 684px; height: 549px; margin: 0 auto; overflow: hidden; border: 1px solid #ddd; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+				<iframe src="interactivos/creditos/index.html" style="width: 760px; height: 610px; border: 0; transform: scale(0.9); transform-origin: 0 0;" scrolling="no"></iframe>
+			</div>
+			<div align="center"><br><a href="interactivos7/creditos/index.html" frameborder="0" allowfullscreen target="_blank" onclick="window.open(this.href,this.target,'scrollbars=yes,resizable=yes,location=0,titlebar=0,,menubar=0,status=0,toolbar=0,left='+(screen.availWidth/2-512)+',top='+(screen.availHeight/2-300)+',width=1024,height=600');return false;"></a></div>
+			<h3>34</h3>
+		</div>
+		<div class="cover">
+			<p align="center" style="position: absolute; bottom: 350px; left:0; right:0;"> <a id="logo"><img src="images/logo3.svg" alt="Descartes"></a>	</p>
+		<div class="gradient"></div>
+		
+	</div>
+</div>
+	<script>
+		$("#book").turn({
+			display: 'double',
+			acceleration: true,
+			gradients: true,
+			elevation: 50,
+		});
+		$(window).bind('keydown', function(e){
+		if (e.target && e.target.tagName.toLowerCase()!='input')
+			if (e.keyCode==37)
+				$('#book').turn('previous');
+			else if (e.keyCode==39)
+				$('#book').turn('next');
+		});
+	</script>
+	
+	
+
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction(i) {
+   
+	$('#book').turn('page',i+2);
+}
+
+function myFunction2() {
+   
+	$('#book').turn('next');
+}
+
+function myFunction3() {
+   
+	$('#book').turn('previous');
+}
+
+function calculadora() {
+	 var myWindow = window.open("calculadora/index.htm", "_blank","toolbar=yes,scrollbars=no,resizable=yes,top=100,left=800,width=400,height=400");
+}
+
+function imprimir() {
+	 var myPrinter = window.print();
+}
+
+function ayuda() {
+	 var myWindow = window.open("images/info.html", "_blank","toolbar=yes,scrollbars=yes,resizable=yes,top=100,left=800,width=800,height=600");
+}
+
+
+</script>
+
+<div class="dropdown">
+<button onclick="myFunction(3)" class="dropbtn2"></button>
+</div>
+<div class="dropdown">
+<button onclick="myFunction(4)" class="dropbtn"></button>
+</div>
+<div class="dropdown">
+<button onclick="myFunction(6)" class="dropbtn3"></button>
+</div>
+<div class="dropdown">
+<button onclick="calculadora()" class="dropbtn4"></button>
+</div>
+<div class="dropdown">
+
+<button onclick="imprimir()" class="dropbtn5"></button>
+<style type="text/css" media="print">
+  @page {size: A4 landscape;}
+</style>
+</div>
+<div class="dropdown">
+<button onclick="ayuda()" class="dropbtn6"></button>
+</div>
+
+<div class="nextdown">
+<button onclick="myFunction2()" class="nextbtn"></button>
+</div>
+<div class="prevdown">
+<button onclick="myFunction3()" class="prevbtn"></button>
+</div>
+</body>
+		
+</html>
+		
+</html>

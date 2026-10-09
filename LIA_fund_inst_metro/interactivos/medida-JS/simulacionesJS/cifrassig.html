@@ -1,0 +1,40 @@
+<html>
+<head>
+
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body>
+
+<ajs name="N&ordm; cifras significativas" width=480 height=340
+        code="Descartes.class"
+        codebase="./"
+        archive="lib/Descartes5.jar"
+        MAYSCRIPT>
+   <param name="tama&ntilde;o" value="480x340">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="s&iacute;">
+   <param name="nombre" value="N&ordm; cifras significativas">
+   <param name="Versi&oacute;n" value="5.202, 2013-10-22">
+   <param name="Idioma" value="espa&ntilde;ol">
+   <param name="Botones" value="cr&eacute;ditos=no config=no inicio=s&iacute; limpiar=no">
+   <param name="E_01" value="tipo='R2' despl_imagen='arr-izq' fondo='ffc9bc' red='no' red10='no' ejes='no' texto='rosa'">
+   <param name="C_01" value="id='n1' tipo='num&eacute;rico' interfaz='bot&oacute;n' nombre='Respuesta' fijo='s&iacute;' visible='no' acci&oacute;n='calcular' par&aacute;metro='n1=1'">
+   <param name="C_02" value="id='n2' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='norte' nombre='Actividad' fijo='s&iacute;' visible='s&iacute;' acci&oacute;n='mensaje' par&aacute;metro='Pulsa inicio para hacer un nuevo ejercicio.\nObserva las cifras del n&uacute;mero y la imprecisi&oacute;n con que se conoce. Piensa cual debe ser la cifra m&aacute;s significativa y la menos significativa antes de pulsar RESPUESTA para comprobarlo. ' pos_mensajes='centro'">
+   <param name="A_01" value="id='V2' vector='s&iacute;' evaluar='una-sola-vez' tama&ntilde;o='5' expresi&oacute;n='V2[0]=b;V2[1]=c;V2[2]=d;v2[3]=e;v2[4]=f'">
+   <param name="A_02" value="id='a1' algoritmo='s&iacute;' evaluar='una-sola-vez' hacer='k=ent(rnd*4+1);imp=1/10^k;a=ent(10000*rnd)/1000;b=ent(a);c=ent(10*a-10*b);d=ent(100*a-100*b-10*c);e=ent(1000*a-1000*b-100*c-10*d);f=ent(10000*a-10000*b-1000*c-100*d-9.99*e);e=((f&gt;=5)&amp;(k=3))? e+1:e;d=((f&gt;=5)&amp;(k=2))? d+1:d;c=((f&gt;=5)&amp;(k=1))? c+1:c;'">
+   <param name="A_03" value="id='a4' algoritmo='s&iacute;' evaluar='una-sola-vez' hacer='posi=((c#0)&amp;(b=0))? 2:1;posf=((e#0)&amp;(f=0))? 4:5;num=posf-posi;'">
+   <param name="G_01" value="tipo='texto' color='azul' expresi&oacute;n='[20,120]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30 Tenemos el n\u250 mero {\*\mjaformula{\expr a}} \f2\fs30}' fuente='SansSerif,PLAIN,15' decimales='k+1' fijo='s&iacute;'">
+   <param name="G_02" value="tipo='texto' color='azul' dibujar-si='(b#0)&amp;(n1=1)' expresi&oacute;n='[20,200]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30 La primera cifra significativa es el {\*\mjaformula{\expr b}}\f2\fs30}' fuente='SansSerif,PLAIN,15' decimales='0' fijo='s&iacute;'">
+   <param name="G_03" value="tipo='texto' color='azul' dibujar-si='((c#0)&amp;(b=0))&amp;(n1=1)' expresi&oacute;n='[20,200]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30 La primera cifra significativa es el {\*\mjaformula{\expr c}}\f2\fs30}' fuente='SansSerif,PLAIN,15' decimales='0' fijo='s&iacute;'">
+   <param name="G_04" value="tipo='texto' color='azul' dibujar-si='((d#0)&amp;(b=0)&amp;(c=0))&amp;(n1=1)' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30 La primera cifra significativa es el {\*\mjaformula{\expr d}}\f2\fs30}' fuente='SansSerif,PLAIN,15' decimales='0' fijo='s&iacute;'">
+   <param name="G_05" value="tipo='texto' color='azul' dibujar-si='(k=4)&amp;(n1=1)' expresi&oacute;n='[20,220]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30 La cifra menos significativa es el {\*\mjaformula{\expr f}}\f2\fs30}' fuente='SansSerif,PLAIN,15' decimales='0' fijo='s&iacute;'">
+   <param name="G_06" value="tipo='texto' color='azul' dibujar-si='(k=3)&amp;(n1=1)' expresi&oacute;n='[20,220]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30 La cifra menos significativa es el {\*\mjaformula{\expr e}}\f2\fs30}' fuente='SansSerif,PLAIN,15' decimales='0' fijo='s&iacute;'">
+   <param name="G_07" value="tipo='texto' color='azul' dibujar-si='(k=2)&amp;(n1=1)' expresi&oacute;n='[20,220]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30 La cifra menos significativa es el {\*\mjaformula{\expr d}}\f2\fs30}' fuente='SansSerif,PLAIN,15' decimales='0' fijo='s&iacute;'">
+   <param name="G_08" value="tipo='texto' color='azul' dibujar-si='(k=1)&amp;(n1=1)' expresi&oacute;n='[20,220]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30 La cifra menos significativa es el {\*\mjaformula{\expr c}}\f2\fs30}' fuente='SansSerif,PLAIN,15' decimales='0' fijo='s&iacute;'">
+   <param name="G_09" value="tipo='texto' color='azul' expresi&oacute;n='[20,140]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30 que conocemos con la imprecisi\u243 n {\*\mjaformula{\expr imp}}\f2\fs30}' fuente='SansSerif,PLAIN,15' decimales='k' fijo='s&iacute;'">
+   <param name="G_10" value="tipo='texto' color='azul' dibujar-si='((b=0)&amp;(k=1))&amp;(n1=1)' expresi&oacute;n='[20,220]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30 S\u243 lo tiene una cifra significativa\f2\fs30}' fuente='SansSerif,PLAIN,15' decimales='0' fijo='s&iacute;'">
+   <param name="G_11" value="tipo='texto' color='azul' expresi&oacute;n='[20,160]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30\u191 Cu\u225 les ser\u225 n sus cifras m\u225 s y menos significativas?\f2\fs30}' fuente='SansSerif,PLAIN,15' decimales='k' fijo='s&iacute;'">
+   <param name="G_12" value="tipo='texto' color='rojo' expresi&oacute;n='[100,80]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs34\b CIFRAS SIGNIFICATIVAS\f2\fs24\b0}' fuente='SansSerif,BOLD,17' decimales='k' fijo='s&iacute;'">
+</ajs>
+</body>
+</html>

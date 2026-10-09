@@ -1,0 +1,54 @@
+<html>
+<head>
+	<script type='text/javascript' src='lib/descartes-min.js'></script>
+</head>
+<body>
+<ajs name="dispersi&oacute;n" width=480 height=360
+        code="Descartes.class"
+        codebase="./"
+        archive="lib/Descartes5.jar"
+        MAYSCRIPT>
+   <param name="tama&ntilde;o" value="480x360">
+   <param name="decimal_symbol" value=",">
+   <param name="antialias" value="s&iacute;">
+   <param name="nombre" value="dispersi&oacute;n">
+   <param name="Versi&oacute;n" value="5.202, 2013-10-22">
+   <param name="Idioma" value="espa&ntilde;ol">
+   <param name="Botones" value="cr&eacute;ditos=no config=no inicio=s&iacute; limpiar=no">
+   <param name="E_01" value="tipo='R2' fijo='s&iacute;' despl_imagen='arr-izq' fondo='negro' red='no' red10='no' ejes='no' texto='rosa'">
+   <param name="C_01" value="id='d' tipo='num&eacute;rico' interfaz='barra' nombre='dispersi&oacute;n' valor='0.5' min='0.5' max='1' fijo='s&iacute;' visible='no'">
+   <param name="C_02" value="id='n2' tipo='num&eacute;rico' interfaz='bot&oacute;n' regi&oacute;n='norte' nombre='Actividad' fijo='s&iacute;' visible='s&iacute;' acci&oacute;n='mensaje' par&aacute;metro='Observa que aunque las medidas est&aacute;n m&aacute;s o menos dispersas la media (el valor representativo) es el mismo.\nEl n&uacute;mero de medidas realizado es 20\nLa media aritm&eacute;tica es siempre la  misma.\nLa dispersi&oacute;n manifiesta la escasa precisi&oacute;n del aparato de medida y las distintas formas del polígono de frecuencias.\nPor motivos gr&aacute;ficos los valores representados en este ejemplo abarcan un amplio abanico que ser&iacute;an poco creíble en una medida seria, puesto que presentan una variaci&oacute;n de hasta cinco unidades en la cifra m&aacute;s significativa.' pos_mensajes='centro'">
+   <param name="A_01" value="id='V1' vector='s&iacute;' evaluar='una-sola-vez' tama&ntilde;o='7' expresi&oacute;n='V1[0]=0;V1[1]=0;V1[2]=0;V1[3]=0;V1[4]=0;V1[5]=0;V1[6]=0'">
+   <param name="A_02" value="id='f' vector='s&iacute;' evaluar='siempre' tama&ntilde;o='7' expresi&oacute;n='f[0]=1;f[1]=2;f[2]=2+ent(d*2);f[3]=10-((ent(d*4)=3)?2:ent(d*4));f[4]=2+ent(d*2);f[5]=2;f[6]=1;;;'">
+   <param name="A_03" value="id='a2' algoritmo='s&iacute;' evaluar='siempre' hacer='m=3;V1[0]=m-3*d;V1[1]=m-2*d;V1[2]=m-1*d;V1[3]=m;V1[4]=m+1*d;V1[5]=m+2*d;V1[6]=m+3*d;;'">
+   <param name="A_04" value="id='a4' algoritmo='s&iacute;' evaluar='una-sola-vez' inicio='i=0;suma=0' hacer='suma=suma+(V1[i])*(f[i]);i=i+1' mientras='i&lt;7'">
+   <param name="A_05" value="id='a5' algoritmo='s&iacute;' evaluar='siempre' inicio='i=0;sf=0' hacer='sf=sf+f[i];i=i+1' mientras='i&lt;7'">
+   <param name="G_01" value="tipo='segmento' color='blanco' expresi&oacute;n='(s-5,-2)(s-5,3)' familia='s' s.intervalo='[0,3.5]' s.pasos='3' fijo='s&iacute;' tama&ntilde;o='1' ancho='2'">
+   <param name="G_02" value="tipo='segmento' color='blanco' expresi&oacute;n='(-5,2.5)(-1.5,2.5)' fijo='s&iacute;' tama&ntilde;o='1' ancho='2'">
+   <param name="G_03" value="tipo='segmento' color='blanco' expresi&oacute;n='(-5,-2)(-1.5,-2)' fijo='s&iacute;' tama&ntilde;o='1' ancho='2'">
+   <param name="G_04" value="tipo='texto' color='blanco' expresi&oacute;n='[10,40+30*s]' familia='s' s.intervalo='[0,6]' s.pasos='6' texto='[V1[s]]' fijo='no'">
+   <param name="G_05" value="tipo='texto' color='rojo' expresi&oacute;n='[60,40+30*s]' familia='s' s.intervalo='[0,6]' s.pasos='6' texto='[f[s]]' fijo='no'">
+   <param name="G_06" value="tipo='texto' color='verde' expresi&oacute;n='[115,40+30*s]' familia='s' s.intervalo='[0,6]' s.pasos='6' texto='[V1[s]*f[s]]' fijo='no'">
+   <param name="G_07" value="tipo='texto' color='blanco' expresi&oacute;n='[0,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs24 Medidas\f2\fs30}' fuente='SansSerif,PLAIN,12' fijo='s&iacute;'">
+   <param name="G_08" value="tipo='texto' color='blanco' expresi&oacute;n='[54,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs24 Frecuenc.\f2\fs30}' fuente='SansSerif,PLAIN,12' fijo='s&iacute;'">
+   <param name="G_09" value="tipo='texto' color='blanco' expresi&oacute;n='[120,20]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30 Xi*f\f2\fs30}' fuente='SansSerif,PLAIN,15' fijo='s&iacute;'">
+   <param name="G_10" value="tipo='texto' color='blanco' expresi&oacute;n='[110,260]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30{\*\mjaformula{\expr suma}}\f2\fs30}' fuente='SansSerif,PLAIN,15' fijo='s&iacute;'">
+   <param name="G_11" value="tipo='texto' color='blanco' expresi&oacute;n='[62,260]' texto='{\rtf1\uc0{\fonttbl\f0\fcharset0 Times New Roman;\f1\fcharset0 Arial;\f2\fcharset0 Courier New;}\f1\fs30{\*\mjaformula{\expr sf}}\f2\fs30}' fuente='SansSerif,PLAIN,15' fijo='no'">
+   <param name="G_12" value="tipo='segmento' color='azul' expresi&oacute;n='(V1[0]/3,0)(V1[0]/3,f[0]/3)' fijo='s&iacute;' tama&ntilde;o='1' ancho='3'">
+   <param name="G_13" value="tipo='segmento' color='azul' expresi&oacute;n='(V1[1]/3,0)(V1[1]/3,f[1]/3)' fijo='s&iacute;' tama&ntilde;o='1' ancho='3'">
+   <param name="G_14" value="tipo='segmento' color='azul' expresi&oacute;n='(V1[2]/3,0)(V1[2]/3,f[2]/3)' fijo='s&iacute;' tama&ntilde;o='1' ancho='3'">
+   <param name="G_15" value="tipo='segmento' color='azul' expresi&oacute;n='(V1[3]/3,0)(V1[3]/3,f[3]/3)' fijo='s&iacute;' tama&ntilde;o='1' ancho='3'">
+   <param name="G_16" value="tipo='segmento' color='azul' expresi&oacute;n='(V1[4]/3,0)(V1[4]/3,f[4]/3)' fijo='s&iacute;' tama&ntilde;o='1' ancho='3'">
+   <param name="G_17" value="tipo='segmento' color='azul' expresi&oacute;n='(V1[5]/3,0)(V1[5]/3,f[5]/3)' fijo='s&iacute;' tama&ntilde;o='1' ancho='3'">
+   <param name="G_18" value="tipo='segmento' color='azul' expresi&oacute;n='(V1[6]/3,0)(V1[6]/3,f[6]/3)' fijo='s&iacute;' tama&ntilde;o='1' ancho='3'">
+   <param name="G_19" value="tipo='pol&iacute;gono' color='rojo' expresi&oacute;n='(V1[0]/3,f[0]/3)(V1[1]/3,f[1]/3)(V1[2]/3,f[2]/3)(V1[3]/3,f[3]/3)(V1[4]/3,f[4]/3)(V1[5]/3,f[5]/3)(V1[6]/3,f[6]/3)' ancho='2'">
+   <param name="G_20" value="tipo='segmento' color='blanco' expresi&oacute;n='(-0.2,0)(4,0)' fijo='s&iacute;' tama&ntilde;o='1' ancho='2'">
+   <param name="G_21" value="tipo='segmento' color='blanco' expresi&oacute;n='(0,-0.2)(0,5)' fijo='s&iacute;' tama&ntilde;o='1' ancho='2'">
+   <param name="G_22" value="tipo='texto' color='blanco' expresi&oacute;n='[280,160]' texto='3' fijo='s&iacute;'">
+   <param name="G_23" value="tipo='texto' color='blanco' expresi&oacute;n='[330,160]' texto='Medidas' fijo='s&iacute;'">
+   <param name="G_24" value="tipo='texto' color='blanco' expresi&oacute;n='[240,100]' texto='3' fijo='s&iacute;'">
+   <param name="G_25" value="tipo='texto' color='blanco' expresi&oacute;n='[240,5]' texto='Frecuencias' fijo='s&iacute;'">
+   <param name="G_26" value="tipo='texto' color='blanco' expresi&oacute;n='[240,200]' texto='Media = Xi*f / N = 3' fijo='s&iacute;'">
+</ajs>
+</body>
+</html>
