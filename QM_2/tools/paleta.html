@@ -1,0 +1,153 @@
+<html>
+<head>
+<title>Selector de Colores Dinámico</title>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=yes,minimal-ui">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+<style>
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 80vh;
+  }
+  h1 {
+    color: #333;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+  }
+  .color-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 10px;
+    max-width: 800px;
+    width: 100%;
+  }
+  .color-cell {
+    aspect-ratio: 1;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+  .color-cell:hover {
+    transform: scale(1.05);
+  }
+  #selected-color {
+    margin-top: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  }
+  .button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  #copy-button {
+    background-color: #4CAF50;
+  }
+  #copy-button:hover {
+    background-color: #45a049;
+  }
+  #generate-button {
+    background-color: #3498db;
+  }
+  #generate-button:hover {
+    background-color: #2980b9;
+  }
+  .button-container {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  @media (max-width: 600px) {
+    .color-grid {
+      grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    }
+    h1 {
+      font-size: 2rem;
+    }
+  }
+</style>
+</head>
+<body>
+  <h1>Selector de Colores Dinámico</h1>
+  <div class="color-grid" id="colorGrid"></div>
+  <div id="selected-color">Color seleccionado: Ninguno</div>
+  <div class="button-container">
+    <button id="copy-button" class="button">Copiar código hexadecimal</button>
+    <button id="generate-button" class="button">Generar más colores</button>
+  </div>
+
+  <script>
+    const colorGrid = document.getElementById('colorGrid');
+    const selectedColorDisplay = document.getElementById('selected-color');
+    const copyButton = document.getElementById('copy-button');
+    const generateButton = document.getElementById('generate-button');
+    let selectedColor = null;
+
+    function generateRandomColor() {
+      return '#' + Math.floor(Math.random()*16777215).toString(16).padStart(6, '0');
+    }
+
+    function createColorGrid(rows, cols) {
+      for (let i = 0; i < rows * cols; i++) {
+        const colorCell = document.createElement('div');
+        colorCell.className = 'color-cell';
+        const color = generateRandomColor();
+        colorCell.style.backgroundColor = color;
+        colorCell.addEventListener('click', () => selectColor(color));
+        colorGrid.appendChild(colorCell);
+      }
+    }
+
+    function selectColor(color) {
+      selectedColor = color;
+      selectedColorDisplay.textContent = `Color seleccionado: ${color}`;
+      selectedColorDisplay.style.color = color;
+    }
+
+    function copyToClipboard() {
+      if (selectedColor) {
+        navigator.clipboard.writeText(selectedColor).then(() => {
+          alert('Código de color copiado al portapapeles!');
+        }, (err) => {
+          console.error('Error al copiar: ', err);
+        });
+      } else {
+        alert('Por favor, selecciona un color primero.');
+      }
+    }
+
+    function regenerateGrid() {
+      colorGrid.innerHTML = '';
+      createColorGrid(5, 5);
+      selectedColor = null;
+      selectedColorDisplay.textContent = 'Color seleccionado: Ninguno';
+      selectedColorDisplay.style.color = 'initial';
+    }
+
+    copyButton.addEventListener('click', copyToClipboard);
+    generateButton.addEventListener('click', regenerateGrid);
+
+    // Crear una cuadrícula de 5x5 por defecto
+    createColorGrid(5, 5);
+  </script>
+</body></html>

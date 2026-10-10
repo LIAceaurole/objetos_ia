@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=yes,minimal-ui">
+	<meta name="mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+	<!-- Primera frase corrida a la derecha (Apa) -->
+
+	<style>
+		.first-word{
+			margin-left: 3em;
+		}
+   </style>
+
+   <!-- Sangria francesa -->
+
+   <style>
+	.hanging-indent {
+	  text-indent: -1.5em;
+	  margin-left: 1.5em;
+	}
+	</style>
+
+	<title>Q&Magazine</title>
+	<!-- se precarga la imagen utilizada para el cargador del libro, en caso de que se utilice -->
+	<!-- <link rel="preload" as="image" href="Bolte_img/Logo_Sin_Sombra/QM (1).png">
+
+	<!- configuración del libro -->
+	<script>
+	window.book_config = {
+		// parámetro que indica si los capítulos, secciones y figura se auto numeran
+		// para que los capítulos se auto numeren deben utilizar la etiqueta <h1>
+		// para que las secciones se auto numeren deben utilizar la etiqueta <h2>
+		auto_numerate_sections_and_figures: true,
+		// parámetro para que los interactivos se muestren a pantalla completa al presionar el botón de la esquina superior derecha
+		open_interactives_fullscreen: true,
+		// parámetro para usar el id de las referencias bibliográficas en lugar de la autonumeración
+		bibitem_ref_id: false,
+	}
+	</script>
+
+  <!-- núcleo del libro interactivo -->
+  <link rel="stylesheet" href="book/css/style.css" type="text/css">
+  <script type="text/javascript" src="book/js/book.js" charset="utf-8"></script>
+  
+  <!-- personalización del usuario -->
+  <link rel="stylesheet" href="extra/fonts.css" type="text/css">
+  <link rel="stylesheet" href="extra/style.css" type="text/css">
+  <link rel="stylesheet" href="extra/mis_estilos.css" type="text/css">
+
+  <!-- inclusión de la biblioteca KaTex -->
+  <link rel="stylesheet" type="text/css" href="extra/katex/katex.min.css"/>
+  <script src="extra/katex/katex.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="extra/katex/copy-tex.min.css"/>
+  <script src="extra/katex/copy-tex.min.js"></script>
+  <script src="extra/katex/auto-render.min.js" ></script>
+
+  <!-- Opcional en caso de requerir fórmulas químicas -->
+  <script src="extra/katex/mhchem.min.js"></script>
+  
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function() {
+    renderMathInElement(document.body, {
+      delimiters: [ {left: "$$", right: "$$", display: true}, {left: "$", right: "$", display: false}, {left: "\\[", right: "\\]", display: true}, {left: "\\(", right: "\\)", display: false} ]
+    });
+  });
+  </script>
+</head>
+
+<body>
+	
+	<div id="book_loader_container">
+		<!-- se utiliza un elemento para que funcione como cargador del libro -->
+		<div id="book_loader"></div>
+		<!-- y se indica la imagen a utilizar para personalizar el libro -->
+		<img src="imagenes_portada_videos_salida_logos/Portada.png" width="20%" style="padding-left:1em;">
+	</div> 
+
+  <div id="book_container">
+    <div id="btn_back_page"></div>
+    <div id="btn_next_page"></div>
+    <button id="go_to_table_of_content"></button>
+    
+    <button id="btn_config"></button>
+    <div id="config_options">
+      <div id="dark_light_mode"></div>	  
+	  <div style="display:inline; text-align:center;"><button align="center" id="tool_chatgpt" onclick="openInteractive('https://chatgpt.com/g/g-1E7Z6Q2XF-gpt-chat-espanol','900','600');"></button></div> 
+    </div>
+
+    <!-- si este elemento no esta presente, el botón de la tabla de contenido lleva a la primera página con un elemento class="toc_link" -->
+    <div id="table_of_content"></div>
+
+    <div id="pages_container">
+      <!--  -->
+    <div class="page" style="background-color:transparent;"></div>
+	<!-- Portada -->
+    <div class="page invertcolor" style="margin:0; padding:0; background-size:cover; background-repeat:no-repeat; background-position:center; background-image:url(imagenes_portada_videos_salida_logos/QM.jpg);"></div>
+    <!-- init-page-num="true" es un parámetro que indica que a partir de esta página comienza la numeración -->
+    <!-- inicialmente los números de las páginas se numeran con numerales romanos -->
+    <!-- num="" es un parámetro que indica que esta página no lleva numeración visible -->
+   
+	<div class="page" num=""></div>
+	<div class="page" style="display:flex; align-items:center; justify-content:center;">
+        <a style="width:50%" target="_blank" href="https://proyectodescartes.org/iCartesiLibri/ciencias-naturales.htm"><img src="Bolte_img/icartesilibri_logo.svg" width="100%"></a>
+    </div>
+
+	<div class="page" init-page-num="true" num=""  style="font-size:15px"><br>
+		<br><br></brZ><p align="center"><img src="Bolte_img/Logo_sombreado/QM (3).png" width="50%"></p>
+		<br><br><p align="center"><a class="tooltip"><font color="blue"><b>Diseño, Diagramación e interactividad:</b></font></a></p>
+		<p align="center">Jean P. Morán-Zabala<br> César Augusto Rodríguez Ledesma<br></p><br>
+		<p align="center"><a class="tooltip"><font color="blue"><b>Comité editorial:</b></font></a></p>
+   		<p align="center">Juan M. Cogollo-Flórez<br> Andrea L. Flórez-Rendón<br> Cristian G. Gómez-Marín<br> Jean P. Morán-Zabala</p><br>
+		<p align="center"><a class="tooltip"><font color="blue"><b>Diseño gráfico:</b></font></a></p>
+   		<p align="center">Jimmy Ortiz Rojas</p><br>
+		<p align="center" style="font-size: 10px;">Código JavaScript para el libro: <a href="https://github.com/jlongi/libro_interactivo" target="_blank">Joel Espinosa Longi</a>, <a href="https://www.matem.unam.mx/" target="_blank">IMATE</a>, UNAM.
+		<p align="center" style="font-size: 10px;">Recursos interactivos: <a href="https://descartes.matem.unam.mx/" target="_blank">DescartesJS</a><br> Fuentes: <a href="https://fonts.google.com/specimen/Lato" target="_blank">Lato</a> y <a href="https://fonts.google.com/specimen/Ubuntu+Mono" target="_blank">UbuntuMono</a><br></p>
+		<p align="center" style="font-size: 10px;"><br> Red Educativa Digital Descartes<br> Medellín (Colombia) <br> <a href="mailto:descartes@proyectodescartes.org?Subject=Fondo editorial"> descartes@proyectodescartes.org</a><br><a href="https://proyectodescartes.org/descartescms/" target="_blank">https://proyectodescartes.org</a><br><a href="https://proyectodescartes.org/iCartesiLibri/index.htm" target="_blank">https://proyectodescartes.org/iCartesiLibri/index.htm</a><br><br><a class="tooltip"></p>
+		<p align="center" style="font-size:10px; position: absolute; bottom: 30px; left: 3px; right:0;"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0" target="_blank"><img src="Bolte_img/by-nc-sa.svg" style="height:40px; width:110px" /></a><br>Esta obra está bajo una licencia Creative Commons 4.0 internacional: Reconocimiento-No Comercial-Compartir Igual.</p>
+    </div>
+
+    <div class="page" num=""  style="font-size:15px">
+		<br><br><p align="center"><a class="tooltip"><font color="blue"><b>INSTITUCIÓN UNIVERSITARIA ITM</b></font></a></p><br>
+		<p align="justified"><b>Quality & Metrology Magazine (Q&Magazine)</b> divulga las contribuciones de estudiantes, docentes y egresados del Departamento de Calidad y Producción en las áreas de calidad y metrología.<br><br></p>
+		<p align="center"><a class="tooltip"><font color="blue"><b>© INSTITUCIÓN UNIVERSITARIA ITM</b></font></a></p>
+		<p align="justified">Publicación de los programas de Tecnología en Control de la Calidad e Ingeniería de la Calidad.</p><br>
+		<p align="center"><a class="tooltip"><font color="blue"><b>Rector</b></font></a></p>
+		<p align="center">Alejandro Villa Gómez</p>
+		<p align="center"><a class="tooltip"><font color="blue"><b>Decano Facultad de Ciencias Económicas y Administrativas</b></font></a></p>
+		<p align="center">Conrado Augusto Serna Urán</p>
+		<p align="center"><a class="tooltip"><font color="blue"><b>Jefe Departamento de Calidad y Producción</b></font></a></p>
+		<p align="center">Yaneth Patricia Valencia Terreros</p>
+		<p align="center"><a class="tooltip"><font color="blue"><b>Departamento de Calidad y Producción</b></font></a></p>
+		<p align="center">Facultad de Ciencias Económicas y Administrativas</p><br>
+		<!--<p align="center" style="position: absolute; bottom: 70px; left:0; right:0;">
+				    <img src="https://visitor-badge.laobi.icu/badge?page_id=QM2_cesar_rodriguez&color=green&title=Visitas" alt="Contador de visitas">-->
+		</p>
+		<br><p align="justified" style="font-size: 10px;"><b><i>Quality & Metrology Magazine/ Cogollo-Flórez, J.M., Flórez-Rendón, A.L., Gómez-Marín, C.G. Morán-Zabala, J.P. & Rodríguez-Ledesma, C.A. (ed.) - No.2 (2026). - Medellín: Institución Universitaria ITM. Facultad de Ciencias Económicas y Administrativas. Departamento de Calidad y Producción, 2025. 57 páginas</i></b></p>
+		<p align="justified" style="font-size: 10px;"> 1. Divulgación. 2. Escritura académica. 3. Quality & Metrology Magazine. I. Cogollo-Flórez, J.M. (ed.) II. Flórez-Rendón, A.L. (ed.) III. Morán-Zabalam J.P. (ed.) IV. Gómez-Marín, C.G. (ed.) V. Rodríguez-Ledesma, C.A. (ed.) VI. Institución Universitaria ITM. Facultad de Ciencias Económicas y Administrativas. Departamento de Calidad y Producción.</p><br>
+		<p align="center">Calle 73 No. 76A-354 Medellín-Colombia<br> (574) 4600727 ext. 5699<br> <a href="https://www.itm.edu.co" style="text-decoration: none;" target="_blank">www.itm.edu.co</a></p>
+	</div>
+
+	<div class="page" num="true" style="background-size:cover; background-repeat:no-repeat; background-position:center; background-image:url(imagenes_portada_videos_salida_logos/Q&M_Contenido.png);"></div>
+      <!--  -->
+      <div class="page">
+        <h2 id="tabla_contenidos" align="center">Tabla de contenido</h2>
+			<div class="toc_link" href="#prefacio"></div>
+			<br><h3>Aportes a la investigación en calidad y producción</h3>
+				<div class="toc_link" href="#AJ"></div>
+				<div class="toc_link" href="#A00"></div>
+				<div class="toc_link" href="#A01"></div>
+				<div class="toc_link" href="#A02"></div>
+					<br><h3>Trabajos de Grado Calidad (TDGC)</h3>
+						<div class="toc_link" href="#A1"></div>	
+						<div class="toc_link" href="#A2"></div>	
+						<div class="toc_link" href="#A3"></div>	
+						<br><h3>Trabajos de Grado Producción (TDGP)</h3>
+							<div class="toc_link" href="#A5"></div> 
+    </div>
+	
+	<div class="page" num="true" style="background-size:cover; background-repeat:no-repeat; background-position:center; background-image:url(imagenes_portada_videos_salida_logos/Q&M_Contenido.png);"></div>
+	<div class="page">
+			<h3>Gestión académica de los programas</h3>
+				<div class="toc_link" href="#A9"></div>	
+				<div class="toc_link" href="#A10"></div>
+				<div class="toc_link" href="#A12"></div>
+				<br><h3>Impacto de egresados en el medio</h3>		
+					<div class="toc_link" href="#A13"></div>	
+					<div class="toc_link" href="#A14"></div>
+					<div class="toc_link" href="#EG10"></div>
+					<div class="toc_link" href="#A15"></div>
+					<div class="toc_link" href="#A16"></div>
+						<br><h3 style="margin-top: 5px">Producción bibliográfica, tecnológica y creativa 2025</h3>
+							<div class="toc_link" href="#A17"></div>	
+	</div>	
+
+	<div class="page" num-type-arabic="true" start-with-one="true">
+		<h2 align="center" id="prefacio">Presentación Q&Magazine</h2>
+			<br><p><span class="first-word">Es</span> un honor presentar el <font color="blue">segundo número</font> del <font color="blue"><i>Quality and Metrology Magazine (Q&Magazine)</i></font>, una iniciativa académica concebida para divulgar conocimineto científico, tecnológico y aplicado en las áreas de <font color="blue">calidad</font> y <font color="blue">metrología</font>, fortaleciendo los vínuclos entre la <font color="blue">investigación</font>, la <font color="blue">formación académica</font> y las <font color="blue">necesidades de transformación</font> de las organizaciones contemporáneas.
+			<p><span class="first-word">Bajo </span> el lema <i>"Calidad que evoluciona: hacia la eficiencia y la sostenibilidad"</i>, este nuevo número reúne <font color="blue">experiencias</font>, <font color="blue">resultados de investigación</font> y <font color="blue">reflexiones</font> que evidencian cómo la calidad continúa consolidándose como un eje estratégico para la <font color="blue">innovación</font>, la <font color="blue">competitividad</font>, y el <font color="blue">desarrollo sostenible</font>. Este número destaca los aportes de tesis doctorales de los docentes del <font color="blue">Departamento de Calidad y Producción</font>, mostrando avances científicos que contribuyen al fortalecimineto de la <font color="blue">gestión de cadenas de suministro</font>, <font color="blue">modelos de madurez</font>, la <font color="blue">optimización de procesos</font> y la <font color="blue">toma de decisiones</font> en entornos cada vez más complejos y dinámicos.</p>
+			<p><span class="first-word">Los </span> lectores encontrarán una selección diversa de contenidos que incluyen <font color="blue">investigaciones doctorales</font>, <font color="blue">trabajos de grado</font>, avances en el <font color="blue">sistema interno de aseguramiento de calidad</font> de los programas, experiencias de <font color="blue">internacionalización académica</font>; además de apartados del <font color="blue"><i>1.er Encuentro de Egresados del programa Ingeniería de la Calidad</i></font> y los testimonios que reflejan el impacto de nuestros <font color="blue">graduados</font> en diferentes sectores empresariales. Asimismo, este número dedica un espacio importante a la <font color="blue">producción científica</font>, <font color="blue">bibliográfica</font> y <font color="blue">creativa</font> desarrollada por <font color="blue">docentes</font>, <font color="blue">estudiantes</font> y <font color="blue">egresados</font> en el año 2025, reflejando el compromiso institucional con la generación y divulgación del conocimineto a nivel nacional e internacional.</p>
+	</div>
+
+	<div class="page">  
+		<p><span class="first-word">Así,</span> <font color="blue">Q&Magazime</font> continúa consolidandose como un espacio para visibilizar el talento de la comunidad <font color="blue">académica</font>, promoviendo el <font color="blue">intercambio de experiencias</font> y la construcción colectiva de <font color="blue">conocimiento</font>. Esperamos que esta nuevo número inspire la reflexión, fomente la colaboración académica y contribuya al fortalecimiento de una cultura de calidad orientada a la <font color="blue">eficiencia</font>, la <font color="blue">sostenibilidad</font> y la <font color="blue">mejora continua.</font>
+		<p><span class="first-word">Agradecemos</span> a todos los <font color="blue">autores</font>, <font color="blue">docentes</font>,<font color="blue">estudiantes</font> y <font color="blue">egresados</font> que hicieron posible estre segundo número, reafirmando su compormiso con la excelencia y el desarrollo científico y tecnológico de nuestra comunidad académica.</p>
+		<p align="center"><img src="imagenes_portada_videos_salida_logos/Videofondo1.png" width="85%"></p>
+		<video src="Videos/PQM.mp4" poster="Bolte_img/Logo_Sin_Sombra/QM (4).png" controls preload="none" style="position:absolute; top:56.1%; left:50%; transform:translate(-50%, -50%); width:59%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; z-index:3; display:block;"></video>		
+		<p align="center"><a class="tooltip" href="https://scholar.google.com/citations?user=OrZLqQcAAAAJ&hl=es" style="color:black; text-decoration:none;"><font color="blue">Cristian Giovanny Gómez-Marín, Ph.D.</font></a></p>
+		<p align="center"><a class="tooltip"><font color="black">Docente de Carrera - Departamento de Calidad y Producción.</font></a></p>
+	</div>
+
+	<div class="page" num="true" style="background-size:cover; background-repeat:no-repeat; background-position:center; background-image:url(imagenes_portada_videos_salida_logos/Q&M_Tendencias.png);"></div>
+	<div class="page">
+		<br><br><br><br><br><br><br><h2 id="AJ" align="center">Tesis Doctoral - Natalia Correa Hincapié</h2>
+			<p align="center">Docente Ocasional - Tiempo Completo</p>
+			<br><p align="center"><img src="imagenes_portada_videos_salida_logos/Videofondo1.png" width="83%"></p>
+			<video src="Videos/MM.mp4" poster="Bolte_img/Logo_Sin_Sombra/QM (4).png" controls preload="none" style="position:absolute; top:53%; left:50%; transform:translate(-50%, -50%); width:59%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; z-index:3; display:block;"></video>		
+	</div>
+
+	<div class="page" num="true" style="background-size:cover; background-repeat:no-repeat; background-position:center; background-image:url(imagenes_portada_videos_salida_logos/Q&M_Tendencias.png);"></div>
+	<div class="page">
+		<br><br><br><br><br><br><br><h2 id="A00" align="center">Tesis Doctoral - John Anderson Valencia</h2>
+			<p align="center">Docente Ocasional - Tiempo Completo</p>
+			<br><p align="center"><img src="imagenes_portada_videos_salida_logos/Videofondo1.png" width="83%"></p>
+			<video src="Videos/JAV.mp4" poster="Bolte_img/Logo_Sin_Sombra/QM (4).png" controls preload="none" style="position:absolute; top:53%; left:50%; transform:translate(-50%, -50%); width:59%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; z-index:3; display:block;"></video>		
+	</div>
+
+	<div class="page" num="true" style="background-size:cover; background-repeat:no-repeat; background-position:center; background-image:url(imagenes_portada_videos_salida_logos/Q&M_Tendencias.png);"></div>
+	<div class="page">
+		<br><br><br><br><br><br><br><h2 id="A01" align="center">Tesis Doctoral - Olga Lucía Larrea Serna</h2>
+			<p align="center">Docente Ocasional - Tiempo Completo</p>
+			<br><p align="center"><img src="imagenes_portada_videos_salida_logos/Videofondo1.png" width="83%"></p>
+			<video src="Videos/OLLS.mp4" poster="Bolte_img/Logo_Sin_Sombra/QM (4).png" controls preload="none" style="position:absolute; top:53%; left:50%; transform:translate(-50%, -50%); width:59%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; z-index:3; display:block;"></video>		
+	</div>
+
+	<div class="page" num="true" style="background-size:cover; background-repeat:no-repeat; background-position:center; background-image:url(imagenes_portada_videos_salida_logos/Q&M_Tendencias.png);"></div>
+	<div class="page">
+		<br><br><br><br><br><br><br><h2 id="A02" align="center">Tesis Doctoral - Germán Álvarez</h2>
+			<p align="center">Docente Ocasional - Tiempo Completo</p>
+			<br><p align="center"><img src="imagenes_portada_videos_salida_logos/Videofondo1.png" width="83%"></p>
+			<video src="Videos/AH.mp4" poster="Bolte_img/Logo_Sin_Sombra/QM (4).png" controls preload="none" style="position:absolute; top:53%; left:50%; transform:translate(-50%, -50%); width:59%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; z-index:3; display:block;"></video>		
+	</div>
+
+	<div class="page" num="" style="margin: 0; background-size:cover; background-repeat:no-repeat; background-position:center; background-image: url(imagenes_portada_videos_salida_logos/Q&M_TDG.png);"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>	</div>
+	<div class="page">
+		<br><br><h2 id="A1" align="center">TDGC - Diseño de un modelo de gestión de experiencia del usuario del transporte público basado en la ISO 10000: caso Metro de Medellín</h2>
+		<br><p align="center"><a class="tooltip"><font color="blue">Laura Andrea Benítez-Rendón</font> <font color="black">&</font> <font color="blue">Manuela Cadavid</font></a></p>	
+		<p align="center"><b>Ingeniería de la Calidad</b></p>		
+		<br><p align="center"><img src="imagenes_portada_videos_salida_logos/Videofondo1.png" width="85%"></p>
+		<video src="Videos/ISO10000.mp4" poster="Bolte_img/Logo_Sin_Sombra/QM (4).png" controls preload="none" style="position:absolute; top:55.3%; left:50%; transform:translate(-50%, -50%); width:60%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; z-index:3; display:block;"></video>
+		<p align="center"><a class="tooltip"><font color="blue">Proceso de Investigación</font></a></p>
+		<p align="center"><b>Semillero:</b> Gestión de la Calidad</p>				
+	</div>
+
+	<div class="page" num="" style="margin: 0; background-size:cover; background-repeat:no-repeat; background-position:center; background-image: url(imagenes_portada_videos_salida_logos/Q&M_TDG.png);"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>	</div>
+	<div class="page">
+		<br><br><h2 id="A2" align="center">TDGC - Modelos para lagestión de inventarios con productos de calidad imperfecta</h2>
+		<br><p align="center"><a class="tooltip"><font color="blue">Anyis Olivero-Tejada</font> <font color="black">&</font> <font color="blue">Didier Guarín</font></a></p>	
+		<p align="center"><b>Ingeniería de la Calidad</b></p>		
+		<br><p align="center"><img src="imagenes_portada_videos_salida_logos/Videofondo1.png" width="85%"></p>
+		<video src="Videos/CIM.mp4" poster="Bolte_img/Logo_Sin_Sombra/QM (4).png" controls preload="none" style="position:absolute; top:51.5%; left:50%; transform:translate(-50%, -50%); width:60%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; z-index:3; display:block;"></video>
+		<p align="center"><a class="tooltip"><font color="blue">Proceso de Investigación</font></a></p>
+		<p align="center"><b>Semillero: </b>Gestión de la Calidad</p>	
+	</div>
+
+	<div class="page" num="" style="margin: 0; background-size:cover; background-repeat:no-repeat; background-position:center; background-image: url(imagenes_portada_videos_salida_logos/Q&M_TDG.png);"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>	</div>
+	<div class="page">
+		<br><br><h2 id="A3" align="center">TDGC - Sistema de medición del desempeño en gestión de índices y requerimientos en servicios de TI</h2>
+		<br><p align="center"><a class="tooltip"><font color="blue">Diego Armando Buitrago Molina</font>, <font color="blue">Leidy Johana Gómez Buitrago</font> <font color="black">&</font> <font color="blue">Edwin Alejandro Hurtado Álvarez</font></a></p>	
+		<p align="center"><b>Ingeniería de la Calidad</b></p>		
+		<br><p align="center"><img src="imagenes_portada_videos_salida_logos/Videofondo1.png" width="85%"></p>
+		<video src="Videos/diego_leidy.mp4" poster="Bolte_img/Logo_Sin_Sombra/QM (4).png" controls preload="none" style="position:absolute; top:57.5%; left:50%; transform:translate(-50%, -50%); width:60%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; z-index:3; display:block;"></video>
+		<p align="center"><a class="tooltip"><font color="blue">Proceso de Investigación</font></a></p>
+		<p align="center"><b>Semillero: </b>Gestión de la Calidad</p>	
+	</div>
+
+	<div class="page" num="" style="margin: 0; background-size:cover; background-repeat:no-repeat; background-position:center; background-image: url(imagenes_portada_videos_salida_logos/Q&M_TDG.png);"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+	<div class="page">
+		<br><br><h2 id="A5" align="center">TDGP - Selección de residuos agroindustriales para la fabricación de concreto mediante AHP</h2>
+		<br><p align="center"><a class="tooltip"><font color="blue">Alejandra Múnera</font></a></p>	
+		<p align="center"><b>Ingeniería de la Producción</b></p>		
+		<br><p align="center"><img src="imagenes_portada_videos_salida_logos/Videofondo1.png" width="85%"></p>
+		<video src="Videos/TDGG.mp4" poster="Bolte_img/Logo_Sin_Sombra/QM (4).png" controls preload="none" style="position:absolute; top:51.5%; left:50%; transform:translate(-50%, -50%); width:60%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; z-index:3; display:block;"></video>
+		<p align="center"><a class="tooltip"><font color="blue">Proceso de Investigación</font></a></p>
+		<p align="center"><b>Semillero: </b>Gestión de la Calidad</p>	
+	</div>
+
+	<div class="page" num="" style="margin: 0; background-size:cover; background-repeat:no-repeat; background-position:center; background-image: url(imagenes_portada_videos_salida_logos/Q&M_PUATo.png);"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+	<div class="page">
+		<br><br><br><br><h2 id="A9" align="center">Aseguramiento de la calidad de los programas</h2>	
+		<br><p>El Docente Ocasional - Tiempo Completo, Nelson Bedoya, cuenta cómo van los procesos de autoevaluación de los programas de Tecnología en Control de la Calidad e Ingeniería de la Calidad.</p>
+		<br><p align="center"><img src="imagenes_portada_videos_salida_logos/Videofondo1.png" width="85%"></p>
+		<video src="Videos/EPA.mp4" poster="Bolte_img/Logo_Sin_Sombra/QM (4).png" controls preload="none" style="position:absolute; top:53.5%; left:50%; transform:translate(-50%, -50%); width:60%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; z-index:3; display:block;"></video>
+	</div> 
+
+	<div class="page" num="" style="margin: 0; background-size:cover; background-repeat:no-repeat; background-position:center; background-image: url(imagenes_portada_videos_salida_logos/Q&M_DT.png);"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+	<div class="page">
+		<h2 id="A10" align="center">Programa de doble titulación con Universidad Politécnica de Ramos Arizpe (UPRA, 🇲🇽)</h2>
+		<br><p align="center"><a class="tooltip"><font color="blue">Andrea Balderas Montero</font></a></p>	
+		<p align="center"><b>Ingeniera de la Calidad ITM</b></p>	
+		<p align="center"><b><a class="tooltip" href="https://circulonoticias.com/obtienen-doble-titulacion-internacional-egresados-de-la-up-santa-rosa/" style="color:black; text-decoration:none;"><font color="blue">¡Conoce la noticia completa haciendo clic aquí!</font></a></b></p>	
+		<br><p align="center"><img src="imagenes_portada_videos_salida_logos/Videofondo1.png" width="85%"></p>
+		<video src="Videos/DT.mp4" poster="Bolte_img/Logo_Sin_Sombra/QM (4).png" controls preload="none" style="position:absolute; top:51.5%; left:50%; transform:translate(-50%, -50%); width:60%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; z-index:3; display:block;"></video>
+		<p align="center"><font color="blue">Ingeniería de la Calidad - Ingeniería en Metrología Industrial</font></p>
+		<p>Lizbeth Aguillón Rangel <font color="blue">(2023)</font>; Dulce Paloma Gonzalez García <font color="blue">(2025)</font>; Carla Patricia Mandujano Pérez <font color="blue">(2025)</font>, Andrea Balderas Montero <font color="blue">(2026)</font> & Diego Iván Lara Nieves <font color="blue">(2026)</font>.</p>
+	</div>
+
+	<div class="page" num="" style="margin: 0; background-size:cover; background-repeat:no-repeat; background-position:center; background-image: url(imagenes_portada_videos_salida_logos/Q&M_Encuentro.png);"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+	<div class="page">
+		<br><br><br><br><h2 id="A12" align="center">1.er Encuentro de Egresados de Ingeniería de la Calidad</h2>
+		<br><p align="center"><img src="imagenes_portada_videos_salida_logos/Videofondo1.png" width="85%"></p>
+		<video src="Videos/Encuentro.mp4" poster="Bolte_img/Logo_Sin_Sombra/QM (4).png" controls preload="none" style="position:absolute; top:44.5%; left:50%; transform:translate(-50%, -50%); width:60%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; z-index:3; display:block;"></video>
+		<br><p align="center"><font color="blue">Miércoles 13 de mayo de 2026</font></p>
+		<p align="center"> <font color="blue">Campus Robledo - Auditorio Pedro Nel Gómez</font></p>
+		<p align="center"><font dolor="blue">6:00 P.M.</font></p>
+	</div>
+
+	<div class="page" num="" style="margin: 0; background-size:cover; background-repeat:no-repeat; background-position:center; background-image: url(imagenes_portada_videos_salida_logos/Q&M_Impacto.png);"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+	<div class="page">
+		<br><br><br><br><br><br><h2 id="A13" align="center">Lizeth Jaramillo - Egresada del Programa Tecnología en Control de la Calidad</h2>
+		<br><p align="center"><img src="imagenes_portada_videos_salida_logos/Videofondo1.png" width="85%"></p>
+		<video src="Videos/VL.mp4" poster="Bolte_img/Logo_Sin_Sombra/QM (4).png" controls preload="none" style="position:absolute; top:49.5%; left:50%; transform:translate(-50%, -50%); width:60%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; z-index:3; display:block;"></video>
+	</div>
+	
+	<div class="page" num="" style="margin: 0; background-size:cover; background-repeat:no-repeat; background-position:center; background-image: url(imagenes_portada_videos_salida_logos/Q&M_Impacto.png);"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+	<div class="page">
+		<br><br><br><br><br><br><h2 id="A14" align="center">Katty Marcela Cortés Valverde - Egresada del programa Ingeniería de la Calidad</h2>
+		<br><p align="center"><img src="imagenes_portada_videos_salida_logos/Videofondo1.png" width="85%"></p>
+		<video src="Videos/KM.mp4" poster="Bolte_img/Logo_Sin_Sombra/QM (4).png" controls preload="none" style="position:absolute; top:49.5%; left:50%; transform:translate(-50%, -50%); width:60%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; z-index:3; display:block;"></video>
+	</div>
+
+	<div class="page" num="" style="margin: 0; background-size:cover; background-repeat:no-repeat; background-position:center; background-image: url(imagenes_portada_videos_salida_logos/Q&M_Impacto.png);"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+	<div class="page">
+		<br><br><br><br><br><br><h2 id="EG10" align="center">Vanessa Taborda Echavarría - Egresada del programa Ingeniería de la Calidad</h2>
+		<br><p align="center"><img src="imagenes_portada_videos_salida_logos/Videofondo1.png" width="85%"></p>
+		<video src="Videos/EG_10.mp4" poster="Bolte_img/Logo_Sin_Sombra/QM (4).png" controls preload="none" style="position:absolute; top:49.5%; left:50%; transform:translate(-50%, -50%); width:60%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; z-index:3; display:block;"></video>
+	</div>
+
+	<div class="page" num="" style="margin: 0; background-size:cover; background-repeat:no-repeat; background-position:center; background-image: url(imagenes_portada_videos_salida_logos/Q&M_Impacto.png);"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+	<div class="page">
+		<br><br><br><br><br><br><h2 id="A15" align="center">Danny Vanegas - Egresado del Programa de Ingeniería de Producción</h2>
+		<br><p align="center"><img src="imagenes_portada_videos_salida_logos/Videofondo1.png" width="85%"></p>
+		<video src="Videos/Egresado_2PP.mp4" poster="Bolte_img/Logo_Sin_Sombra/QM (4).png" controls preload="none" style="position:absolute; top:49.5%; left:50%; transform:translate(-50%, -50%); width:60%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; z-index:3; display:block;"></video>
+	</div>
+
+	<div class="page" num="" style="margin: 0; background-size:cover; background-repeat:no-repeat; background-position:center; background-image: url(imagenes_portada_videos_salida_logos/Q&M_Impacto.png);"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+	<div class="page">
+		<br><br><br><br><br><br><h2 id="A16" align="center">Duván Alzate - Egresado del Programa de Ingeniería de Producción</h2>
+		<br><p align="center"><img src="imagenes_portada_videos_salida_logos/Videofondo1.png" width="85%"></p>
+		<video src="Videos/Egresado_Liliana1.mp4" poster="Bolte_img/Logo_Sin_Sombra/QM (4).png" controls preload="none" style="position:absolute; top:49.5%; left:50%; transform:translate(-50%, -50%); width:60%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; z-index:3; display:block;"></video>
+	</div>
+
+	<div class="page" num="" style="margin: 0; background-size:cover; background-repeat:no-repeat; background-position:center; background-image: url(imagenes_portada_videos_salida_logos/Q&M_Prod.png);"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>
+	<div class="page">
+		<h2 id="A17" align="center">Producción tecnológica, bibliográfica y creativa 2025</h2>
+		<h2 align="center">Calidad & Metrología</h2><br>
+		<p>Se presenta la producción tecnológica, bibliográfica y creativa en las áreas de calidad y metrología en el año 2025 y se especifica las asignaturas de la malla curricular con la que está relacionado cada aporte. Accede al documento completo o al perfil de los autores haciendo clic en el título respectivo.</p>
+		<div style="border:1px solid #dcdcdc; padding:15px; margin-bottom:15px; border-radius:4px;">
+			<div style="font-size:24px; margin-bottom:8px;">
+				<a class="tooltip"
+				href="https://doi.org/10.1007/978-3-032-10126-6_43"
+				style="color:black; text-decoration:none;">
+					Component Warranty Cost Analysis Using a Fuzzy Approach
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px; color:#555; margin-bottom:4px;">
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?user=tf_-8RsAAAAJ&hl=es"
+				style="color:black; text-decoration:none;">
+					Cogollo-Flórez, J. M.
+				</a>
+				<font color="blue">&</font>
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?user=YPiCYlAAAAAJ&hl=es&oi=ao"
+				style="color:black; text-decoration:none;">
+					Arteaga-Sierra, M. L.
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px;">
+				<b><font color="blue">Vínculo curricular:</font></b> Herramientas para la Calidad; Costos de la Calidad; Ingeniería de Productividad.
+			</div>
+		</div>
+	
+		<div style="border:1px solid #dcdcdc; padding:15px; margin-bottom:15px; border-radius:4px;">
+			<div style="font-size:24px; margin-bottom:8px;">
+				<a class="tooltip"
+				href="https://www.iust.ac.ir/ijieen/browse.php?a_id=1921&slc_lang=en&sid=1&printcase=1&hbnr=1&hmb=1"
+				style="color:black; text-decoration:none;">
+					Methodology Proposal for Accessibility Analysis of a Road Corridor for Freight Transport
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px; color:#555; margin-bottom:4px;">
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?hl=es&user=5X-j7GsAAAAJ"
+				style="color:black; text-decoration:none;">
+					Arango-Serna, M. D.
+				</a>
+				<font color="blue">,</font>
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?user=OrZLqQcAAAAJ&hl=es&oi=sra"
+				style="color:black; text-decoration:none;">
+					Gomez-Marin, C. G.
+				</a>
+				<font color="blue">,</font>
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?hl=es&user=TSWHFuUAAAAJ"
+				style="color:black; text-decoration:none;">
+					Serna-Uran, C. A.
+				</a>
+				<font color="blue">&</font>
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?hl=es&user=E8RPZAgAAAAJ"
+				style="color:black; text-decoration:none;">
+					Ruiz-Moreno, S.
+				</a>
+			</div>
+			<br>
+		
+			<div style="font-size:18px;">
+				<b><font color="blue">Vínculo curricular:</font></b>
+				Estrategia de Operaciones; Optimización; Ingeniería de Productividad.
+			</div>
+		</div>
+	</div>
+
+	<div class="page">
+		<div style="border:1px solid #dcdcdc; padding:15px; margin-bottom:15px; border-radius:4px;">
+			<div style="font-size:24px; margin-bottom:8px;">
+				<a class="tooltip"
+				href="https://doi.org/10.25100/iyc.v27i1.14352"
+				style="color:black; text-decoration:none;">
+					Metodología para evaluar la resolución de problemas complejos de ingeniería en la optimización de procesos productivos
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px; color:#555; margin-bottom:4px;">
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?hl=es&user=PwC3gMcAAAAJ"
+				style="color:black; text-decoration:none;">
+					Hernández, J. I.
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px;">
+				<b><font color="blue">Vínculo curricular:</font></b>
+				Optimización; Ingeniería de Productividad; Gestión por Procesos.
+			</div>
+		</div>
+
+		<div style="border:1px solid #dcdcdc; padding:15px; margin-bottom:15px; border-radius:4px;">
+			<div style="font-size:24px; margin-bottom:8px;">
+				<a class="tooltip"
+				href="https://www.researchgate.net/profile/Arcadio-Gonzalez-Samaniego/publication/402044088_Las_Megatendencias_en_Las_Ciencias_Administrativas/links/69b5bbea8c53216c011c6b22/Las-Megatendencias-en-Las-Ciencias-Administrativas.pdf#page=26"
+				style="color:black; text-decoration:none;">
+					Construyendo un Modelo de Entorno Laboral Saludable Funcional para las Empresas de Medellín - Colombia
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px; color:#555; margin-bottom:4px;">
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?hl=es&user=lBCtdFgAAAAJ"
+				style="color:black; text-decoration:none;">
+					Hurtado-Cataño, B. L.
+				</a>
+				<font color="blue">&</font>
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?user=u-8lAvUAAAAJ&hl=es&oi=sra"
+				style="color:black; text-decoration:none;">
+					Jiménez-Echeverri, E. A.
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px;">
+				<b><font color="blue">Vínculo curricular:</font></b>
+				Sistema de Gestión en Seguridad y Salud en el Trabajo; Sistema de Gestión en Seguridad y Salud en el Trabajo.
+			</div>
+		</div>
+
+		<div style="border:1px solid #dcdcdc; padding:15px; margin-bottom:15px; border-radius:4px;">
+			<div style="font-size:24px; margin-bottom:8px;">
+				<a class="tooltip"
+				href="https://isbnmexico.indautor.cerlalc.org/catalogo.php?mode=detalle&nt=467583"
+				style="color:black; text-decoration:none;">
+					El cambio organizacional en las instituciones de educación superior en Colombia: El caso de la evaluación y acreditación en el ITM
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px; color:#555; margin-bottom:4px;">
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?hl=es&user=VOQj61EAAAAJ"
+				style="color:black; text-decoration:none;">
+					Suárez-Landazábal, N.
+				</a>
+				<font color="blue">&</font>
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?hl=es&user=1URSaxIAAAAJ"
+				style="color:black; text-decoration:none;">
+					Quiceno Rúa, E.
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px;">
+				<b><font color="blue">Vínculo curricular:</font></b>
+				Gestión Integral; Auditorías de Sistemas de Gestión; Formulación y Evaluación de Proyectos.
+			</div>
+		</div>
+	</div>	
+
+	<div class="page">
+		<div style="border:1px solid #dcdcdc; padding:15px; margin-bottom:15px; border-radius:4px;">
+			<div style="font-size:24px; margin-bottom:8px;">
+				Medición de la calidad del servicio de los sistemas de comunicación e información en universidades
+			</div>
+			<br>
+			<div style="font-size:18px; color:#555; margin-bottom:4px;">
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?hl=es&user=tf_-8RsAAAAJ"
+				style="color:black; text-decoration:none;">
+					Cogollo-Flórez, J.M.
+				</a>
+				<font color="blue">,</font>
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?hl=es&user=fGmdahoAAAAJ"
+				style="color:black; text-decoration:none;">
+					Restrepo-Olarte, A.C.
+				</a>
+				<font color="blue">&</font>
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?hl=es&user=XziPesYAAAAJ"
+				style="color:black; text-decoration:none;">
+					Rivera-Cardona, S.
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px;">
+				<b><font color="blue">Vínculo curricular:</font></b>
+				Sistema de Gestión de la Calidad; Estrategia de Operaciones; Introducción a la Formación Profesional.
+			</div>
+		</div>
+
+		<div style="border:1px solid #dcdcdc; padding:15px; margin-bottom:15px; border-radius:4px;">
+			<div style="font-size:24px; margin-bottom:8px;">
+				<a class="tooltip"
+				href="https://doi.org/10.22507/rli.v22n1a3682"
+				style="color:black; text-decoration:none;">
+					Incorporación de componentes axiológicos en el diseño de productos: una revisión
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px; color:#555; margin-bottom:4px;">
+				<a class="tooltip"
+				href="https://orcid.org/0000-0003-2372-2631"
+				style="color:black; text-decoration:none;">
+					Cardona-Betancur, J. P.
+				</a>
+				<font color="blue">,</font>
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?hl=es&user=0nis_34AAAAJ"
+				style="color:black; text-decoration:none;">
+					Morán-Zabala, J.P.
+				</a>
+				<font color="blue">,</font>
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?hl=es&user=OrZLqQcAAAAJ"
+				style="color:black; text-decoration:none;">
+					Gómez-Marín, C.G.
+				</a>
+				<font color="blue">,</font>
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?hl=es&user=qDTsb3oAAAAJ"
+				style="color:black; text-decoration:none;">
+					Giraldo-Gutiérrez, F.L.
+				</a>
+				<font color="blue">&</font>
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?hl=es&user=tf_-8RsAAAAJ"
+				style="color:black; text-decoration:none;">
+					Cogollo-Flórez, J.M.
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px;">
+				<b><font color="blue">Vínculo curricular:</font></b>
+				Herramientas para la Calidad; Estrategia de Operaciones; Ingeniería de Productividad.
+			</div>
+		</div>
+
+		<div style="border:1px solid #dcdcdc; padding:15px; margin-bottom:15px; border-radius:4px;">
+			<div style="font-size:24px; margin-bottom:8px;">
+				<a class="tooltip"
+				href="https://doi.org/10.1177/25165984251351098"
+				style="color:black; text-decoration:none;">
+					Analyzing 3D printing variables for small-scale clay objects using fuzzy cognitive maps
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px; color:#555; margin-bottom:4px;">
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?hl=es&user=0nis_34AAAAJ"
+				style="color:black; text-decoration:none;">
+					Morán-Zabala, J.P.
+				</a>
+				<font color="blue">,</font>
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?user=vxlnWb8AAAAJ&hl=es&oi=sra"
+				style="color:black; text-decoration:none;">
+					Restrepo-Henao, J.A.
+				</a>
+				<font color="blue">,</font>
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?hl=es&user=7gu4ZR0AAAAJ"
+				style="color:black; text-decoration:none;">
+					Correa-Espinal, A.A.
+				</a>
+				<font color="blue">&amp;</font>
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?hl=es&user=tf_-8RsAAAAJ"
+				style="color:black; text-decoration:none;">
+					Cogollo-Flórez, J.M.
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px;">
+				<b><font color="blue">Vínculo curricular:</font></b>
+				Diseño de Experimentos; Dibujo Asistido por Computador.
+			</div>
+		</div>
+	</div>
+
+	<div class="page">
+		<div style="border:1px solid #dcdcdc; padding:15px; margin-bottom:15px; border-radius:4px;">
+			<div style="font-size:24px; margin-bottom:8px;">
+				Análisis de confiabilidad de componentes de un producto automotriz usando distribuciones de colas pesadas
+			</div>
+			<br>
+			<div style="font-size:18px; color:#555; margin-bottom:4px;">
+				<a class="tooltip"
+				href="https://orcid.org/0009-0004-3833-2198"
+				style="color:black; text-decoration:none;">
+					Durango-Ruiz, E.
+				</a>
+				<font color="blue">,</font>
+				<a class="tooltip"
+				href="https://orcid.org/0009-0008-4466-5414"
+				style="color:black; text-decoration:none;">
+					Serna-Jaramillo, D.
+				</a>
+				<font color="blue">,</font>
+				<a class="tooltip"
+				href="https://orcid.org/0009-0007-8956-0651"
+				style="color:black; text-decoration:none;">
+					Roldán-Bedoya, B.S.
+				</a>
+				<font color="blue">&amp;</font>
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?hl=es&user=tf_-8RsAAAAJ"
+				style="color:black; text-decoration:none;">
+					Cogollo-Flórez, J.M.
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px;">
+				<b><font color="blue">Vínculo curricular:</font></b>
+				Control Estadístico de la Calidad; Costos de la Calidad.
+			</div>
+		</div>
+
+		<div style="border:1px solid #dcdcdc; padding:15px; margin-bottom:15px; border-radius:4px;">
+			<div style="font-size:24px; margin-bottom:8px;">
+				<a class="tooltip"
+				href="https://doi.org/10.15332/24631140.10564"
+				style="color:black; text-decoration:none;">
+					Measurement system contributions in industry, innovation, and quality infrastructure
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px; color:black; margin-bottom:4px;">
+				<a class="tooltip" href="https://scholar.google.com/citations?hl=es&user=0nis_34AAAAJ" style="color:black; text-decoration:none;">
+    				Morán-Zabala, J. P.
+				</a>	
+				<font color="blue">,</font>
+				Bedoya-Cardona, N.
+				<font color="blue">&</font>
+				Palacio-Morales, J.
+			</div>
+			<br>
+			<div style="font-size:18px;">
+				<b><font color="blue">Vínculo curricular:</font></b>
+				Gestión Metrológica; Análisis de Sistemas de Medición; Sistema de Gestión de la Calidad.
+			</div>
+		</div>
+
+		<div style="border:1px solid #dcdcdc; padding:15px; margin-bottom:15px; border-radius:4px;">
+			<div style="font-size:24px; margin-bottom:8px;">
+				<a class="tooltip"
+				href="https://doi.org/10.22430/22565337.3296"
+				style="color:black; text-decoration:none;">
+					Máquinas de aprendizaje y soft sensores de tipo nariz y lengua electrónica para la detección de cáncer
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px; color:black; margin-bottom:4px;">
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?user=7u7fDm4AAAAJ&hl=es"
+				style="color:black; text-decoration:none;">
+					García García, L.M.
+				</a>
+				<font color="blue">,</font>
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?user=0mM3c-sAAAAJ&hl=es"
+				style="color:black; text-decoration:none;">
+					Vallejo-Valencia, M.
+				</a>
+				<font color="blue">&amp;</font>
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?user=0mM3c-sAAAAJ&hl=es"
+				style="color:black; text-decoration:none;">
+					Delgado-Trejos, E.
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px;">
+				<b><font color="blue">Vínculo curricular:</font></b>
+				Gestión Metrológica; Análisis de Sistemas de Medición.
+			</div>
+		</div>
+	</div>
+
+	<div class="page">
+		<br><br><br><div style="border:1px solid #dcdcdc; padding:15px; margin-bottom:15px; border-radius:4px;">
+			<div style="font-size:24px; margin-bottom:8px;">
+				<a class="tooltip"
+				href="https://doi.org/10.1016/j.flowmeasinst.2025.103084"
+				style="color:black; text-decoration:none;">
+					Flow rate estimation from flow-induced vibration using signal decomposition and advanced regression models
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px; color:black; margin-bottom:4px;">
+				Urrea, J.
+				<font color="blue">,</font>
+				Escobar-Correa, L.
+				<font color="blue">,</font>
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?user=0nis_34AAAAJ&hl=es"
+				style="color:black; text-decoration:none;">
+					Morán-Zabala, J.P.
+				</a>
+				<font color="blue">,</font>
+				Ramirez-Barrera, A.F.
+				<font color="blue">,</font>
+				Padilla-Buritica, J.I.
+				<font color="blue">&amp;</font>
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?user=0mM3c-sAAAAJ&hl=es"
+				style="color:black; text-decoration:none;">
+					Delgado-Trejos, E.
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px;">
+				<b><font color="blue">Vínculo curricular:</font></b>
+				Gestión Metrológica; Análisis de Sistemas de Medición; Optimización.
+			</div>
+		</div>
+
+		<div style="border:1px solid #dcdcdc; padding:15px; margin-bottom:15px; border-radius:4px;">
+			<div style="font-size:24px; margin-bottom:8px;">
+				<a class="tooltip"
+				href="https://doi.org/10.22430/24223182.3115"
+				style="color:black; text-decoration:none;">
+					Evaluación del componente de un modelo de innovación para una empresa consultora del sector eléctrico aplicando técnicas de optimización de procesos
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px; color:#555; margin-bottom:4px;">
+				<a class="tooltip"
+				href="https://orcid.org/0000-0003-3870-5324"
+				style="color:black; text-decoration:none;">
+					Ochoa Restrepo, C.C.
+				</a>
+				<font color="blue">,</font>
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?hl=es&user=Pit3cREAAAAJ"
+				style="color:black; text-decoration:none;">
+					Montoya Quintero, D.M.
+				</a>
+				<font color="blue">&</font>
+				<a class="tooltip"
+				href="https://scholar.google.com/citations?hl=es&user=f7WKxyUAAAAJ"
+				style="color:black; text-decoration:none;">
+					Larrea Serna, O.L.
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px;">
+				<b><font color="blue">Vínculo curricular:</font></b>
+				Sistema de Gestión de la Calidad; Optimización.
+			</div>
+		</div>
+	</div>
+
+	<div class="page">
+		<br><br><br><div style="border:1px solid #dcdcdc; padding:15px; margin-bottom:15px; border-radius:4px;">
+			<div style="font-size:24px; margin-bottom:8px;" align="center">
+				<a class="tooltip"
+				href="https://hdl.handle.net/20.500.12622/8025"
+				style="color:black; text-decoration:none;">
+					Sinfonía de un proceso textil
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px; color:black; margin-bottom:4px;">
+				Larrea-Serna, O.L.
+				<font color="blue">&amp;</font>
+				Montoya-Quintero, D.M.
+			</div>
+			<br>
+			<div style="font-size:18px;">
+				<b><font color="blue">Vínculo curricular:</font></b>
+				Gestión por Procesos; Simulación de Sistemas.
+			</div>
+		</div>
+		<br><br><br><p align="center"><img src="imagenes_portada_videos_salida_logos/Videofondo1.png" width="83%"></p>
+		<video src="Videos/PT.mp4" poster="Bolte_img/Logo_Sin_Sombra/QM (4).png" controls preload="none" style="position:absolute; top:60.5%; left:50%; transform:translate(-50%, -50%); width:59%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; z-index:3; display:block;"></video>
+	</div>
+
+	<div class="page">
+		<div style="border:1px solid #dcdcdc; padding:15px; margin-bottom:15px; border-radius:4px;">
+			<div style="font-size:24px; margin-bottom:8px;">
+				<a class="tooltip"
+				href="https://hdl.handle.net/20.500.12622/8025"
+				style="color:black; text-decoration:none;">
+					Conectando emociones - Aprendizaje de la metrología en un laboratorio inmersivo de realidad virtual
+				</a>
+			</div>
+			<br>
+			<div style="font-size:18px; color:black; margin-bottom:4px;">
+				Montoya-Quintero, D.M.
+				<font color="blue">,</font>
+				Palacio-Morales, J.A.
+				<font color="blue">,</font>
+				Rodriguez-López, A.
+				<font color="blue">&</font>
+				Mercader-Trejos, F.
+			</div>
+			<br>
+			<div style="font-size:18px;">
+				<b><font color="blue">Vínculo curricular:</font></b>
+				Gestión Metrológica; Análisis de Sistemas de Medición; Fundamentos de Instrumentación y Metrología; Instrumentación Industrial.
+			</div>
+		</div>
+		<br><p align="center"><img src="imagenes_portada_videos_salida_logos/Videofondo1.png" width="83%"></p>
+		<video src="Videos/LRA.mp4" poster="Bolte_img/Logo_Sin_Sombra/QM (4).png" controls preload="none" style="position:absolute; top:60%; left:50%; transform:translate(-50%, -50%); width:59%; aspect-ratio:16/9; border-radius:12px; overflow:hidden; z-index:3; display:block;"></video>		
+	</div>
+
+	<!-- Cierre -->
+    <div class="page invertcolor" style="margin:0; padding:0; background-size:cover; background-repeat:no-repeat; background-position:center; background-image:url(imagenes_portada_videos_salida_logos/Q&M_Salida.jpg);"></div>
+ 	<!-- [cierra] pages_container -->
+    </div>
+  <!-- [cierra] book_container -->
+  </div>
+
+</body>
+</html>
